@@ -1,0 +1,34 @@
+title: Standard-Seite
+
+tabs:
+  content:
+    label: Inhalt
+    icon: page
+    sections:
+      fields:
+        fields:
+          text:
+            extends: fields/writer
+  meta:
+    label: Meta
+    icon: search
+    sections:
+      metaFields:
+        type: fields
+        fields:
+          metaDescription:
+            extends: fields/metaDescription
+  pages:
+    label: Unterseiten
+    icon: list-bullet
+    sections:
+      pages:
+        label: Unterseiten
+        type: pages
+  files:
+    label: Dateien
+    icon: file
+    sections:
+      files:
+        label: Dateien
+        type: files
