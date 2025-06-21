@@ -1,3 +1,6 @@
 [submodule "public/kirby"]
 	path = public/kirby
 	url = https://github.com/getkirby/kirby.git
+[submodule "public/content"]
+	path = public/content
+	url = ./public/content
