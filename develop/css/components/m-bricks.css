@@ -1,0 +1,31 @@
+.m-bricks {
+	margin-inline: auto;
+	max-inline-size: var(--max-width-content);
+	display: flex;
+	flex-direction: column;
+	row-gap: var(--space-500);
+
+	> ul {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		column-gap: var(--gap-inline);
+		row-gap: var(--gap-inline);
+		list-style: none;
+
+		> li {
+			display: flex;
+			flex-direction: column;
+			row-gap: var(--space-300);
+
+			> h3 {
+				margin-block-start: var(--space-300);
+			}
+		}
+	}
+
+	&[data-text-align="center"] {
+		> ul {
+			text-align: center;
+		}
+	}
+}

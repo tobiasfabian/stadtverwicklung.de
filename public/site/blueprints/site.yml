@@ -1,6 +1,89 @@
 title: Site
 
-sections:
-  pages:
-    label: Seiten
-    type: pages
+tabs:
+  content:
+    sections:
+      home:
+        type: pages
+        create: false
+        templates:
+          - home
+      pages:
+        type: pages
+        templatesIgnore:
+          - home
+          - error
+      error:
+        type: pages
+        create: false
+        templates:
+          - error
+  footer:
+    sections:
+      footer:
+        type: fields
+        fields:
+          newsletterHeadline:
+            type: headline
+            label: Newsletter
+          newsletterTitle:
+            extends: fields/writer-inline
+            marks: false
+          newsletterText:
+            extends: fields/writer-inline
+            marks: false
+          newsletterLink:
+            extends: fields/link
+          footerHeadline:
+            type: headline
+            label: Footer
+          footerAddress:
+            label: Adresse
+            extends: fields/writer-inline
+            width: 1/4
+          footerProgramm:
+            label: Programm
+            type: pages
+            width: 1/4
+          footerLegal:
+            label: Rechtliches
+            type: pages
+            width: 1/4
+          footerSocialMedia:
+            label: Social Media
+            type: structure
+            width: 1/4
+            fields:
+              plattform:
+                type: select
+                options:
+                  instagram: Instagram
+                  facebook: Facebook
+                required: true
+              link:
+                type: link
+                required: true
+          fundingHeadline:
+            type: headline
+            label: Funding
+          footerFundingIcons:
+            type: structure
+            fields:
+              image:
+                type: files
+                multiple: false
+                query: model.images
+                required: true
+              text:
+                type: text
+                required: true
+              link:
+                type: link
+              height:
+                type: number
+                min: 20
+                max: 80
+                required: true
+          footerFundingText:
+            extends: fields/writer-inline
+            marks: false

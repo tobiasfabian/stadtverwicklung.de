@@ -1,0 +1,22 @@
+name: field.blocks.text.name
+icon: text
+wysiwyg: true
+preview: text
+fields:
+  text:
+    extends: fields/writer
+    placeholder: field.blocks.text.placeholder
+  textSize:
+    label: Textgröße
+    type: toggles
+    grow: false
+    width: 1/2
+    options:
+      small: Klein
+  width:
+    label: Breite
+    type: toggles
+    grow: false
+    width: 1/2
+    options:
+      large: Breit

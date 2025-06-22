@@ -1,0 +1,13 @@
+.a-nav-item {
+	display: flex;
+	align-items: center;
+	padding-inline: var(--space-400);
+	line-height: calc(18rem / 16);
+	font-size: calc(18rem / 16);
+	font-weight: 400;
+	text-decoration: none;
+
+	&[data-selected] {
+		font-weight: 700;
+	}
+}

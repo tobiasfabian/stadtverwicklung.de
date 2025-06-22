@@ -1,0 +1,9 @@
+name: Link
+icon: url
+fields:
+  text:
+    type: text
+    required: true
+  link:
+    type: link
+    required: true

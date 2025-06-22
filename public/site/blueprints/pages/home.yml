@@ -1,0 +1,52 @@
+title: Start-Seite
+
+navigation:
+  status: all
+  template: all
+
+tabs:
+  content:
+    label: Inhalt
+    icon: page
+    sections:
+      fields:
+        fields:
+          teaserImage:
+            extends: fields/teaser-image
+          teaserTitle:
+            label: Teaser-Titel
+            extends: fields/writer-inline
+            marks: false
+            width: 1/2
+          teaserText:
+            label: Teaser-Text
+            extends: fields/writer-inline
+            width: 1/2
+          teaserLink:
+            extends: fields/link
+            width: 1/2
+          text:
+            extends: fields/blocks-all
+  meta:
+    label: Meta
+    icon: search
+    sections:
+      metaFields:
+        type: fields
+        fields:
+          metaDescription:
+            extends: fields/meta-description
+  pages:
+    label: Unterseiten
+    icon: list-bullet
+    sections:
+      pages:
+        label: Unterseiten
+        type: pages
+  files:
+    label: Dateien
+    icon: file
+    sections:
+      files:
+        label: Dateien
+        type: files

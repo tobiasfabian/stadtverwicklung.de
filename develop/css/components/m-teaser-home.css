@@ -1,0 +1,30 @@
+.m-teaser-home {
+	display: grid;
+	align-items: end;
+
+	> * {
+		grid-column: 1 / -1;
+		grid-row: 1 / -1;
+	}
+
+	> img {
+
+	}
+
+	> div {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		column-gap: 0;
+		row-gap: var(--space-400);
+		margin-inline: auto;
+		max-inline-size: calc(var(--max-width-content) - var(--space-700) * 2);
+		padding-block-end: var(--space-800);
+		padding-inline: var(--space-700);
+		justify-items: start;
+		color: var(--color-brand-rose);
+
+		> * {
+			grid-column: 2 / -1;
+		}
+	}
+}

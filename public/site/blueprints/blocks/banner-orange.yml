@@ -1,0 +1,12 @@
+wysiwyg: true
+preview: fields
+fields:
+  title:
+    extends: fields/writer-inline
+    marks: false
+  text:
+    extends: fields/writer-inline
+  link:
+    extends: fields/link
+  image:
+    extends: fields/image

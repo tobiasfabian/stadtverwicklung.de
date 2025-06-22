@@ -1,0 +1,6 @@
+.k-block-type-button .button {
+	display: inline-block;
+	padding: 0.25em 0.5em;
+	border: 2px solid var(--color-black);
+	border-radius: 25px;
+}

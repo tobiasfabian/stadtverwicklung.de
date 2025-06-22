@@ -1,0 +1,35 @@
+label: Bausteine
+wysiwyg: true
+preview: fields
+fields:
+  text:
+    extends: fields/writer
+    placeholder: field.blocks.text.placeholder
+  items:
+    type: structure
+    fields:
+      title:
+        extends: fields/writer-inline
+        marks: false
+      text:
+        extends: fields/writer-inline
+      image:
+        extends: fields/image
+        image:
+          back: white
+  textAlign:
+    label: Text-Ausrichtung
+    type: toggles
+    grow: false
+    width: 1/2
+    required: true
+    default: start
+    options:
+      - value: start
+        text: Links
+        icon: text-left
+      - value: center
+        text: Zentriert
+        icon: text-center
+
+

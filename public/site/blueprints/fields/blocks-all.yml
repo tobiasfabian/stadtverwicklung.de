@@ -1,0 +1,13 @@
+type: blocks
+fieldsets:
+  - text
+  - button
+  - cite
+  - video
+  - image
+  - gallery
+  - line
+  - banner-orange
+  - bricks
+  - upcoming-events
+  - background

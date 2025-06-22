@@ -1,0 +1,16 @@
+/**
+ * Used to tag events (online / [City] / [Address])
+ */
+
+.a-tag {
+	font: var(--font-label-small);
+	font-weight: 400;
+	text-transform: uppercase;
+	letter-spacing: var(--letter-spacing-uppercase);
+	color: var(--color-brand-orange-dark);
+
+	&[data-size="large"] {
+		font: var(--font-label-large);
+		font-weight: 400;
+	}
+}

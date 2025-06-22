@@ -1,0 +1,8 @@
+title: Kommende Veranstaltungen
+icon: calendar
+wysiwyg: true
+preview: fields
+fields:
+  info:
+    type: info
+    text: Zeigt alle kommenden Veranstaltungen an

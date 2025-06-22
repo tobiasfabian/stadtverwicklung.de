@@ -1,5 +1,9 @@
 title: Standard-Seite
 
+navigation:
+  status: all
+  template: all
+
 tabs:
   content:
     label: Inhalt
@@ -8,7 +12,7 @@ tabs:
       fields:
         fields:
           text:
-            extends: fields/writer
+            extends: fields/blocks
   meta:
     label: Meta
     icon: search
@@ -17,7 +21,7 @@ tabs:
         type: fields
         fields:
           metaDescription:
-            extends: fields/metaDescription
+            extends: fields/meta-description
   pages:
     label: Unterseiten
     icon: list-bullet

@@ -1,0 +1,10 @@
+name: Zitat
+icon: text
+fields:
+  text:
+    label: Zitat
+    extends: fields/writer-inline
+    required: true
+  author:
+    label: Autor
+    extends: fields/writer-inline

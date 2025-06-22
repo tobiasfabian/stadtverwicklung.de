@@ -1,0 +1,5 @@
+.a-button-back {
+	color: var(--color-brand-orange-dark);
+	font: var(--font-label-medium);
+	text-decoration: none;
+}

@@ -1,0 +1,11 @@
+.m-nav-primary {
+	block-size: calc(60rem / 16);
+
+	> ul {
+		display: flex;
+		block-size: 100%;
+	}
+	> ul > li {
+		display: flex;
+	}
+}

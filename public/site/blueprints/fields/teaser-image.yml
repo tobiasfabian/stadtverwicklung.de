@@ -1,0 +1,8 @@
+label: Teaser-Image
+type: files
+multiple: false
+query: model.images
+layout: cards
+size: huge
+image:
+  ratio: 3/2

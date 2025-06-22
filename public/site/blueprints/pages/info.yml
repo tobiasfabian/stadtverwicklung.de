@@ -1,0 +1,49 @@
+title: Info-Seite
+
+navigation:
+  status: all
+  template: all
+
+tabs:
+  content:
+    label: Inhalt
+    icon: page
+    sections:
+      fields:
+        fields:
+          alternativeTitle:
+            label: Teaser-Text
+            extends: fields/writer-inline
+            marks: false
+          teaserText:
+            label: Teaser-Text
+            extends: fields/writer-inline
+            width: 1/2
+          teaserImage:
+            extends: fields/teaser-image
+            width: 1/2
+          text:
+            extends: fields/blocks-all
+  meta:
+    label: Meta
+    icon: search
+    sections:
+      metaFields:
+        type: fields
+        fields:
+          metaDescription:
+            extends: fields/meta-description
+  pages:
+    label: Unterseiten
+    icon: list-bullet
+    sections:
+      pages:
+        label: Unterseiten
+        type: pages
+  files:
+    label: Dateien
+    icon: file
+    sections:
+      files:
+        label: Dateien
+        type: files

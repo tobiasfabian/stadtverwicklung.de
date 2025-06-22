@@ -1,0 +1,11 @@
+.k-cite blockquote {
+  font-size: var(--text-lg);
+}
+.k-cite blockquote + blockquote {
+  margin-block-start: var(--spacing-2);
+  color: var(--color-gray-600);
+}
+.k-cite figcaption {
+  margin-block-start: var(--spacing-2);
+  font-weight: 600;
+}

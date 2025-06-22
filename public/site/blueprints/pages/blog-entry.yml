@@ -1,0 +1,39 @@
+title: Blog-Eintrag
+
+num: '{{ page.date.toDate("Ymd") }}'
+
+navigation:
+  status: all
+  template: all
+  sortBy: date desc
+
+tabs:
+  content:
+    label: Inhalt
+    icon: page
+    sections:
+      fields:
+        fields:
+          teaserText:
+            label: Teaser-Text
+            type: textarea
+            buttons: false
+            width: 1/2
+          teaserImage:
+            extends: fields/teaser-image
+            width: 1/2
+          date:
+            label: Datum
+            type: date
+            width: 1/2
+            default: now
+            required: true
+          text:
+            extends: fields/blocks
+  files:
+    label: Dateien
+    icon: file
+    sections:
+      files:
+        label: Dateien
+        type: files

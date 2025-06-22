@@ -1,5 +1,7 @@
 html {
 	font-family: var(--font-family);
+	color: var(--color-content-primary);
+	background-color: var(--color-background-primary);
 	-webkit-hyphens: auto;
 	-webkit-hyphenate-limit-after: var(--hyphenate-limit);
 	-webkit-hyphenate-limit-before: var(--hyphenate-limit);

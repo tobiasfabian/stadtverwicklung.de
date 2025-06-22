@@ -1,0 +1,26 @@
+title: Blog
+
+navigation:
+  status: all
+  template: all
+
+tabs:
+  content:
+    label: Inhalt
+    icon: page
+    sections:
+      pages:
+        headline: Blog-Einträge
+        flip: true
+        info: "{{ page.date.toDate('d.m.Y') }}"
+        templates:
+          - blog-entry
+  meta:
+    label: Meta
+    icon: search
+    sections:
+      metaFields:
+        type: fields
+        fields:
+          metaDescription:
+            extends: fields/meta-description

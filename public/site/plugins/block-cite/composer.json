@@ -1,0 +1,11 @@
+{
+	"name": "tobiaswolf/cite-block",
+	"description": "",
+	"type": "kirby-plugin",
+	"license": "MIT",
+	"authors": [{
+		"name": "Tobias Wolf",
+		"email": "tobias@wirsindcarlo.de"
+	}],
+	"version": "2023-02"
+}

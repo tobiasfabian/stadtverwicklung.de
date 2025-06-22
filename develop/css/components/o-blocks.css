@@ -1,0 +1,43 @@
+.o-blocks {
+	display: grid;
+	grid-template-columns: 1fr var(--max-width-text) 1fr;
+	row-gap: var(--gap-block);
+
+	> * {
+		grid-column: 2 / 3;
+	}
+	> :where(
+		.o-list-events,
+	) {
+		inline-size: 100%;
+	}
+	> :where(
+		.o-list-events,
+		.o-background,
+		m-gallery,
+		.m-video,
+		.m-banner-orange,
+		.m-bricks,
+		.m-text[data-width="large"]
+	) {
+		grid-column: 1 / -1;
+	}
+	> :where(.a-button) {
+		justify-self: start;
+	}
+
+	main > &:first-child {
+		margin-block-start: var(--space-1000);
+	}
+
+	:where(.m-teaser) + & {
+		margin-block-start: var(--space-1000);
+	}
+	:where(.m-teaser-home) + & {
+		margin-block-start: var(--space-800);
+	}
+
+	&[data-gap="small"] {
+		row-gap: var(--space-600);
+	}
+}

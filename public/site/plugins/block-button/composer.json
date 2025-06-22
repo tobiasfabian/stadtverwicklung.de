@@ -1,0 +1,11 @@
+{
+	"name": "tobiaswolf/button-block",
+	"description": "",
+	"type": "kirby-plugin",
+	"license": "MIT",
+	"authors": [{
+		"name": "Tobias Wolf",
+		"email": "tobias@wirsindcarlo.de"
+	}],
+	"version": "2022-09"
+}

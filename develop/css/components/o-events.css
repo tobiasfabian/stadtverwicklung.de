@@ -1,0 +1,13 @@
+.o-events {
+	/* margin-block-start: var(--space-1000); */
+	margin-inline: auto;
+	max-inline-size: var(--max-width-content);
+	font: var(--font-paragraph-large);
+	display: flex;
+	flex-direction: column;
+	row-gap: var(--gap-block);
+
+	> * {
+		inline-size: 100%;
+	}
+}

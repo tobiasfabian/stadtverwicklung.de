@@ -1,56 +1,55 @@
-.a-text {
-	--font-size: var(--font-size-paragraphs-medium);
-	--line-height: var(--line-height-paragraphs-medium);
+.m-text {
+	--font-size: var(--font-size-paragraph-medium);
+	--line-height: var(--line-height-paragraph-medium);
 
-	font: var(--font-paragraphs-medium);
+	font: var(--font-paragraph-large);
+	letter-spacing: var(--letter-spacing-display);
 
 	> h1 {
-		font: var(--font-heading-xxlarge);
-	}
-	> h2 {
-		font: var(--font-heading-xlarge);
-	}
-	> h3 {
 		font: var(--font-heading-large);
 	}
-	> h4 {
+	> h2 {
 		font: var(--font-heading-medium);
 	}
-	> h5 {
+	> h3 {
 		font: var(--font-heading-small);
 	}
-	> h6 {
-		font: var(--font-heading-xsmall);
+
+	> :where(ul, ol) {
+		padding-inline-start: 2ch;
+
+		li + li {
+			margin-block-start: var(--space-300);
+		}
 	}
 
 	> * + * {
-		margin-block-start: calc(--space-400);
+		margin-block-start: var(--space-400);
+
+		&:where(h2, h3) {
+			margin-block-start: var(--space-600);
+		}
 	}
 
-	&[data-size="large"] {
-		--font-size: var(--font-size-paragraphs-large);
-		--line-height: var(--line-height-paragraphs-large);
+	&[data-text-size="large"] {
+		--font-size: var(--font-size-paragraph-large);
+		--line-height: var(--line-height-paragraph-large);
 
-		font: var(--font-paragraphs-large);
+		font: var(--font-paragraph-large);
 	}
-	&[data-size="small"] {
-		--font-size: var(--font-size-paragraphs-small);
-		--line-height: var(--line-height-paragraphs-small);
+	&[data-text-size="small"] {
+		--font-size: var(--font-size-paragraph-small);
+		--line-height: var(--line-height-paragraph-small);
 
-		font: var(--font-paragraphs-small);
-	}
-	&[data-size="xsmall"] {
-		--font-size: var(--font-size-paragraphs-xsmall);
-		--line-height: var(--line-height-paragraphs-xsmall);
+		font: var(--font-paragraph-small);
 
-		font: var(--font-paragraphs-xsmall);
+		> * + * {
+			margin-block-start: var(--space-300);
+		}
 	}
 
-	& + & {
-		margin-block-start: calc(--gap-block);
-	}
-
-	.a-heading + & {
-		margin-block-start: var(--gap-block);
+	&[data-width="large"] {
+		margin-inline: auto;
+		max-inline-size: var(--max-width-content);
 	}
 }

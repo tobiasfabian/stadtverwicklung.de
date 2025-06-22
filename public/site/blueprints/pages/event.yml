@@ -1,0 +1,100 @@
+title: Veranstaltung
+
+num: '{{ page.startDate.toDate("YmdHi") }}'
+
+icon: calendar
+
+navigation:
+  status: all
+  sortBy: startDate desc
+
+tabs:
+  content:
+    label: Inhalt
+    icon: page
+    fields:
+      subtitle:
+        label: Untertitel
+        extends: fields/writer-inline
+        marks: false
+        width: 1/2
+      teaserImage:
+        extends: fields/teaser-image
+        width: 1/2
+      startDate:
+        label: Start-Datum
+        type: date
+        translate: false
+        time:
+          step: 1
+        required: true
+        width: 1/3
+      endDate:
+        label: End-Datum
+        type: date
+        translate: false
+        time:
+          step: 1
+        width: 1/3
+      status:
+        label: Event-Status
+        type: select
+        default: EventScheduled
+        translate: false
+        required: true
+        width: 1/3
+        options:
+          EventScheduled: findet statt
+          EventCancelled: abgesagt
+          EventPostponed: verschoben
+      attendanceMode:
+        label: Teilnahmeart
+        type: toggles
+        default: OfflineEventAttendanceMode
+        translate: false
+        required: true
+        width: 1/3
+        options:
+          OfflineEventAttendanceMode: offline
+          OnlineEventAttendanceMode: online
+      registrationLink:
+        label: Link zur Registrierung
+        type: url
+        width: 1/3
+      location:
+        extends: fields/location
+        required: true
+        when:
+          attendanceMode: OfflineEventAttendanceMode
+      virtualLocation:
+        label: Virtueller Veranstaltungsort
+        type: url
+        help: Z.B. Zoom- oder YouTube-Link
+        # required: true
+        when:
+          attendanceMode: OnlineEventAttendanceMode
+      text:
+        extends: fields/blocks
+  meta:
+    label: Meta
+    icon: search
+    sections:
+      metaFields:
+        type: fields
+        fields:
+          metaDescription:
+            extends: fields/meta-description
+  pages:
+    label: Unterseiten
+    icon: list-bullet
+    sections:
+      pages:
+        label: Unterseiten
+        type: pages
+  files:
+    label: Dateien
+    icon: file
+    sections:
+      files:
+        label: Dateien
+        type: files

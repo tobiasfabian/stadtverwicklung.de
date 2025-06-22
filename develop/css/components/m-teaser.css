@@ -1,0 +1,21 @@
+.m-teaser {
+	margin-inline: auto;
+	max-inline-size: var(--max-width-content);
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: auto 1fr;
+	column-gap: var(--gap-inline);
+
+	> p {
+		margin-block-start: var(--space-500);
+	}
+
+	> img {
+		grid-column: 2 / 3;
+		grid-row: 1 / 3;
+	}
+
+	main &:first-child {
+		margin-block-start: var(--space-1000);
+	}
+}

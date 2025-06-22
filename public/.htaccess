@@ -1,7 +1,7 @@
-<If "%{HTTP_HOST} == 'preview.example.com'">
+<If "%{HTTP_HOST} == 'gemeinwohl.stadtverwicklung.com'">
 	AuthType Basic
 	AuthName "Preview"
-	AuthUserFile /var/www/virtual/PATH/preview.example.com/.htpasswd
+	AuthUserFile /var/www/virtual/PATH/gemeinwohl.stadtverwicklung.com/.htpasswd
 	Require valid-user
 </IF>
 
@@ -107,7 +107,7 @@ SetEnvIf Authorization "(.+)" HTTP_AUTHORIZATION=$1
 
 # Make sure cache gets revalidated for JavaScript and CSS files
 <FilesMatch ".(js|mjs|css)$">
-	<If "%{HTTP_HOST} in {'example.local' , 'preview.example.com'}">
+	<If "%{HTTP_HOST} in {'gemeinwohl.stadtverwicklung.local' , 'gemeinwohl.stadtverwicklung.com'}">
 		ExpiresActive Off
 		Header set Cache-Control "no-cache"
 	</If>

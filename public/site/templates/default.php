@@ -1,5 +1,12 @@
 <?php snippet('head'); ?>
-<body class="t-default">
-	<?= $page->title() ?>
+<body>
+	<?php snippet('o-header') ?>
+	<main>
+		<div class="o-blocks" data-gap="small">
+			<h1><?= $page->title() ?></h1>
+			<?= $page->text()->toBlocks() ?>
+		</div>
+	</main>
+	<?php snippet('o-footer') ?>
 </body>
 <?php snippet('foot'); ?>

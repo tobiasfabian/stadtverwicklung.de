@@ -1,0 +1,9 @@
+type: blocks
+fieldsets:
+  - text
+  - button
+  - cite
+  - video
+  - image
+  - gallery
+  - line
