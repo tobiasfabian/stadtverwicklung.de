@@ -1,11 +1,13 @@
-label: Bausteine
+title: Raster
 wysiwyg: true
 preview: fields
+icon: grid
 fields:
   text:
     extends: fields/writer
     placeholder: field.blocks.text.placeholder
   items:
+    label: Bausteine
     type: structure
     fields:
       title:

@@ -28,8 +28,10 @@
 @import 'components/m-banner-orange.css';
 @import 'components/m-bricks.css';
 @import 'components/m-cite.css';
+@import 'components/m-figure.css';
 @import 'components/m-gallery.css';
 @import 'components/m-nav-primary.css';
+@import 'components/m-stack.css';
 @import 'components/m-teaser-home.css';
 @import 'components/m-teaser.css';
 @import 'components/m-text.css';
@@ -39,6 +41,8 @@
 @import 'components/o-article.css';
 @import 'components/o-background.css';
 @import 'components/o-blocks.css';
+@import 'components/o-blog-entry.css';
+@import 'components/o-blog.css';
 @import 'components/o-event.css';
 @import 'components/o-events.css';
 @import 'components/o-footer.css';

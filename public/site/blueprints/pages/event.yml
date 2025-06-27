@@ -8,6 +8,10 @@ navigation:
   status: all
   sortBy: startDate desc
 
+image:
+  query: model.teaserImage.toFile
+  cover: true
+
 tabs:
   content:
     label: Inhalt

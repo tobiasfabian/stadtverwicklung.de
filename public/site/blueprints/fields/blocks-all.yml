@@ -10,4 +10,5 @@ fieldsets:
   - banner-orange
   - bricks
   - upcoming-events
+  - blog-entries
   - background

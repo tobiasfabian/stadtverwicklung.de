@@ -4,6 +4,10 @@ navigation:
   status: all
   template: all
 
+image:
+  query: model.teaserImage.toFile
+  cover: true
+
 tabs:
   content:
     label: Inhalt

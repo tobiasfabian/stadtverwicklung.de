@@ -1,0 +1,8 @@
+title: Neueste Blog-Einträge
+icon: list-bullet
+wysiwyg: true
+preview: fields
+fields:
+  info:
+    type: info
+    text: Zeigt die drei neuesten Blog-Einträge an

@@ -4,6 +4,9 @@ navigation:
   status: all
   template: all
 
+icon: home
+image: icon
+
 tabs:
   content:
     label: Inhalt

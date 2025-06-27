@@ -40,4 +40,5 @@
 	font: var(--font-label-large);
 	display: flex;
 	align-items: center;
+	text-decoration: none;
 }

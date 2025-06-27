@@ -3,6 +3,10 @@
 	border-inline-start: var(--border-size-medium) solid currentcolor;
 	font: var(--font-paragraph-large);
 
+	> blockquote {
+		letter-spacing: var(--letter-spacing-display);
+	}
+
 	> figcaption {
 		margin-block-start: var(--space-200);
 	}

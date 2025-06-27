@@ -1,5 +1,7 @@
+title: Orangener Banner
 wysiwyg: true
 preview: fields
+icon: sparkling
 fields:
   title:
     extends: fields/writer-inline
@@ -10,3 +12,6 @@ fields:
     extends: fields/link
   image:
     extends: fields/image
+    image:
+      back: "#F59D22"
+      cover: true

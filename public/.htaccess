@@ -1,7 +1,7 @@
-<If "%{HTTP_HOST} == 'gemeinwohl.stadtverwicklung.com'">
+<If "%{HTTP_HOST} == 'gemeinwohl.stadtverwicklung.de'">
 	AuthType Basic
 	AuthName "Preview"
-	AuthUserFile /var/www/virtual/PATH/gemeinwohl.stadtverwicklung.com/.htpasswd
+	AuthUserFile //www/htdocs/w01dee97/gemeinwohl.stadtverwicklung.de/.htpasswd
 	Require valid-user
 </IF>
 
@@ -13,10 +13,6 @@
 	# enable awesome urls. i.e.:
 	# http://yourdomain.com/about-us/team
 	RewriteEngine on
-
-	# Redirect to non-www.
-	RewriteCond %{HTTP_HOST} ^www.example.com [NC]
-	RewriteRule ^(.*)$ https://example.com/$1 [L,R=301]
 
 	# Redirect to https
 	RewriteCond %{HTTPS} off

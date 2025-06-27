@@ -5,6 +5,16 @@
 	font: var(--font-paragraph-large);
 	letter-spacing: var(--letter-spacing-display);
 
+	a {
+		transition-duration: var(--duration-xsmall);
+		transition-property: color;
+
+		&:where(:focus-visible, :hover) {
+			color: var(--color-brand-orange-dark);
+			transition-timing-function: ease-out;
+		}
+	}
+
 	> h1 {
 		font: var(--font-heading-large);
 	}
@@ -42,6 +52,7 @@
 		--line-height: var(--line-height-paragraph-small);
 
 		font: var(--font-paragraph-small);
+		letter-spacing: normal;
 
 		> * + * {
 			margin-block-start: var(--space-300);

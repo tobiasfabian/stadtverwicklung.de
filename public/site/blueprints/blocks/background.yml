@@ -1,5 +1,7 @@
+title: Farbiger Hintergrund
 wysiwyg: true
 preview: fields
+icon: grid-full
 fields:
   color:
     label: Text-Farbe

@@ -4,8 +4,7 @@
 
 $alt = $block->alt();
 $caption = $block->caption();
-$crop = $block->crop()->isTrue();
-$ratio = $block->ratio()->or('auto');
+$srcset = $block->ratio()->or('default');
 $image = $block->image()->toFile();
 $alt = $alt->or($image->alt());
 
@@ -14,7 +13,12 @@ if ($image === null) {
 }
 ?>
 <figure class="m-figure">
-	<img src="<?= $image->url() ?>" alt="<?= $alt->esc() ?>">
+	<?php snippet('image', [
+		'image' => $image,
+		'srcset' => $srcset,
+		'alt' => $alt,
+		'sizes' => '(min-width: 66rem) 66rem, 100vw'
+	]) ?>
 
 	<?php if ($caption->isNotEmpty()): ?>
 	<figcaption>

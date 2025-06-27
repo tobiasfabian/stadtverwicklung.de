@@ -9,8 +9,8 @@
 	--ease-out: cubic-bezier(0.215, 0.610, 0.275, 1.000);
 
 	@media (prefers-reduced-motion: no-preference) {
-		--duration-xsmall: 120ms;
-		--duration-small: 160ms;
+		--duration-xsmall: 100ms;
+		--duration-small: 140ms;
 		--duration-medium: 200ms;
 		--duration-large: 400ms;
 		--duration-xlarge: 550ms;

@@ -1,20 +1,24 @@
 <?php
 /** @var \Kirby\Cms\Block $block */
 $caption = $block->caption();
-$crop    = $block->crop()->isTrue();
-$ratio   = $block->ratio()->or('auto');
+$srcset = $block->ratio()->or('default');
+
+$files = $block->images()->toFiles();
 ?>
 <m-gallery
 	role="region"
 	aria-roledescription="gallery"
 	aria-label="Images"
 	tabindex="0"
-	<?= attr(['data-ratio' => $ratio, 'data-crop' => $crop]) ?>
 >
 	<ul>
-		<?php foreach ($block->images()->toFiles() as $image): ?>
+		<?php foreach ($files as $image): ?>
 		<li>
-			<?= $image ?>
+			<?php snippet('image', [
+				'image' => $image,
+				'srcset' => $srcset,
+				'sizes' => '(min-width: 66rem) 66rem, 100vw'
+			]) ?>
 		</li>
 		<?php endforeach ?>
 	</ul>

@@ -1,6 +1,9 @@
 .m-teaser-home {
+	margin-block-start: var(--space-600);
 	display: grid;
 	align-items: end;
+	color: var(--color-brand-rose);
+	background-color: var(--color-brand-purple);
 
 	> * {
 		grid-column: 1 / -1;
@@ -21,7 +24,6 @@
 		padding-block-end: var(--space-800);
 		padding-inline: var(--space-700);
 		justify-items: start;
-		color: var(--color-brand-rose);
 
 		> * {
 			grid-column: 2 / -1;

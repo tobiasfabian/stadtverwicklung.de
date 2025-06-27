@@ -1,0 +1,14 @@
+.o-blog {
+	/* margin-block-start: var(--space-1000); */
+	margin-inline: auto;
+	max-inline-size: var(--max-width-content);
+	inline-size: 100%;
+	font: var(--font-paragraph-large);
+	display: flex;
+	flex-direction: column;
+	row-gap: var(--space-700);
+
+	> * {
+		inline-size: 100%;
+	}
+}

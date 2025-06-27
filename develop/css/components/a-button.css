@@ -13,6 +13,8 @@
 	border: var(--border-size-medium) solid currentcolor;
 	border-radius: calc(1lh + var(--_padding-block) * 2);
 	background-color: var(--color-background-primary);
+	transition-duration: var(--duration-xsmall);
+	transition-property: background-color, color, border-color;
 
 	&[data-shape="circle"] {
 		padding-inline: var(--_padding-block);
@@ -46,6 +48,7 @@
 		color: var(--color-content-primary);
 		border-color: var(--color-brand-orange-dark);
 		background-color: var(--color-brand-orange);
+		transition-timing-function: ease-out;
 
 		&[data-kind="transparent"] {
 			color: var(--color-content-primary);

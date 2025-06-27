@@ -1,9 +1,10 @@
 <?php
 
 return [
+	// Kirby options
 	'locale' => 'de_DE.utf-8',
 	'routes' => require __DIR__ . '/options/routes.php',
-	'sitemap.ignoreTemplates' => ['error'],
+	'thumbs' => require __DIR__ . '/options/thumbs.php',
 	'updates' => [
 		'kirby' => 'security',
 		'plugins' => [
@@ -11,4 +12,8 @@ return [
 			'tobiaswolf/hashed-url' => false,
 		],
 	],
+
+	// Custom options
+	'sitemap.ignoreTemplates' => ['error'],
+	'blog.jsonUrl' => 'https://stadtverwicklung.de/de/blog.json',
 ];

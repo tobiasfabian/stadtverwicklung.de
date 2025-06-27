@@ -10,4 +10,8 @@
 	&[data-selected] {
 		font-weight: 700;
 	}
+
+	&:hover {
+		font-weight: 700;
+	}
 }

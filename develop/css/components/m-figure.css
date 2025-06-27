@@ -1,0 +1,4 @@
+.m-figure {
+	margin-inline: auto;
+	max-inline-size: var(--max-width-content);
+}
