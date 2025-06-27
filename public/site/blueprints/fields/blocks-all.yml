@@ -1,4 +1,5 @@
 type: blocks
+pretty: true
 fieldsets:
   - text
   - button
