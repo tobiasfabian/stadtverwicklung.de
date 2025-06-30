@@ -70,7 +70,7 @@ if (preg_match('!vimeo!i', $url) === 1) {
 		<div class="m-video__cookie-banner">
 			<?php if ($youtubeId): ?>
 				<div class="m-video__preview">
-					<img src="<?= url('youtube-thumbnail/' . $youtubeId) ?>" alt="">
+					<img src="<?= url('youtube-thumbnail/' . $youtubeId) ?>" width="1280" height="720" alt="">
 				</div>
 			<?php endif; ?>
 			<button class="m-video__button-play" aria-label="Video anschauen: <?= $videoTitle ?>">

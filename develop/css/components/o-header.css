@@ -35,6 +35,7 @@
 }
 
 .o-header__title {
+	justify-self: start;
 	padding-block: var(--space-200);
 	padding-inline: var(--space-400);
 	font: var(--font-label-large);

@@ -39,7 +39,13 @@ tabs:
             label: Footer
           footerAddress:
             label: Adresse
-            extends: fields/writer-inline
+            type: info
+            text: Adresse wird auf der [Kontakt-Seite](pages/kontakt) festgelegt
+            width: 1/4
+          footerSocialMedia:
+            label: Social Media
+            type: info
+            text: Social-Media-Icons werden auf der [Kontakt-Seite](pages/kontakt) festgelegt
             width: 1/4
           footerProgramm:
             label: Programm
@@ -49,20 +55,6 @@ tabs:
             label: Rechtliches
             type: pages
             width: 1/4
-          footerSocialMedia:
-            label: Social Media
-            type: structure
-            width: 1/4
-            fields:
-              plattform:
-                type: select
-                options:
-                  instagram: Instagram
-                  facebook: Facebook
-                required: true
-              link:
-                type: link
-                required: true
           fundingHeadline:
             type: headline
             label: Funding

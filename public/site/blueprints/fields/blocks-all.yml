@@ -9,7 +9,7 @@ fieldsets:
   - gallery
   - line
   - banner-orange
-  - bricks
+  - grid
   - upcoming-events
   - blog-entries
   - background

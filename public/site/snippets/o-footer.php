@@ -1,8 +1,8 @@
 <?php
-/** @var \Kirby\Cms\Site $site */
 
 use Kirby\Toolkit\Str;
 
+/** @var \Kirby\Cms\Site $site */
 ?>
 <footer class="o-footer">
 	<div class="o-footer__newsletter">
@@ -21,7 +21,7 @@ use Kirby\Toolkit\Str;
 		<div>
 			<address>
 				<p>
-					<?= $site->footerAddress() ?>
+					<?= $site->contactPage()->address() ?>
 				</p>
 				<div class="a-caption">© 2025 Stadtverwicklung gGmbH</div>
 			</address>
@@ -48,9 +48,9 @@ use Kirby\Toolkit\Str;
 				</div>
 				<div>
 					<ul class="o-footer__social-media" aria-label="Social Media">
-						<?php foreach ($site->footerSocialMedia()->toStructure() as $item): ?>
+						<?php foreach ($site->contactPage()->socialMedia()->toStructure() as $item): ?>
 							<li>
-								<a href="<?= $item->link() ?>">
+								<a href="<?= $item->link() ?>" title="<?= Str::kebabToCamel($item->plattform()) ?> ">
 									<img src="<?= url('assets/images/icon-' . $item->plattform() . '.svg') ?>" alt="<?= Str::kebabToCamel($item->plattform()) ?>" width="24" height="24">
 								</a>
 							</li>

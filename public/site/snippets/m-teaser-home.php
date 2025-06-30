@@ -8,7 +8,12 @@ if ($teaserImage === null) {
 }
 ?>
 <div class="m-teaser-home">
-	<img src="<?= $teaserImage->url() ?>" alt="<?= $teaserImage->alt() ?>">
+	<?php if ($teaserImage = $page->teaserImage()->toFile()): ?>
+		<?php snippet('image', [
+			'image' => $teaserImage,
+			'sizes' => '100vw',
+		]) ?>
+	<?php endif ?>
 	<div>
 		<h1 class="a-heading"><?= $page->teaserTitle() ?></h1>
 		<p class="m-text"><?= $page->teaserText() ?></p>

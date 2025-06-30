@@ -14,8 +14,9 @@ $image = $block->image()->toFile();
 				</a>
 			<?php endif ?>
 		</div>
-		<img src="<?= $image->thumb([
-			'width' => 508 * 2,
-		])->url() ?>" alt="<?= $image->alt() ?>" width="<?= $image->width() ?>" height="<?= $image->height() ?>">
+		<?php snippet('image', [
+			'image' => $image,
+			'sizes' => 480 / 16 . 'rem',
+		]) ?>
 	</div>
 </div>

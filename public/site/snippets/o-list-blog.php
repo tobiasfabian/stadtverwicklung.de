@@ -5,14 +5,14 @@
 $headline = $headline ?? null;
 $showMore = $showMore ?? null;
 ?>
-<div class="m-bricks">
+<div class="m-grid">
 	<?php if ($headline): ?>
 		<h2 class="a-heading"><?= $headline ?></h2>
 	<?php endif ?>
 	<ul>
 		<?php foreach ($entries as $blogEntryPage): ?>
 			<?php /** @var BlogEntryPage|\Kirby\Cms\Page $blogEntryPage */ ?>
-			<li>
+			<li class="m-grid__item">
 				<a href="<?= $blogEntryPage->url() ?>">
 					<img <?= attr([
 						'src' => $blogEntryPage->teaserImage()->toObject()->src(),

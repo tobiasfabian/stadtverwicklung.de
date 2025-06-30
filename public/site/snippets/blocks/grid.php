@@ -1,5 +1,5 @@
 <?php /** @var \Kirby\Cms\Block $block */ ?>
-<div class="m-bricks" <?= attr([
+<div class="m-grid" <?= attr([
 	'data-text-align' => $block->textAlign()->value() !== 'start' ? $block->textAlign()->value() : null,
 ]) ?>>
 	<div class="m-text">
@@ -10,11 +10,13 @@
 			<?php
 			$image = $item->image()->toFile();
 			?>
-			<li>
+			<li class="m-grid__item">
 				<?php if ($image): ?>
-					<img src="<?= $image->thumb([
-						'width' => 325 * 2,
-					])->url() ?>" alt="<?= $image->alt() ?>" width="<?= $image->width() ?>" height="<?= $image->height() ?>">
+					<?php snippet('image', [
+						'image' => $image,
+						'srcset' => '3/2',
+						'sizes' => 336 / 16 . 'rem',
+					]) ?>
 				<?php endif ?>
 				<h3><?= $item->title() ?></h3>
 				<p><?= $item->text() ?></p>

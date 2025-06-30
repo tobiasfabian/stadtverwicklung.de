@@ -18,7 +18,7 @@
 		.m-figure,
 		.m-video,
 		.m-banner-orange,
-		.m-bricks,
+		.m-grid,
 		.m-text[data-width="large"]
 	) {
 		grid-column: 1 / -1;

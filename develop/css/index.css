@@ -26,7 +26,7 @@
 
 /* Molecules */
 @import 'components/m-banner-orange.css';
-@import 'components/m-bricks.css';
+@import 'components/m-grid.css';
 @import 'components/m-cite.css';
 @import 'components/m-figure.css';
 @import 'components/m-gallery.css';
@@ -43,6 +43,7 @@
 @import 'components/o-blocks.css';
 @import 'components/o-blog-entry.css';
 @import 'components/o-blog.css';
+@import 'components/o-contact.css';
 @import 'components/o-event.css';
 @import 'components/o-events.css';
 @import 'components/o-footer.css';

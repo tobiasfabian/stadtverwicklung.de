@@ -8,6 +8,7 @@
 		margin-inline: auto;
 		max-inline-size: var(--max-width-content);
 		display: grid;
+		align-items: end;
 		grid-template-columns: 1fr 1fr;
 		padding-inline-start: var(--space-1000);
 

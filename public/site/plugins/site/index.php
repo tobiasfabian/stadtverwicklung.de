@@ -18,6 +18,9 @@ App::plugin(
 			'blogPage' => function () {
 				return page('page://ts0jgzbgmzzyfri3');
 			},
+			'contactPage' => function () {
+				return page('page://fmn7z0n40ortaweq');
+			},
 			'eventsPage' => function () {
 				return page('page://jzxp27b1ir0rlrsc');
 			},

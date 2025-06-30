@@ -37,6 +37,7 @@ tabs:
         label: End-Datum
         type: date
         translate: false
+        help: Das End-Datum darf nicht mehr als 24 Stunden nach dem Start-Datum liegen.
         time:
           step: 1
         width: 1/3

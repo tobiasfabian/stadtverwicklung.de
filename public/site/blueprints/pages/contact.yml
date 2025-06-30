@@ -1,0 +1,65 @@
+title: Standard-Seite
+
+navigation:
+  status: all
+  template: all
+
+tabs:
+  content:
+    label: Inhalt
+    icon: page
+    sections:
+      fields:
+        fields:
+          text:
+            extends: fields/writer
+          headerImage:
+            extends: fields/image
+            image:
+              ratio: 16/3
+              back: white
+          address:
+            label: Adresse
+            extends: fields/writer-inline
+            width: 1/4
+          email:
+            type: email
+            width: 1/4
+          socialMedia:
+            label: Social Media
+            type: structure
+            width: 1/4
+            fields:
+              plattform:
+                type: select
+                options:
+                  instagram: Instagram
+                  facebook: Facebook
+                required: true
+              link:
+                type: link
+                required: true
+
+  meta:
+    label: Meta
+    icon: search
+    sections:
+      metaFields:
+        type: fields
+        fields:
+          metaDescription:
+            extends: fields/meta-description
+  pages:
+    label: Unterseiten
+    icon: list-bullet
+    sections:
+      pages:
+        label: Unterseiten
+        type: pages
+  files:
+    label: Dateien
+    icon: file
+    sections:
+      files:
+        label: Dateien
+        type: files
