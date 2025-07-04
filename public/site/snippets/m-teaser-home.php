@@ -14,7 +14,7 @@ if ($teaserImage === null) {
 			'sizes' => '100vw',
 		]) ?>
 	<?php endif ?>
-	<div>
+	<div class="m-teaser-home__text">
 		<h1 class="a-heading"><?= $page->teaserTitle() ?></h1>
 		<p class="m-text"><?= $page->teaserText() ?></p>
 		<?php if ($page->teaserLink()->isNotEmpty()): ?>

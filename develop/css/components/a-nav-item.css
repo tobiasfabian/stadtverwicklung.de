@@ -4,6 +4,7 @@
 	padding-inline: var(--space-400);
 	line-height: calc(18rem / 16);
 	font-size: calc(18rem / 16);
+	font: var(--font-heading-large);
 	font-weight: 400;
 	text-decoration: none;
 
@@ -13,5 +14,10 @@
 
 	&:hover {
 		font-weight: 700;
+	}
+
+	@media (min-width: 64em) {
+		font: var(--font-label-large);
+		font-weight: 400;
 	}
 }

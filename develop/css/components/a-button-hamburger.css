@@ -1,3 +1,21 @@
 .a-button-hamburger {
-	display: none;
+	margin-inline-start: auto;
+	inline-size: calc(72rem / 16);
+	block-size: 100%;
+	display: grid;
+	align-content: center;
+	justify-content: center;
+	row-gap: calc(7rem / 16);
+	border: 0;
+	border-radius: 0;
+
+	> span {
+		background-color: currentcolor;
+		block-size: calc(3rem / 16);
+		inline-size: calc(32rem / 16);
+	}
+
+	@media (min-width: 64em) {
+		display: none;
+	}
 }

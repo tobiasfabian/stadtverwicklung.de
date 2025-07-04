@@ -1,9 +1,12 @@
 .m-teaser-home {
 	margin-block-start: var(--space-600);
+	margin-inline: auto;
+	max-inline-size: var(--max-width);
 	display: grid;
 	align-items: end;
 	color: var(--color-brand-rose);
 	background-color: var(--color-brand-purple);
+	justify-content: center;
 
 	> * {
 		grid-column: 1 / -1;
@@ -11,22 +14,71 @@
 	}
 
 	> img {
-
+		block-size: calc(320rem / 16);
+		inline-size: 100%;
+		object-fit: cover;
+		object-position: 90% 0;
 	}
 
 	> div {
 		display: grid;
-		grid-template-columns: 1fr 1fr;
 		column-gap: 0;
 		row-gap: var(--space-400);
 		margin-inline: auto;
-		max-inline-size: calc(var(--max-width-content) - var(--space-700) * 2);
-		padding-block-end: var(--space-800);
+		max-inline-size: calc(360rem / 16);
+		padding-block-end: var(--space-600);
 		padding-inline: var(--space-700);
 		justify-items: start;
+		align-content: center;
 
 		> * {
 			grid-column: 2 / -1;
 		}
+
+	}
+
+	@media (min-width: 42em) {
+		> img {
+			object-position: 100% 0;
+		}
+		> div {
+			margin-inline-end: calc(116rem / 16);
+			max-inline-size: calc(360rem / 16);
+		}
+	}
+	@media (min-width: 64em) {
+		> img {
+			block-size: auto;
+			inline-size: 100%;
+			object-position: 0 0;
+		}
+		> div {
+			margin-inline: auto;
+			max-inline-size: calc(var(--max-width-content) - var(--space-700) * 2);
+			grid-template-columns: 33vw 33vw;
+			block-size: min(calc(360rem / 16), calc(320 / 1440 * 100vw));
+			padding-block-end: var(--space-800);
+		}
+	}
+	@media (min-width: 90em) {
+		> div {
+			grid-template-columns: 1fr 1fr;
+		}
+	}
+}
+
+
+.m-teaser-home__text {
+	> h1 {
+		font-size: clamp(var(--font-size-heading-small), calc(40 / 1440 * 100vw), var(--font-size-heading-large));
+		line-height: calc(40 / 40);
+	}
+	> p {
+		font-size: clamp(var(--font-size-paragraph-small), calc(20 / 1440 * 100vw), var(--font-size-paragraph-large));
+		line-height: calc(28 / 20);
+	}
+	> a {
+		font-size: clamp(var(--font-size-label-small), calc(16 / 1440 * 100vw), var(--font-size-label-medium));
+		line-height: calc(16 / 16);
 	}
 }

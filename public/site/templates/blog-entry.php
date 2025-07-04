@@ -15,7 +15,7 @@
 		</header>
 
 		<div class="o-blog-entry__content">
-			<div class="o-blocks" data-gap="small">
+			<div class="o-blocks" data-gap="small" data-variant="blog-entry">
 				<figure class="m-figure">
 					<img <?= attr([
 						'src' => $page->teaserImage()->toObject()->src(),

@@ -1,7 +1,9 @@
 .o-events {
 	/* margin-block-start: var(--space-1000); */
+	box-sizing: content-box;
 	margin-inline: auto;
 	max-inline-size: var(--max-width-content);
+	padding-inline: var(--padding-inline-root);
 	font: var(--font-paragraph-large);
 	display: flex;
 	flex-direction: column;

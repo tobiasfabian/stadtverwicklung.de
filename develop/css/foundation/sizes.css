@@ -38,4 +38,10 @@
 	--border-radius-medium: 5px;
 	--border-radius-large: 6px;
 	--border-radius-xlarge: 8px;
+
+	--z-index-header: 500;
+
+	@media (min-width: 32rem) {
+		--padding-inline-root: var(--space-500);
+	}
 }

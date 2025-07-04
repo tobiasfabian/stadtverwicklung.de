@@ -41,4 +41,8 @@
 	&[data-gap="small"] {
 		row-gap: var(--space-600);
 	}
+
+	&[data-variant="blog-entry"] {
+		font: var(--font-paragraph-large);
+	}
 }
