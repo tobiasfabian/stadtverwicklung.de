@@ -1,7 +1,7 @@
 .o-blog-entry {
-	margin-block-start: var(--space-1000);
+	margin-block-start: var(--margin-block-start-after-header);
 	display: grid;
-	grid-template-columns: 1fr var(--max-width-text) 1fr;
+	grid-template-columns: var(--grid-template-columns-breakout);
 	row-gap: var(--space-600);
 
 	> * {

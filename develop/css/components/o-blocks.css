@@ -1,6 +1,6 @@
 .o-blocks {
 	display: grid;
-	grid-template-columns: 1fr var(--max-width-text) 1fr;
+	grid-template-columns: var(--grid-template-columns-breakout);
 	row-gap: var(--gap-block);
 
 	> * {

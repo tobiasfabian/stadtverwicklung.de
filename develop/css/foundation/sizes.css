@@ -24,6 +24,9 @@
 	/* Padding */
 	--padding-inline-root: var(--space-400);
 
+	/* Margin */
+	--margin-block-start-after-header: var(--space-900);
+
 	/* Widths */
 	--max-width: calc(1600rem / 16);
 	--max-width-content: calc(1056rem / 16);
@@ -41,7 +44,16 @@
 
 	--z-index-header: 500;
 
+	/* Grid with max text width and option to breakout */
+	--grid-template-columns-breakout:
+		minmax(var(--padding-inline-root), 1fr)
+		min(var(--max-width-text), calc(100vw - var(--padding-inline-root) * 2))
+		minmax(var(--padding-inline-root), 1fr)
+	;
+
+
 	@media (min-width: 32rem) {
 		--padding-inline-root: var(--space-500);
+		--margin-block-start-after-header: var(--space-1000);
 	}
 }

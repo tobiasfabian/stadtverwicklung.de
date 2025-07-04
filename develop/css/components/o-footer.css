@@ -14,13 +14,14 @@
 	background-size: cover;
 
 	> div {
-		max-inline-size: var(--max-width-content);
 		margin-inline: auto;
+		max-inline-size: var(--max-width-content);
 		padding-block: var(--space-900);
+		padding-inline: var(--padding-inline-root);
 		display: grid;
-		grid-template-columns: 1fr 1fr;
 		align-items: center;
 		column-gap: var(--gap-inline);
+		row-gap: var(--space-400);
 
 		> img {
 			justify-self: center;
@@ -33,6 +34,12 @@
 			row-gap: var(--space-300);
 		}
 	}
+
+	@media (min-width: 32em) {
+		> div {
+			grid-template-columns: 1fr 1fr;
+		}
+	}
 }
 
 .o-footer__sitemap {
@@ -40,14 +47,16 @@
 	background-color: var(--color-brand-orange);
 
 	> div {
-		max-inline-size: var(--max-width-content);
+		box-sizing: content-box;
 		margin-inline: auto;
+		max-inline-size: var(--max-width-content);
+		padding-inline: var(--padding-inline-root);
 		display: grid;
-		grid-template-columns: repeat(6, 1fr);
+		grid-template-columns: repeat(2, 1fr);
 		column-gap: var(--gap-inline);
+		row-gap: var(--gap-inline);
 
 		> address {
-			grid-column: 1 / 4;
 			font: var(--font-paragraph-medium);
 
 			> p {
@@ -67,11 +76,27 @@
 			}
 		}
 	}
+
+	@media (min-width: 50em) {
+		> div {
+			grid-template-columns: repeat(6, 1fr);
+
+			> address {
+				grid-column: 1 / 4;
+			}
+		}
+	}
 }
 
 .o-footer__social-media {
-	display: flex;
-	column-gap: var(--space-200);
+	grid-column-start: 2;
+	grid-row-start: 1;
+	justify-self: end;
+
+	> ul {
+		display: flex;
+		column-gap: var(--space-200);
+	}
 
 	a {
 		display: block;
@@ -80,17 +105,25 @@
 			opacity: 0.7;
 		}
 	}
+
+	@media (min-width: 50em) {
+		grid-column-start: auto;
+		grid-row-start: auto;
+		justify-self: auto;
+	}
 }
 
 .o-footer__funding {
 	padding-block: var(--space-500);
 
 	> div {
-		max-inline-size: var(--max-width-content);
+		box-sizing: content-box;
 		margin-inline: auto;
+		max-inline-size: var(--max-width-content);
+		padding-inline: var(--padding-inline-root);
 		display: grid;
-		grid-template-columns: repeat(2, 1fr);
 		column-gap: var(--gap-inline);
+		row-gap: var(--gap-inline);
 		font: var(--font-paragraph-small);
 
 		> ul {
@@ -98,6 +131,12 @@
 			display: flex;
 			align-items: center;
 			column-gap: var(--space-600);
+		}
+	}
+
+	@media (min-width: 50em) {
+		> div {
+			grid-template-columns: repeat(2, 1fr);
 		}
 	}
 }

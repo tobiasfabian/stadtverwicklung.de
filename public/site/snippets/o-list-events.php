@@ -17,11 +17,13 @@ $headline = $headline ?? null;
 						<?php /** @var EventPage $eventPage */ ?>
 						<li>
 							<a class="o-list-events__item" href="<?= $eventPage->url() ?>">
-								<span class="a-list-item-event__start-date"><?= $eventPage->startDate()->toDate('d.') ?></span>
-								<span class="a-list-item-event__day-short"><?= $eventPage->dayShort() ?></span>
-								<strong class="a-list-item-event__title"><?= $eventPage->title() ?></strong>
-								<span class="a-tag"><?= $eventPage->tag() ?></span>
-								<span class="a-list-item-event__hours"><?= $eventPage->hours() ?></span>
+								<span class="o-list-events__item-start-date"><?= $eventPage->startDate()->toDate('d.') ?></span>
+								<span class="o-list-events__item-day-short"><?= $eventPage->dayShort() ?></span>
+								<strong class="o-list-events__item-title"><?= $eventPage->title() ?></strong>
+								<span class="o-list-events__item-location">
+									<span class="a-tag"><?= $eventPage->tag() ?></span>
+								</span>
+								<span class="o-list-events__item-hours"><?= $eventPage->hours() ?></span>
 							</a>
 						</li>
 					<?php endforeach ?>

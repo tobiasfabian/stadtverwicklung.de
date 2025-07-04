@@ -59,7 +59,7 @@
 	@media (min-width: 30rem) {
 		grid-template-columns:
 			max(calc(50vw - var(--max-width-content) * 0.5), var(--padding-inline-root))
-			calc(var(--_width-logo) + var(--space-500)) auto auto
+			calc(var(--_width-logo) + var(--padding-inline-root)) auto auto
 			max(calc(50vw - var(--max-width-content) * 0.5), var(--padding-inline-root));
 	}
 }

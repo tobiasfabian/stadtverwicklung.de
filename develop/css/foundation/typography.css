@@ -23,8 +23,8 @@
 
 	/* Line height */
 	--line-height-heading-large: calc(40rem / 16);
-	--line-height-heading-medium: calc(24rem / 16);
-	--line-height-heading-small: calc(20rem / 16);
+	--line-height-heading-medium: calc(28rem / 16);
+	--line-height-heading-small: calc(24rem / 16);
 
 	--line-height-label-large: calc(20rem / 16);
 	--line-height-label-medium: calc(16rem / 16);

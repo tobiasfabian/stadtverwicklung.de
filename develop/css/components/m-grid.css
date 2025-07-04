@@ -1,14 +1,16 @@
 .m-grid {
 	margin-inline: auto;
+	box-sizing: content-box;
 	max-inline-size: var(--max-width-content);
+	padding-inline: var(--padding-inline-root);
 	display: flex;
 	flex-direction: column;
 	row-gap: var(--space-600);
 
 	> ul {
 		display: grid;
-		grid-template-columns: repeat(3, 1fr);
-		column-gap: var(--gap-inline);
+		grid-template-columns: repeat(auto-fill, minmax(calc(160rem / 16), 1fr));
+		column-gap: var(--padding-inline-root);
 		row-gap: var(--gap-inline);
 		list-style: none;
 	}
@@ -16,6 +18,22 @@
 	&[data-text-align="center"] {
 		> ul {
 			text-align: center;
+		}
+	}
+
+	.m-teaser + & {
+		margin-block-start: var(--space-900);
+	}
+
+	@media (min-width: 36em) {
+		> ul {
+			grid-template-columns: repeat(auto-fill, minmax(calc(240rem / 16), 1fr));
+			column-gap: var(--gap-inline);
+		}
+	}
+	@media (min-width: 64em) {
+		> ul {
+			grid-template-columns: repeat(auto-fill, minmax(calc(292rem / 16), 1fr));
 		}
 	}
 }

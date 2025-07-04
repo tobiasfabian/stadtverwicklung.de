@@ -5,7 +5,7 @@
 	> ul {
 		&:popover-open {
 			display: grid;
-			position: absolute;
+			position: fixed;
 			z-index: -1;
 			top: calc(120rem / 16);
 			block-size: 100vh;
@@ -13,6 +13,7 @@
 			row-gap: var(--space-600);
 			padding-block-start: var(--space-600);
 			align-content: start;
+			color: var(--color-brand-purple);
 			background-color: var(--color-brand-orange);
 		}
 	}

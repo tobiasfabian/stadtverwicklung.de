@@ -7,10 +7,9 @@
 		box-sizing: border-box;
 		margin-inline: auto;
 		max-inline-size: var(--max-width-content);
+		padding-inline: var(--padding-inline-root);
 		display: grid;
 		align-items: end;
-		grid-template-columns: 1fr 1fr;
-		padding-inline-start: var(--space-1000);
 
 		> div {
 			display: flex;
@@ -18,8 +17,30 @@
 			align-items: start;
 			justify-content: center;
 			row-gap: var(--space-400);
-			padding-block: var(--space-800);
+			padding-block-start: calc(var(--padding-inline-root) + var(--space-200));
 			font: var(--font-paragraph-large);
+		}
+
+		> img {
+			max-inline-size: min(calc(380rem / 16), 90vw);
+		}
+	}
+
+	@media (min-width: 32em) {
+		> div {
+			grid-template-columns: 1fr 1fr;
+
+			> div {
+				padding-block: var(--space-800);
+			}
+			> img {
+				max-inline-size: 100%;
+			}
+		}
+	}
+	@media (min-width: 54em) {
+		> div {
+			padding-inline-start: var(--space-1000);
 		}
 	}
 }

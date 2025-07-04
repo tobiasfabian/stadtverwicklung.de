@@ -46,8 +46,8 @@ use Kirby\Toolkit\Str;
 						<?php endforeach ?>
 					</ul>
 				</div>
-				<div>
-					<ul class="o-footer__social-media" aria-label="Social Media">
+				<div class="o-footer__social-media">
+					<ul aria-label="Social Media">
 						<?php foreach ($site->contactPage()->socialMedia()->toStructure() as $item): ?>
 							<li>
 								<a href="<?= $item->link() ?>" title="<?= Str::kebabToCamel($item->plattform()) ?> ">

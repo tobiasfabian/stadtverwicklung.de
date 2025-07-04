@@ -10,7 +10,9 @@ use Kirby\Exception\Exception;
 	<main class="o-blog">
 		<div class="m-teaser">
 			<h1 class="a-heading"><?= $page->alternativeTitle()->or($page->title()) ?></h1>
-			<p class="m-text"><?= $page->teaserText() ?></p>
+			<?php if ($page->teaserText()->isNotEmpty()): ?>
+				<p class="m-text"><?= $page->teaserText() ?></p>
+			<?php endif ?>
 			<?php if ($teaserImage = $page->teaserImage()->toFile()): ?>
 				<?php snippet('image', [
 					'image' => $teaserImage,
