@@ -26,7 +26,7 @@ use Kirby\Toolkit\Str;
 				<div class="a-caption">© 2025 Stadtverwicklung gGmbH</div>
 			</address>
 			<nav aria-label="Footer">
-				<div>
+				<div class="o-footer__nav-category">
 					<strong>Programm</strong>
 					<ul aria-label="Programm">
 						<?php foreach ($site->footerProgramm()->toPages() as $item): ?>
@@ -36,7 +36,7 @@ use Kirby\Toolkit\Str;
 						<?php endforeach ?>
 					</ul>
 				</div>
-				<div>
+				<div class="o-footer__nav-category">
 					<strong>Rechtliches</strong>
 					<ul aria-label="Rechtliches">
 						<?php foreach ($site->footerLegal()->toPages() as $item): ?>
