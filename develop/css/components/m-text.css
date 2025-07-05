@@ -1,7 +1,4 @@
 .m-text {
-	--font-size: var(--font-size-paragraph-medium);
-	--line-height: var(--line-height-paragraph-medium);
-
 	font: var(--font-paragraph-large);
 	letter-spacing: var(--letter-spacing-display);
 
@@ -42,15 +39,9 @@
 	}
 
 	&[data-text-size="large"] {
-		--font-size: var(--font-size-paragraph-large);
-		--line-height: var(--line-height-paragraph-large);
-
 		font: var(--font-paragraph-large);
 	}
 	&[data-text-size="small"] {
-		--font-size: var(--font-size-paragraph-small);
-		--line-height: var(--line-height-paragraph-small);
-
 		font: var(--font-paragraph-small);
 		letter-spacing: normal;
 

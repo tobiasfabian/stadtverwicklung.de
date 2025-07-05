@@ -13,6 +13,22 @@
 		background-color: currentcolor;
 		block-size: calc(3rem / 16);
 		inline-size: calc(32rem / 16);
+		transition-property: rotate, opacity;
+		transition-duration: var(--duration-small);
+	}
+
+	&:has(+ #nav-primary-list:popover-open) {
+		> span:nth-child(1) {
+			rotate: 45deg;
+			translate: 0 calc((3rem + 7rem) / 16);
+		}
+		> span:nth-child(2) {
+			opacity: 0;
+		}
+		> span:nth-child(3) {
+			rotate: -45deg;
+			translate: 0 calc((3rem + 7rem) / 16 * -1);
+		}
 	}
 
 	@media (min-width: 64em) {

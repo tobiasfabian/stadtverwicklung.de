@@ -2,6 +2,7 @@
 	margin-inline: auto;
 	box-sizing: content-box;
 	max-inline-size: var(--max-width-content);
+	inline-size: calc(100% - var(--padding-inline-root) * 2);
 	padding-inline: var(--padding-inline-root);
 	font: var(--font-paragraph-large);
 

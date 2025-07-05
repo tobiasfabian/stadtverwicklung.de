@@ -1,6 +1,6 @@
 .m-nav-primary {
 	margin-inline-end: calc(var(--padding-inline-root) * -1);
-	block-size: calc(60rem / 16);
+	block-size: var(--header-height);
 
 	> ul {
 		&:popover-open {

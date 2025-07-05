@@ -8,11 +8,6 @@
 	}
 	> :where(
 		.o-list-events,
-	) {
-		inline-size: 100%;
-	}
-	> :where(
-		.o-list-events,
 		.o-background,
 		m-gallery,
 		.m-figure,

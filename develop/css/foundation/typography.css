@@ -22,17 +22,17 @@
 	--font-size: var(--font-size-paragraph-medium);
 
 	/* Line height */
-	--line-height-heading-large: calc(40rem / 16);
-	--line-height-heading-medium: calc(28rem / 16);
-	--line-height-heading-small: calc(24rem / 16);
+	--line-height-heading-large: calc(40 / 40);
+	--line-height-heading-medium: calc(28 / 24);
+	--line-height-heading-small: calc(24 / 20);
 
-	--line-height-label-large: calc(20rem / 16);
-	--line-height-label-medium: calc(16rem / 16);
-	--line-height-label-small: calc(14rem / 16);
+	--line-height-label-large: calc(20 / 20);
+	--line-height-label-medium: calc(16 / 16);
+	--line-height-label-small: calc(14 / 14);
 
-	--line-height-paragraph-large: calc(28rem / 16);
-	--line-height-paragraph-medium: calc(22rem / 16);
-	--line-height-paragraph-small: calc(18rem / 16);
+	--line-height-paragraph-large: calc(28 / 20);
+	--line-height-paragraph-medium: calc(22 / 16);
+	--line-height-paragraph-small: calc(18 / 14);
 
 	--line-height: var(--line-height-paragraph-medium);
 
@@ -57,4 +57,19 @@
 
 	/* Other */
 	--hyphenate-limit: 5;
+
+	@media (max-width: 25em) {
+		/* Font size */
+		--font-size-heading-large: calc((40rem - 7rem) / 16);
+		--font-size-heading-medium: calc((24rem - 3rem) / 16);
+		--font-size-heading-small: calc((20rem - 3rem) / 16);
+
+		--font-size-label-large: calc((20rem - 3rem) / 16);
+		--font-size-label-medium: calc((16rem - 2rem) / 16);
+		--font-size-label-small: calc((14rem - 2rem) / 16);
+
+		--font-size-paragraph-large: calc((20rem - 3rem) / 16);
+		--font-size-paragraph-medium: calc((16rem - 2rem) / 16);
+		--font-size-paragraph-small: calc((14rem - 1rem) / 16);
+	}
 }

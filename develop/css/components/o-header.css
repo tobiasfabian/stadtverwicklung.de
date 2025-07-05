@@ -8,6 +8,7 @@
 }
 
 .o-header {
+	--header-height: calc(60rem / 16);
 	--_width-logo: calc(160rem / 16);
 	--_offset-logo: calc(10rem / 16);
 	--_inset-block-start: calc(10rem / 16 * -1);
@@ -21,6 +22,11 @@
 			block-size: 100vh;
 			background-color: var(--color-brand-orange);
 		}
+	}
+
+	@media (max-width: 25em) {
+		--header-height: calc(48rem / 16);
+		--_width-logo: calc(120rem / 16);
 	}
 
 	@media (min-height: 20em) {
@@ -50,7 +56,7 @@
 	grid-template-columns:
 		var(--padding-inline-root)
 		auto
-		auto
+		1fr
 		auto
 		var(--padding-inline-root);
 	background-color: var(--color-brand-orange);
