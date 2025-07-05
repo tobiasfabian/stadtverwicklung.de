@@ -44,21 +44,24 @@
 		border-color: currentcolor;
 	}
 
-	&:where(:focus-visible, :hover) {
-		color: var(--color-content-primary);
-		border-color: var(--color-brand-orange-dark);
-		background-color: var(--color-brand-orange);
-		transition-timing-function: ease-out;
 
-		&[data-kind="transparent"] {
+	@media (any-pointer: fine) {
+		&:where(:focus-visible, :hover):not([disabled]) {
 			color: var(--color-content-primary);
-			border-color: var(--color-brand-orange);
-			background-color: var(--color-brand-orange);
-		}
-		&[data-kind="transparent-dark"] {
-			color: var(--color-white);
 			border-color: var(--color-brand-orange-dark);
-			background-color: var(--color-brand-orange-dark);
+			background-color: var(--color-brand-orange);
+			transition-timing-function: ease-out;
+
+			&[data-kind="transparent"] {
+				color: var(--color-content-primary);
+				border-color: var(--color-brand-orange);
+				background-color: var(--color-brand-orange);
+			}
+			&[data-kind="transparent-dark"] {
+				color: var(--color-white);
+				border-color: var(--color-brand-orange-dark);
+				background-color: var(--color-brand-orange-dark);
+			}
 		}
 	}
 }
