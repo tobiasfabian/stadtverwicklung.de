@@ -3,66 +3,70 @@
 	block-size: var(--header-height);
 
 	> ul {
-		position: fixed;
-		top: calc(120rem / 16);
-		block-size: 100vh;
-		inline-size: 100vw;
-		row-gap: var(--space-600);
-		padding-block-start: var(--space-600);
-		align-content: start;
 		color: var(--color-brand-purple);
-		background-color: transparent;
-		opacity: 0;
-		transition-property: opacity, display;
-		transition-duration: var(--duration-xsmall);
-		transition-behavior: allow-discrete;
+	}
 
-		> li {
-			translate: -0.5em 0;
+	@media not (min-width: 64em) {
+		> ul {
+			position: fixed;
+			top: calc(120rem / 16);
+			block-size: 100vh;
+			inline-size: 100vw;
+			row-gap: var(--space-600);
+			padding-block-start: var(--space-600);
+			align-content: start;
+			background-color: transparent;
 			opacity: 0;
-			transition-property: translate, opacity;
-			transition-duration: inherit;
-
-			&:nth-child(1) {
-				transition-delay: calc(var(--duration-xsmall) * (1 - 1) * 0.5);
-			}
-			&:nth-child(2) {
-				transition-delay: calc(var(--duration-xsmall) * (2 - 1) * 0.5);
-			}
-			&:nth-child(3) {
-				transition-delay: calc(var(--duration-xsmall) * (3 - 1) * 0.5);
-			}
-			&:nth-child(4) {
-				transition-delay: calc(var(--duration-xsmall) * (4 - 1) * 0.5);
-			}
-		}
-
-		&:popover-open {
-			display: grid;
-			opacity: 1;
-			transition-duration: var(--duration-medium);
+			transition-property: opacity, display;
+			transition-duration: var(--duration-xsmall);
+			transition-behavior: allow-discrete;
 
 			> li {
-				opacity: 1;
-				translate: 0 0;
+				translate: -0.5em 0;
+				opacity: 0;
+				transition-property: translate, opacity;
+				transition-duration: inherit;
 
-				@starting-style {
-					opacity: 0;
-					translate: -0.5em 0;
+				&:nth-child(1) {
+					transition-delay: calc(var(--duration-xsmall) * (1 - 1) * 0.5);
+				}
+				&:nth-child(2) {
+					transition-delay: calc(var(--duration-xsmall) * (2 - 1) * 0.5);
+				}
+				&:nth-child(3) {
+					transition-delay: calc(var(--duration-xsmall) * (3 - 1) * 0.5);
+				}
+				&:nth-child(4) {
+					transition-delay: calc(var(--duration-xsmall) * (4 - 1) * 0.5);
 				}
 			}
 
-			@starting-style {
-				opacity: 0;
+			&:popover-open {
+				display: grid;
+				opacity: 1;
+				transition-duration: var(--duration-medium);
+
+				> li {
+					opacity: 1;
+					translate: 0 0;
+
+					@starting-style {
+						opacity: 0;
+						translate: -0.5em 0;
+					}
+				}
+
+				@starting-style {
+					opacity: 0;
+				}
 			}
 		}
 	}
-
-
 	@media (min-width: 64em) {
 		> ul {
 			display: flex;
 			block-size: 100%;
+			opacity: 1;
 		}
 		> ul > li {
 			display: flex;
