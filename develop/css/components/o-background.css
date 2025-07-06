@@ -14,4 +14,34 @@
 		background-color: var(--color-brand-purple);
 		background-image: url('/assets/images/gradient-blue.jpg');
 	}
+
+	@media (min-width: 87em) {
+		display: grid;
+
+		> * {
+			grid-column: 1 / -1;
+			grid-row: 1 / -1;
+		}
+	}
+}
+
+.o-background__illustration {
+	margin-inline: auto;
+	margin-block-start: calc(var(--space-900) * -1 + var(--space-600));
+	margin-block-end: var(--space-500);
+	box-sizing: content-box;
+	max-inline-size: var(--max-width-content);
+
+	> img {
+		margin-inline-start: var(--padding-inline-root);
+		inline-size: calc(144rem / 16);
+	}
+
+	@media (min-width: 87em) {
+		inline-size: 100%;
+		margin-block-start: calc(-32rem / 16);
+		> img {
+			margin-inline-start: calc((144rem + 12rem) / -16);
+		}
+	}
 }

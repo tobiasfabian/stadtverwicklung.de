@@ -22,7 +22,7 @@
 	}
 
 	.m-teaser + & {
-		margin-block-start: var(--space-900);
+		margin-block-start: var(--space-800);
 	}
 
 	@media (min-width: 36em) {

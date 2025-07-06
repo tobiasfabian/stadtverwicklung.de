@@ -6,19 +6,25 @@ fields:
   color:
     label: Text-Farbe
     type: color
-    width: 1/3
+    width: 1/4
   backgroundColor:
     label: Hintergrund-Farbe
     type: color
-    width: 1/3
+    width: 1/4
   gradient:
     label: Verlauf
     type: select
-    width: 1/3
+    width: 1/4
     options:
       - blue
       - orange-pink
       - orange
+  illustration:
+    extends: fields/image
+    layout: list
+    image:
+      back: white
+    width: 1/4
   text:
     type: blocks
     fieldsets:

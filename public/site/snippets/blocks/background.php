@@ -1,5 +1,6 @@
 <?php /** @var \Kirby\Cms\Block $block */ ?>
 <?php
+$illustration = $block->illustration()->toFile();
 $styles = array_filter([
 	'color' => $block->color()->isNotEmpty() ? $block->color() : null,
 	'background-color' => $block->backgroundColor()->isNotEmpty() ? $block->backgroundColor() : null,
@@ -17,6 +18,14 @@ $styles = array_filter([
 			$styles
 	)),
 ]) ?>>
+	<?php if ($illustration): ?>
+		<div class="o-background__illustration">
+			<?php snippet('image', [
+				'image' => $illustration,
+				'sizes' => '7em',
+			]) ?>
+		</div>
+	<?php endif ?>
 	<div class="o-blocks">
 		<?= $block->text()->toBlocks() ?>
 	</div>
