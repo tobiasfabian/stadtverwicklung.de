@@ -1,10 +1,12 @@
 .a-button {
 	--_padding-block: var(--space-200);
+	--_padding-block-start: calc(var(--space-200));
+	--_padding-block-end: calc(var(--space-200) - 1rem / 16);
 	--_padding-inline: var(--space-300);
 
 	display: inline-block;
 	padding-inline: var(--_padding-inline);
-	padding-block: var(--_padding-block);
+	padding-block: var(--_padding-block-start) var(--_padding-block-end);
 	text-transform: uppercase;
 	text-decoration: none;
 	letter-spacing: var(--letter-spacing-uppercase);
