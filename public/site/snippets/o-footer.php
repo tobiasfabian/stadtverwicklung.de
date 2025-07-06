@@ -11,7 +11,7 @@ use Kirby\Toolkit\Str;
 			<div>
 				<h2 class="a-heading"><?= $site->newsletterTitle() ?></h2>
 				<p class="m-text"><?= $site->newsletterText() ?></p>
-				<a class="a-button" data-kind="transparent" href="<?= $site->newsletterLink()->toObject()->url() ?>">
+				<a class="a-button" data-kind="transparent" href="<?= $site->newsletterLink()->toObject()->link() ?>">
 					<?= $site->newsletterLink()->toObject()->text() ?>
 				</a>
 			</div>
