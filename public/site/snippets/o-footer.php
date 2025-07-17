@@ -11,7 +11,7 @@ use Kirby\Toolkit\Str;
 			<div>
 				<h2 class="a-heading"><?= $site->newsletterTitle() ?></h2>
 				<p class="m-text"><?= $site->newsletterText() ?></p>
-				<a class="a-button" data-kind="transparent" href="<?= $site->newsletterLink()->toObject()->link() ?>">
+				<a class="a-button" data-kind="transparent" href="<?= $site->newsletterLink()->toObject()->link() ?>" target="_blank">
 					<?= $site->newsletterLink()->toObject()->text() ?>
 				</a>
 			</div>
@@ -67,7 +67,7 @@ use Kirby\Toolkit\Str;
 					<?php if ($image = $item->image()->toFile()): ?>
 						<li>
 							<?php if ($link = $item->link()->toUrl()): ?>
-								<a href="<?= $link ?>">
+								<a href="<?= $link ?>" target="_blank">
 							<?php endif ?>
 								<img src="<?= $image->url() ?>" alt="<?= $item->text() ?>" width="<?= (int)($item->height()->toFloat() * $image->ratio()) ?>" height="<?= $item->height() ?>">
 							<?php if ($link = $item->link()->toUrl()): ?>

@@ -51,25 +51,25 @@
 			max-inline-size: calc(304rem / 16);
 			row-gap: var(--space-200);
 		}
+
 	}
 	@media (max-width: 36em) {
 		> div {
-			margin-inline-end: calc(576rem / -16 + 95vw + calc(576rem * 0.05 / 16));
+			margin-inline-end: calc(592rem / -16 + 90vw + calc(592rem * 0.1 / 16));
 		}
 	}
-	@media (max-width: 25em) {
+	@media (max-width: 26em) {
 		> div {
-			margin-inline-end: calc(-124rem / 16);
+			margin-inline-end: calc(-140rem / 16);
 		}
 		> div > picture > img {
-			min-block-size: calc(320rem / 16);
+			min-block-size: calc(312rem / 16);
 		}
 		> div > div {
 			margin-inline-end: calc(124rem / 16);
-			max-inline-size: calc(260rem / 16);
+			max-inline-size: calc(240rem / 16);
 		}
 	}
-
 
 	@media (min-width: 64em) {
 		> div > picture > img {
