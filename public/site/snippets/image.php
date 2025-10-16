@@ -3,10 +3,9 @@
 use Kirby\Cms\File;
 
 /** @var File $image */
-
 $image = $image ?? null;
 
-/** @var $attr additional optioanl attributes */
+/** @var $attr additional optional attributes */
 $attr = $attr ?? [];
 
 if (!($image instanceof File)) {

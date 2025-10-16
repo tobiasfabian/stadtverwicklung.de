@@ -1,6 +1,7 @@
 type: blocks
 pretty: true
 fieldsets:
+  - heading
   - text
   - button
   - cite

@@ -11,17 +11,13 @@ $showMore = $showMore ?? null;
 	<?php endif ?>
 	<ul>
 		<?php foreach ($entries as $blogEntryPage): ?>
-			<?php /** @var BlogEntryPage|\Kirby\Cms\Page $blogEntryPage */ ?>
 			<li class="m-grid__item">
 				<a href="<?= $blogEntryPage->url() ?>">
-					<img <?= attr([
-						'src' => $blogEntryPage->teaserImage()->toObject()->src(),
-						'srcset' => $blogEntryPage->teaserImage()->toObject()->srcset(),
-						'width' => $blogEntryPage->teaserImage()->toObject()->width(),
-						'height' => $blogEntryPage->teaserImage()->toObject()->height(),
-						'alt' => $blogEntryPage->teaserImage()->toObject()->alt(),
+					<?php snippet('image', [
+						'image' => $blogEntryPage->teaserImage()->toFile(),
+						'srcset' => '3/2',
 						'sizes' => 336 / 16 . 'rem',
-					]) ?>>
+					]) ?>
 					<time datetime="<?= $blogEntryPage->date()->toDate('c') ?>"><?= $blogEntryPage->date()->toDate('d.m.Y') ?></time>
 					<h3><?= $blogEntryPage->title() ?></h3>
 				</a>

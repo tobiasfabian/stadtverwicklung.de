@@ -12,6 +12,7 @@ tabs:
       pages:
         headline: Blog-Einträge
         info: "{{ page.date.toDate('d.m.Y') }}"
+        flip: true
         templates:
           - blog-entry
   meta:

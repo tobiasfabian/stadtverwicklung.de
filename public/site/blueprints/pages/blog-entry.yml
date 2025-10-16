@@ -7,23 +7,6 @@ navigation:
   template: all
   sortBy: date desc
 
-options:
-  access: true
-  read: true
-  list: true
-
-  changeSlug: false
-  changeStatus: false
-  changeTemplate: false
-  changeTitle: false
-  create: false
-  delete: false
-  duplicate: false
-  move: false
-  preview: false
-  sort: false
-  update: false
-
 tabs:
   content:
     label: Inhalt
@@ -31,34 +14,43 @@ tabs:
     sections:
       fields:
         fields:
-          info:
-            label: false
-            type: info
-            text: |
-              Diese Seite kann nur auf der Hautpseite bearbeitet werden.
-              **[Bearbeiten](https://stadtverwicklung.de/panel/pages/blog+{{ model.slug }})**
+          subtitle:
+            label: Untertitel
+            extends: fields/writer-inline
+            marks: false
+            width: 2/3
           teaserImage:
-            type: object
-            required: true
-            fields:
-              src:
-                type: text
-              srcset:
-                type: text
-              width:
-                type: text
-              height:
-                type: text
-              alt:
-                type: text
-            width: 1/2
+            extends: fields/teaser-image
+            width: 1/3
           date:
             label: Datum
             type: date
             width: 1/2
             default: now
+            translate: false
             required: true
           text:
-            type: textarea
-            font: monospace
-            buttons: false
+            extends: fields/blocks
+  meta:
+    label: Meta
+    icon: search
+    sections:
+      metaFields:
+        type: fields
+        fields:
+          metaDescription:
+            extends: fields/meta-description
+  pages:
+    label: Unterseiten
+    icon: list-bullet
+    sections:
+      pages:
+        label: Unterseiten
+        type: pages
+  files:
+    label: Dateien
+    icon: file
+    sections:
+      files:
+        label: Dateien
+        type: files

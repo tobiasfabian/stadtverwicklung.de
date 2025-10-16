@@ -1,5 +1,5 @@
 <?php
-/** @var EventsPage|\Kirby\Cms\Page $page */
+/** @var BlogPage $page */
 
 use Kirby\Exception\Exception;
 

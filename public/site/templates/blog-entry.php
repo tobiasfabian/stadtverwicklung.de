@@ -26,7 +26,7 @@
 						'sizes' => '(min-width: 66rem) 66rem, 100vw',
 					]) ?>>
 				</figure>
-				<?= $page->text() ?>
+				<?= $page->text()->toBlocks() ?>
 			</div>
 		</div>
 	</main>
