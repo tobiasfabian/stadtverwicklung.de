@@ -1,4 +1,4 @@
-title: Standard-Seite
+title: Wissens-Seite
 
 navigation:
   status: all
@@ -6,10 +6,15 @@ navigation:
 
 tabs:
   content:
-    extends: tabs/content
+    label: Inhalt
+    icon: page
     sections:
       fields:
         fields:
+          teaser:
+            label: Teaser-Text
+            extends: fields/headline
+            help: Wird in der Übersicht angezeigt
           text:
             extends: fields/blocks
   meta:

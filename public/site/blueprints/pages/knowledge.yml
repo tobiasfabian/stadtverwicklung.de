@@ -17,7 +17,7 @@ tabs:
         fields:
           alternativeTitle:
             label: Alternativer Titel
-            placeholder: model.title
+            placeholder: "{ model.title }"
             extends: fields/writer-inline
             marks: false
           teaserText:
@@ -27,24 +27,11 @@ tabs:
           teaserImage:
             extends: fields/teaser-image
             width: 1/2
-      events:
+      pages:
         type: pages
-        info: "{{ page.startDate.toDate('d.m.Y') }}"
         templates:
-          - event
+          - knowledge-entry
   meta:
-    label: Meta
-    icon: search
-    sections:
-      metaFields:
-        type: fields
-        fields:
-          metaDescription:
-            extends: fields/meta-description
+    extends: tabs/meta
   files:
-    label: Dateien
-    icon: file
-    sections:
-      files:
-        label: Dateien
-        type: files
+    extends: tabs/files

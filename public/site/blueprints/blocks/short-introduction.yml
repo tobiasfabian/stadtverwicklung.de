@@ -1,0 +1,16 @@
+name: Kurzvorstellung
+icon: image
+wysiwyg: true
+preview: fields
+fields:
+  headline:
+    extends: fields/headline
+  image:
+    extends: fields/image
+    width: 1/2
+  text:
+    extends: fields/writer
+    width: 1/2
+    required: true
+    nodes:
+      - paragraph

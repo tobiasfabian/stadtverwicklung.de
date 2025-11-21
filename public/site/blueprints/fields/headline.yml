@@ -1,0 +1,6 @@
+label: Überschrift
+type: writer
+toolbar:
+  inline: false
+marks: false
+inline: true

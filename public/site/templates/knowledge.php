@@ -1,5 +1,5 @@
 <?php
-/** @var EventsPage|\Kirby\Cms\Page $page */
+/** @var \Kirby\Cms\Page $page */
 ?>
 <?php snippet('head'); ?>
 <body>
@@ -16,9 +16,19 @@
 					]) ?>
 				<?php endif ?>
 			</div>
-			<?php snippet('o-list-events', [
-				'events' => collection('events')->listed(),
-			]) ?>
+			<div class="m-grid">
+				<ul>
+					<?php foreach ($page->children()->listed() as $knowledgePage): ?>
+						<?php /** @var BlogEntryPage|\Kirby\Cms\Page $knowledgePage */ ?>
+						<li class="m-grid__item">
+							<a class="m-card-lonk" href="<?= $knowledgePage->url() ?>">
+								<h3><?= $knowledgePage->title() ?> →</h3>
+								<p><?= $knowledgePage->teaser() ?></p>
+							</a>
+						</li>
+					<?php endforeach ?>
+				</ul>
+			</div>
 		</div>
 	</main>
 	<?php snippet('o-footer') ?>

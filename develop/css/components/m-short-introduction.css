@@ -1,0 +1,11 @@
+.m-short-introduction {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	column-gap: var(--space-400);
+	row-gap: var(--space-400);
+	font: var(--font-paragraph-medium);
+
+	> h2 {
+		grid-column: 1 / -1;
+	}
+}

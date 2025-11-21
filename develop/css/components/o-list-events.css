@@ -45,10 +45,6 @@
 		margin-block-start: var(--space-600);
 	}
 
-	:where(.m-teaser) + & {
-		margin-block-start: var(--space-900);
-	}
-
 	@media (min-width: 42em) {
 		> ul {
 			grid-template-columns: 2.5ch 2.2ch 1fr minmax(auto, 10ch) auto;

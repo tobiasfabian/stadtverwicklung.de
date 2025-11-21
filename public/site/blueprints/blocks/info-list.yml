@@ -1,0 +1,34 @@
+name: Info-Liste
+icon: checklist
+wysiwyg: true
+preview: fields
+fields:
+  headline:
+    extends: fields/headline
+  items:
+    type: structure
+    fields:
+      type:
+        type: toggles
+        options:
+          link: Link
+          text: Text
+        default: link
+        required: true
+      link:
+        extends: fields/link
+        fields:
+          link:
+            type: link
+            required: true
+          text:
+            type: text
+            required: true
+          info:
+            type: text
+        when:
+          type: link
+      text:
+        extends: fields/writer-inline
+        when:
+          type: text

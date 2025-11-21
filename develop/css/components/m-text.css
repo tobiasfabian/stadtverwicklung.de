@@ -24,6 +24,7 @@
 
 	> :where(ul, ol) {
 		padding-inline-start: 2ch;
+		text-wrap-style: pretty;
 
 		li + li {
 			margin-block-start: var(--space-300);

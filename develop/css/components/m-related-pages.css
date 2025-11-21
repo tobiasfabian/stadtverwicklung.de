@@ -1,0 +1,16 @@
+.m-related-pages {
+	display: grid;
+	row-gap: var(--space-300);
+	padding-block-start: var(--space-300);
+	border-block-start: var(--border-size-medium) solid currentcolor;
+
+	> ul {
+		display: flex;
+		gap: var(--space-200);
+	}
+
+	.m-teaser-text > & {
+		padding-block-start: 0;
+		border-block-start: none;
+	}
+}

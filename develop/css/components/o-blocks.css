@@ -9,6 +9,7 @@
 	> :where(
 		.o-list-events,
 		.o-background,
+		.m-teaser,
 		m-gallery,
 		.m-figure,
 		.m-video,
@@ -37,6 +38,7 @@
 		row-gap: var(--space-600);
 	}
 
+	/* DEPRECATED */
 	&[data-variant="blog-entry"] {
 		font: var(--font-paragraph-large);
 	}

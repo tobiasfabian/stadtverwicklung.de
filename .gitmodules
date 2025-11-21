@@ -4,3 +4,6 @@
 [submodule "public/content"]
 	path = public/content
 	url = ./public/content
+[submodule "public/site/plugins/staticache"]
+	path = public/site/plugins/staticache
+	url = https://github.com/getkirby/staticache.git

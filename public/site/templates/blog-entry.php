@@ -4,30 +4,25 @@
 <?php snippet('head'); ?>
 <body>
 	<?php snippet('o-header') ?>
-	<main class="o-blog-entry">
-		<a class="a-button-back" href="<?= $page->parent()->url() ?>">← Zurück zur Übersicht</a>
+	<main>
+		<div class="o-blocks" data-gap="small" data-variant="blog-entry">
+			<header class="m-teaser-text">
+				<a class="a-button-back" href="<?= $page->parent()->url() ?>">← Zurück zur Übersicht</a>
+				<time datetime="<?= $page->date()->toDate('c') ?>">
+					<?= $page->date()->toDate('d.m.Y') ?>
+				</time>
+				<h1 class="a-heading"><?= $page->title() ?></h1>
+			</header>
 
-		<header class="o-blog-entry__header">
-			<time datetime="<?= $page->date()->toDate('c') ?>">
-				<?= $page->date()->toDate('d.m.Y') ?>
-			</time>
-			<h1 class="a-heading"><?= $page->title() ?></h1>
-		</header>
-
-		<div class="o-blog-entry__content">
-			<div class="o-blocks" data-gap="small" data-variant="blog-entry">
+			<?php if ($teaserImage = $page->teaserImage()->toFile()): ?>
 				<figure class="m-figure">
-					<img <?= attr([
-						'src' => $page->teaserImage()->toObject()->src(),
-						'srcset' => $page->teaserImage()->toObject()->srcset(),
-						'width' => $page->teaserImage()->toObject()->width(),
-						'height' => $page->teaserImage()->toObject()->height(),
-						'alt' => $page->teaserImage()->toObject()->alt(),
+					<?php snippet('image', [
+						'image' => $teaserImage,
 						'sizes' => '(min-width: 66rem) 66rem, 100vw',
-					]) ?>>
+					]) ?>
 				</figure>
-				<?= $page->text()->toBlocks() ?>
-			</div>
+			<?php endif ?>
+			<?= $page->text()->toBlocks() ?>
 		</div>
 	</main>
 	<?php snippet('o-footer') ?>
