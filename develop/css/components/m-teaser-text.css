@@ -1,15 +1,7 @@
-.o-event {
-	margin-block-start: var(--space-1000);
-	display: grid;
-	grid-template-columns: var(--grid-template-columns-breakout);
-	row-gap: var(--space-600);
-
-	> * {
-		grid-column: 2 / 3;
-	}
-}
-
- .o-event__header {
+/**
+ * Used for blog-entry, event and knowledge
+ */
+.m-teaser-text {
 	display: flex;
 	flex-direction: column;
 	row-gap: var(--space-100);
@@ -28,8 +20,4 @@
 	> h2 {
 		margin-block-start: var(--space-200);
 	}
-}
-
-.o-event__content {
-	grid-column: 1 / -1;
 }

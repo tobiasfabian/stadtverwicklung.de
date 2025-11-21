@@ -65,13 +65,32 @@ foreach ($crops as $key => $value) {
 			'quality' => 70,
 
 		],
-
 	];
 }
 
 return [
 	'quality' => 80,
 	'interlace' => true,
-	'presets' => $presets,
-	'srcsets' => $srcsets,
+	'presets' => [...$presets,
+		'short-introduction' => [
+			'width' => 336,
+			'height' => 256,
+			'crop' => true,
+		],
+	],
+	'srcsets' => [...$srcsets,
+		'short-introduction' => [
+			'336w' => [
+				'width' => 336,
+				'height' => 256,
+				'crop' => true,
+			],
+			'672w' => [
+				'width' => 336 * 2,
+				'height' => 256 * 2,
+				'crop' => true,
+				'quality' => 70,
+			],
+		],
+	],
 ];

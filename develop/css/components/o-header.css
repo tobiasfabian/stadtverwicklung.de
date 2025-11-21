@@ -33,9 +33,9 @@
 			display: block;
 			opacity: 1;
 
-			@starting-style {
+			/* @starting-style {
 				opacity: 0;
-			}
+			} */
 		}
 	}
 

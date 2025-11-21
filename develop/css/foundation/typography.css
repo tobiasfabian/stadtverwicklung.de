@@ -8,7 +8,7 @@
 
 	/* Font size */
 	--font-size-heading-large: calc(40rem / 16);
-	--font-size-heading-medium: calc(24rem / 16);
+	--font-size-heading-medium: calc(28rem / 16);
 	--font-size-heading-small: calc(20rem / 16);
 
 	--font-size-label-large: calc(20rem / 16);
@@ -23,7 +23,7 @@
 
 	/* Line height */
 	--line-height-heading-large: calc(40 / 40);
-	--line-height-heading-medium: calc(28 / 24);
+	--line-height-heading-medium: calc(32 / 28);
 	--line-height-heading-small: calc(24 / 20);
 
 	--line-height-label-large: calc(20 / 20);

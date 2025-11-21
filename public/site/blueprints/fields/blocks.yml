@@ -7,4 +7,6 @@ fieldsets:
   - video
   - image
   - gallery
+  - short-introduction
+  - info-list
   - line
