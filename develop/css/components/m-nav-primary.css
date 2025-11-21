@@ -50,20 +50,12 @@
 				> li {
 					opacity: 1;
 					translate: 0 0;
-
-					@starting-style {
-						opacity: 0;
-						translate: -0.5em 0;
-					}
-				}
-
-				@starting-style {
-					opacity: 0;
 				}
 			}
 		}
 	}
 	@media (min-width: 64em) {
+		justify-self: end;
 		> ul {
 			display: flex;
 			block-size: 100%;
