@@ -2,6 +2,7 @@
 	margin-inline: auto;
 	box-sizing: content-box;
 	max-inline-size: var(--max-width-content);
+	inline-size: 100%;
 	padding-inline: var(--padding-inline-root);
 	display: grid;
 	column-gap: var(--gap-inline);
@@ -14,10 +15,6 @@
 		max-inline-size: calc(516rem / 16);
 		inline-size: 100%;
 		margin-inline-end: calc(var(--padding-inline-root) * -1);
-	}
-
-	main &:first-child {
-		margin-block-start: var(--margin-block-start-after-header);
 	}
 
 	@media (min-width: 44em) {

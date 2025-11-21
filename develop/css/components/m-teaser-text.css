@@ -6,13 +6,22 @@
 	flex-direction: column;
 	row-gap: var(--space-100);
 
+	> address,
 	> time {
-		font: var(--font-heading-medium);
+		font: var(--font-label-xlarge);
 		font-weight: 400;
 	}
 
+	> address {
+		color: var(--color-brand-orange-dark);
+	}
+
+	> .a-button-back + * {
+		margin-block-start: var(--space-500);
+	}
+
 	> h1 {
-		margin-block-start: var(--space-200);
+		margin-block-start: var(--space-300);
 		padding-block-start: var(--space-600);
 		border-block-start: var(--border-size-medium) solid currentcolor;
 	}
@@ -20,4 +29,6 @@
 	> h2 {
 		margin-block-start: var(--space-200);
 	}
+
+
 }

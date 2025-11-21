@@ -72,6 +72,11 @@ return [
 	'quality' => 80,
 	'interlace' => true,
 	'presets' => [...$presets,
+		'og-image'=> [
+			'width' => 1200,
+			'height' => 630,
+			'crop' => true,
+		],
 		'short-introduction' => [
 			'width' => 336,
 			'height' => 256,
@@ -79,6 +84,13 @@ return [
 		],
 	],
 	'srcsets' => [...$srcsets,
+		'og-image'=> [
+			'1200w' => [
+				'width' => 1200,
+				'height' => 628,
+				'crop' => true,
+			],
+		],
 		'short-introduction' => [
 			'336w' => [
 				'width' => 336,

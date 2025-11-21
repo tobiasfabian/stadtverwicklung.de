@@ -77,7 +77,8 @@ if (preg_match('!vimeo!i', $url) === 1) {
 				<?= svg('assets/images/play-button.svg') ?>
 			</button>
 			<div class="m-video__legal-info">
-				Dieses Video wird mit Ihrer Zustimmung von YouTube geladen. <a href="<?= $site->privacyPage()->url() ?>">Mehr erfahren…</a>
+				Dieses Video wird mit Ihrer Zustimmung von YouTube geladen.
+				<a href="<?= $site->privacyPage()->url() ?>" title="<?= $site->privacyPage()->title() ?>">Mehr erfahren…</a>
 			</div>
 		</div>
 	</div>

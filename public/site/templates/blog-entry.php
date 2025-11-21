@@ -6,9 +6,8 @@
 	<?php snippet('o-header') ?>
 	<main>
 		<div class="o-blocks" data-gap="small" data-variant="blog-entry">
-			<a class="a-button-back" href="<?= $page->parent()->url() ?>">← Zurück zur Übersicht</a>
-
 			<header class="m-teaser-text">
+				<a class="a-button-back" href="<?= $page->parent()->url() ?>">← Zurück zur Übersicht</a>
 				<time datetime="<?= $page->date()->toDate('c') ?>">
 					<?= $page->date()->toDate('d.m.Y') ?>
 				</time>

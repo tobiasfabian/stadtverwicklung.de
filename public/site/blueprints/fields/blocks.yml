@@ -9,4 +9,5 @@ fieldsets:
   - gallery
   - short-introduction
   - info-list
+  - iframe
   - line

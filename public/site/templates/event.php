@@ -5,14 +5,13 @@
 <body>
 	<?php snippet('o-header') ?>
 	<main>
-		<div class="o-blocks" data-gap="small" data-variant="blog-entry">
-			<a class="a-button-back" href="<?= $page->parent()->url() ?>">← Zurück zur Übersicht</a>
-
+		<div class="o-blocks">
 			<header class="m-teaser-text">
+				<a class="a-button-back" href="<?= $page->parent()->url() ?>">← Zurück zur Übersicht</a>
 				<time datetime="<?= $page->startDate()->toDate('c') ?>">
 					<?= $page->dateFull() ?> | <?= $page->hours() ?>
 				</time>
-				<address class="a-tag" data-size="large">
+				<address>
 					<?= $page->addressFull() ?>
 				</address>
 				<h1 class="a-heading"><?= $page->title() ?></h1>

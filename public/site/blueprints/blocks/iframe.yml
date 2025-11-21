@@ -1,0 +1,20 @@
+label: iFrame
+icon: code
+wysiwyg: true
+preview: fields
+fields:
+  html:
+    type: textarea
+    buttons: false
+    font: monospace
+    placeholder: <iframe …>
+    validate:
+      startsWith: "<iframe "
+  provider:
+    label: Anbieter
+    type: text
+    placeholder: z.B. „podigee“
+    required: true
+    help: |
+      Nötig für den Zustimmungs-Banner.
+      „Mit Ihrer Zustimmung wird externer Inhalt von [Anbieter] geladen. Dabei werden Daten an [Anbieter] übertragen.“

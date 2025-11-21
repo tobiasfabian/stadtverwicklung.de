@@ -1,0 +1,56 @@
+.m-iframe {
+	display: grid;
+	background-color: var(--color-background-secondary);
+	transition-property: background-color;
+	transition-duration: var(--duration-small);
+
+	> * {
+		grid-column: 1 / -1;
+		grid-row: 1 / -1;
+	}
+
+	> :where(p, a, iframe) {
+		transition-duration: inherit;
+		transition-property: opacity, display;
+		transition-behavior: allow-discrete;
+	}
+
+	> button {
+		border: 0;
+	}
+
+	> p {
+		align-self: center;
+		text-align: center;
+		text-wrap-style: balance;
+		padding: var(--padding-inline-root);
+		pointer-events: none;
+		> a {
+			pointer-events: auto;
+		}
+	}
+
+	> iframe {
+		inline-size: 100%;
+		align-self: start;
+		opacity: 0;
+		visibility: hidden;
+	}
+
+	&:has(button:where(:focus-visible, :hover)) {
+		background-color: hsl(from var(--color-background-secondary) h s calc(l - 3));
+	}
+
+	&[data-state="active"] {
+		background-color: transparent;
+
+		> :where(p, a) {
+			opacity: 0;
+			display: none;
+		}
+		> iframe {
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+}
