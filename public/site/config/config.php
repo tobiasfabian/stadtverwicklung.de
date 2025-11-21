@@ -3,6 +3,7 @@
 return [
 	// Kirby options
 	'locale' => 'de_DE.utf-8',
+	'slugs' => 'de',
 	'routes' => require __DIR__ . '/options/routes.php',
 	'thumbs' => require __DIR__ . '/options/thumbs.php',
 	'updates' => [
@@ -10,6 +11,12 @@ return [
 		'plugins' => [
 			'site/*' => false,
 			'tobiaswolf/hashed-url' => false,
+		],
+	],
+	'cache' => [
+		'pages' => [
+			'active' => true,
+			'type'   => 'static',
 		],
 	],
 
