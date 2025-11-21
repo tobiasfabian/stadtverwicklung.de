@@ -8,7 +8,7 @@ $alt = $block->alt();
 $caption = $block->caption();
 $srcset = $block->ratio()->or('default');
 $image = $block->image()->toFile();
-$alt = $alt->or($image->alt());
+$alt = $alt->or($image?->alt());
 $maxWidth = Str::camelToKebab($block->maxWidth()->toString());
 $sizes = '(min-width: 66rem) 66rem, 100vw';
 
