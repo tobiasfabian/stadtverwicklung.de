@@ -2,6 +2,7 @@
 	padding-inline-start: calc(2ch - var(--border-size-medium));
 	border-inline-start: var(--border-size-medium) solid currentcolor;
 	font: var(--font-paragraph-large);
+	text-wrap-style: pretty;
 
 	> blockquote {
 		letter-spacing: var(--letter-spacing-display);

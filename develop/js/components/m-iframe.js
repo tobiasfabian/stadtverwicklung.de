@@ -4,12 +4,18 @@ class MIframe {
 		this.element = element;
 		this.provider = element.dataset.provider;
 		this.iframeElement = element.querySelector('iframe');
+		this.sessionKey = `consent.${this.provider}`;
 
 		const buttonElement = element.querySelector('button');
 
 		buttonElement.addEventListener('click', () => {
+			window.sessionStorage.setItem(this.sessionKey, '1');
 			[...document.mIframes].filter((_) => _.provider === this.provider).forEach((_) => _.activate());
 		});
+
+		if (window.sessionStorage.getItem(this.sessionKey) === '1') {
+			this.activate();
+		}
 	}
 
 	activate() {
