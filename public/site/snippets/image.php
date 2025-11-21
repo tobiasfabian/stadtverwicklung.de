@@ -6,7 +6,7 @@ use Kirby\Cms\File;
 
 $image = $image ?? null;
 
-/** @var $attr additional optioanl attributes */
+/** @var $attr additional optional attributes */
 $attr = $attr ?? [];
 
 if (!($image instanceof File)) {
@@ -29,4 +29,7 @@ $height = option('thumbs.presets')[$srcset]['crop'] === true ? option('thumbs.pr
 	'width' => $width,
 	'height' => $image->height(),
 	'sizes' => $sizes,
+	'loading' => $loading ?? null,
+	'fetchpriority' => $fetchpriority ?? null,
+	'decoding' => $decoding ?? null,
 ], $attr)) ?>>
