@@ -1,7 +1,7 @@
-<If "%{HTTP_HOST} == 'gemeinwohl.stadtverwicklung.de'">
+<If "%{HTTP_HOST} == 'vorschau.stadtverwicklung.de'">
 	AuthType Basic
 	AuthName "Preview"
-	AuthUserFile //www/htdocs/w01dee97/gemeinwohl.stadtverwicklung.de/.htpasswd
+	AuthUserFile //www/htdocs/w01dee97/vorschau.stadtverwicklung.de/.htpasswd
 	Require valid-user
 </IF>
 
