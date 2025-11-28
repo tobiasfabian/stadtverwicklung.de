@@ -10,6 +10,7 @@ use Kirby\Toolkit\Str;
  * @method Field startDate()
  * @method Field endDate()
  * @method Field status()
+ * @method Field projects()
  * @method Field attendanceMode()
  * @method Field location()
  * @method Field virtualLocation()
@@ -100,5 +101,10 @@ class EventPage extends Page {
 			$items[] = $location->country();
 		}
 		return A::implode($items, ', ');
+	}
+
+	public function projectsUuids(): array
+	{
+		return $this->projects()->yaml();
 	}
 }

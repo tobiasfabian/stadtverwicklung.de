@@ -13,6 +13,8 @@ return [
         'field.location' => 'Ort',
         'field.areas_of_action' => 'Handlungsfelder',
         'field.partner' => 'Ein Projekt von…',
+        'events.upcoming' => 'Bevorstehende Veranstaltungen',
+        'events.past' => 'Vergangene Veranstaltungen',
     ],
     'url' => '/'
 ];
