@@ -12,4 +12,9 @@ class ProjectPage extends Page
 			return in_array($uuid, $event->projectsUuids());
 		});
 	}
+
+	public function servicePagesUuids(): array
+	{
+		return $this->servicePages()->yaml();
+	}
 }

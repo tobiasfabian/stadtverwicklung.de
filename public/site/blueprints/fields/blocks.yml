@@ -27,4 +27,5 @@ fieldsets:
     type: group
     fieldsets:
       - events
+      - projects
       - blog-entries

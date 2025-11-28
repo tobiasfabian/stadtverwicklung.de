@@ -15,21 +15,12 @@ App::plugin(
 	version: '2025-06',
 	extends: [
 		'siteMethods' => [
-			'projectsPage' => function () {
-				return page('page://5qmbi5bf5dkeu3u3');
-			},
-			'blogPage' => function () {
-				return page('page://ts0jgzbgmzzyfri3');
-			},
-			'contactPage' => function () {
-				return page('page://fmn7z0n40ortaweq');
-			},
-			'eventsPage' => function () {
-				return page('page://jzxp27b1ir0rlrsc');
-			},
-			'privacyPage' => function () {
-				return page('page://zfim59xjmzmmta8d');
-			},
+			'projectsPage' => fn () => page('page://5qmbi5bf5dkeu3u3'),
+			'blogPage' => fn () => page('page://ts0jgzbgmzzyfri3'),
+			'contactPage' => fn () => page('page://fmn7z0n40ortaweq'),
+			'servicesPage' => fn () => page('page://yl6un2fzajxokg6b'),
+			'eventsPage' => fn () => page('page://jzxp27b1ir0rlrsc'),
+			'privacyPage' => fn () => page('page://zfim59xjmzmmta8d'),
 		],
 	],
 );

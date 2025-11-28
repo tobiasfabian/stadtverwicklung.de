@@ -1,0 +1,8 @@
+title: Projekte
+icon: pin
+wysiwyg: true
+preview: fields
+fields:
+  info:
+    type: info
+    text: Zeigt entweder die drei aktuellsten Projekte an. Oder die drei passenden Projekte zu der Leistungs-Seite.

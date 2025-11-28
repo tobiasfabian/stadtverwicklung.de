@@ -1,0 +1,30 @@
+title: Blog
+
+navigation:
+  status: all
+  template: all
+
+tabs:
+  content:
+    label: Inhalt
+    icon: page
+    sections:
+      pages:
+        headline: Projekte
+        layout: table
+        sortBy: startDate desc
+        columns:
+          startDate:
+            label: Start-Datum
+            value: "{{ page.startDate.toDate('d.m.Y')}}"
+        templates:
+          - project
+  meta:
+    label: Meta
+    icon: search
+    sections:
+      metaFields:
+        type: fields
+        fields:
+          metaDescription:
+            extends: fields/meta-description

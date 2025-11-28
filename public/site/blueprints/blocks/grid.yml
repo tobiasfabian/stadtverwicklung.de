@@ -14,7 +14,11 @@ fields:
         extends: fields/writer-inline
         marks: false
       text:
-        extends: fields/writer-inline
+        extends: fields/writer
+        nodes:
+          - paragraph
+          - bulletList
+          - orderedList
       image:
         extends: fields/image
         image:

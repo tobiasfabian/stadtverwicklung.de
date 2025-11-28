@@ -19,7 +19,9 @@
 					]) ?>
 				<?php endif ?>
 				<h3><?= $item->title() ?></h3>
-				<p><?= $item->text() ?></p>
+				<div class=m-text data-text-size=small>
+					<?= $item->text() ?>
+				</div>
 			</li>
 		<?php endforeach ?>
 	</ul>

@@ -3,6 +3,7 @@ title: Info-Seite
 navigation:
   status: all
   template: all
+  sortBy: startDate desc
 
 image:
   query: model.teaserImage.toFile
@@ -19,6 +20,11 @@ tabs:
             label: Teaser-Text
             extends: fields/writer-inline
             marks: false
+          startDate:
+            label: Start-Datum
+            type: date
+            width: 1/4
+            help: Wird genutzt, damit auf den Leistungen-Seiten die neusten Projekte angezeigt werden können.
           period:
             label: field.period
             type: text
@@ -34,6 +40,11 @@ tabs:
           partner:
             label: field.partner
             type: text
+            width: 3/4
+          servicePages:
+            label: Zielgruppe
+            type: pages
+            query: site.servicesPage.childrenAndDrafts
             width: 1/4
           teaserText:
             label: Teaser-Text
@@ -41,7 +52,7 @@ tabs:
             width: 1/2
           teaserImage:
             extends: fields/teaser-image
-            width: 1/2
+            width: 1/4
           text:
             extends: fields/blocks
   meta:
