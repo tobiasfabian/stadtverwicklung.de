@@ -14,11 +14,11 @@ use Kirby\Cms\Page;
 
 	<title><?= $page->isHomePage() ? $site->title()->esc('attr') : $page->title()->esc('attr') . ' – ' . $site->title()->esc('attr') ?></title>
 
-	<link rel=icon href="<?= url('favicon.ico') ?>" sizes=32x32>
-	<link rel=apple-touch-icon href="<?= url('apple-touch-icon.png') ?>">
-	<link rel=manifest href="<?= url('site.webmanifest') ?>">
+	<link rel=icon href=<?= url('favicon.ico') ?> sizes=32x32>
+	<link rel=apple-touch-icon href=<?= url('apple-touch-icon.png') ?>>
+	<link rel=manifest href=<?= url('site.webmanifest') ?>>
 
-	<meta name=viewport content=width=device-width,initial-scale=1.0>
+	<meta name=viewport content="width=device-width,initial-scale=1.0">
 	<meta name=description content="<?= $page->metaDescription()->esc('attr') ?>">
 	<meta property=og:title content="<?= $page->title()->esc('attr') ?>">
 	<meta property=og:site_name content="<?= $site->title()->esc('attr') ?>">

@@ -6,10 +6,10 @@ $srcset = $block->ratio()->or('default');
 $files = $block->images()->toFiles();
 ?>
 <m-gallery
-	role="region"
+	role=region
 	aria-roledescription="gallery"
 	aria-label="Images"
-	tabindex="0"
+	tabindex=0
 >
 	<ul>
 		<?php foreach ($files as $image): ?>

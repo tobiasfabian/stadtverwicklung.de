@@ -4,14 +4,14 @@
 }
 
 h1.a-heading,
-.a-heading[data-size="large"] {
+.a-heading[data-size=large] {
 	font: var(--font-heading-large);
 }
 h2.a-heading,
-.a-heading[data-size="medium"] {
+.a-heading[data-size=medium] {
 	font: var(--font-heading-medium);
 }
 h3.a-heading,
-.a-heading[data-size="small"] {
+.a-heading[data-size=small] {
 	font: var(--font-heading-small);
 }

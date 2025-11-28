@@ -8,7 +8,7 @@
 		column-gap: var(--space-100);
 	}
 
-	&[data-kind="dots"] {
+	&[data-kind=dots] {
 		--_size-dot: var(--space-400);
 
 		> ul > li > button {

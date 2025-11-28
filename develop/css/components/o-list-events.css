@@ -66,6 +66,13 @@
 .o-list-events__item-title {
 	grid-column: 1 / -1;
 	grid-row: 2 / 3;
+	text-wrap-style: balance;
+
+	> small {
+		display: block;
+		font: var(--font-paragraph-medium);
+		font-weight: 400;
+	}
 
 	.o-list-events__item:where(:focus-visible, :hover) & {
 		color: var(--color-brand-orange-dark);
@@ -88,6 +95,7 @@
 
 .o-list-events__item-hours {
 	grid-column-start: 3;
+	text-align: end;
 	@media (min-width: 42em) {
 		grid-column: auto;
 	}

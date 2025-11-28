@@ -3,7 +3,7 @@
 	<?php snippet('o-header') ?>
 	<main>
 		<?php snippet('m-teaser-home') ?>
-		<div class="o-blocks">
+		<div class=o-blocks>
 			<?= $page->text()->toBlocks() ?>
 		</div>
 	</main>

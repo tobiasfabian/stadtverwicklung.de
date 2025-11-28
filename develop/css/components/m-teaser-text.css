@@ -10,6 +10,7 @@
 	> time {
 		font: var(--font-label-xlarge);
 		font-weight: 400;
+		text-wrap-style: balance;
 	}
 
 	> address {
@@ -29,6 +30,18 @@
 	> h2 {
 		margin-block-start: var(--space-200);
 	}
+}
 
+.m-teaser-text__projects {
+	color: var(--color-content-secondary);
+	font: var(--font-label-medium);
+	font-weight: 400;
 
+	> a {
+		text-decoration: none;
+
+		&:where(:focus-visible, :hover) {
+			text-decoration: underline;
+		}
+	}
 }

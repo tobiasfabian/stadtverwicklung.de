@@ -2,15 +2,15 @@
 	padding-block: var(--space-900);
 	background-size: cover;
 
-	&[data-gradient="orange"] {
+	&[data-gradient=orange] {
 		background-color: var(--color-brand-orange);
 		background-image: url('/assets/images/gradient-orange.jpg');
 	}
-	&[data-gradient="orange-pink"] {
+	&[data-gradient=orange-pink] {
 		background-color: var(--color-brand-orange);
 		background-image: url('/assets/images/gradient-orange-pink.jpg');
 	}
-	&[data-gradient="blue"] {
+	&[data-gradient=blue] {
 		background-color: var(--color-brand-purple);
 		background-image: url('/assets/images/gradient-blue.jpg');
 	}

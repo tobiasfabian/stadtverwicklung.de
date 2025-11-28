@@ -1,8 +1,8 @@
 <?php /** @var \Kirby\Cms\Block $block */ ?>
-<div class="m-grid" <?= attr([
+<div class=m-grid <?= attr([
 	'data-text-align' => $block->textAlign()->value() !== 'start' ? $block->textAlign()->value() : null,
 ]) ?>>
-	<div class="m-text">
+	<div class=m-text>
 		<?= $block->text() ?>
 	</div>
 	<ul>
@@ -10,7 +10,7 @@
 			<?php
 			$image = $item->image()->toFile();
 			?>
-			<li class="m-grid__item">
+			<li class=m-grid__item>
 				<?php if ($image): ?>
 					<?php snippet('image', [
 						'image' => $image,

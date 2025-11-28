@@ -20,7 +20,7 @@ if ($image === null) {
 	return;
 }
 ?>
-<figure class="m-figure" <?= attr([
+<figure class=m-figure <?= attr([
 	'data-max-width' => empty($maxWidth) ? null : $maxWidth,
 ]) ?>>
 	<?php snippet('image', [

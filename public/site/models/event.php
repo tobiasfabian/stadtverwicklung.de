@@ -51,6 +51,29 @@ class EventPage extends Page {
 		return $formatter->format($this->startDate()->toDate());
 	}
 
+	public function dateTimeFull($useEndDate = false): string
+	{
+		$dateField = $useEndDate ? $this->endDate() : $this->startDate();
+		$pattern = 'dd. MMMM y';
+		if ($dateField->toDate('Hi') !== '0000') {
+			$pattern .= ', HH:mm';
+		}
+		$formatter = new IntlDateFormatter(
+			locale: 'de_DE',
+			pattern: $pattern,
+		);
+		return $formatter->format($dateField->toDate());
+	}
+
+	public function dateTimeFullEnd(): string
+	{
+		$formatter = new IntlDateFormatter(
+			locale: 'de_DE',
+			pattern: 'dd. MMMM y HH:mm',
+		);
+		return $formatter->format($this->endDate()->toDate());
+	}
+
 	public function dayShort(): string
 	{
 		$formatter = new IntlDateFormatter(
@@ -72,7 +95,27 @@ class EventPage extends Page {
 		return $formatter->format($this->startDate()->toDate());
 	}
 
-	public function hours(): string
+	public function shortEndDate(): string
+	{
+		$formatter = new IntlDateFormatter(
+			locale: 'de_DE',
+			pattern: 'dd.MM.y',
+		);
+		return 'bis ' . $formatter->format($this->endDate()->toDate());;
+	}
+
+	public function multiDay(): bool
+	{
+		if ($this->endDate()->isEmpty()) return false;
+		return $this->startDate()->toDate('Ymd') !== $this->endDate()->toDate('Ymd');
+	}
+
+	/**
+	 * @return string|null
+	 * e.g. ab 11:00
+	 * null, when start and end date are differnt days
+	 */
+	public function hours(): ?string
 	{
 		$formatter = new IntlDateFormatter(
 			locale: 'de_DE',
@@ -81,7 +124,11 @@ class EventPage extends Page {
 		if ($this->endDate()->isEmpty()) {
 			return 'ab ' . $formatter->format($this->startDate()->toDate());
 		}
-		return $formatter->format($this->startDate()->toDate()) . ' – ' . $formatter->format($this->endDate()->toDate());
+
+		$startHour = $formatter->format($this->startDate()->toDate());
+		$endHour = $formatter->format($this->endDate()->toDate());
+
+		return $startHour . ' – ' . $endHour;
 	}
 
 	public function addressFull(): string

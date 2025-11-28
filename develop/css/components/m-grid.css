@@ -16,7 +16,7 @@
 		list-style: none;
 	}
 
-	&[data-text-align="center"] {
+	&[data-text-align=center] {
 		> ul {
 			text-align: center;
 		}
@@ -54,6 +54,7 @@
 
 	h3 {
 		font: var(--font-heading-small);
+		text-wrap-style: pretty;
 		transition-property: color;
 		transition-duration: var(--duration-xsmall);
 	}
@@ -77,7 +78,7 @@
 		}
 	}
 
-	.m-grid[data-text-align="center"] & img {
+	.m-grid[data-text-align=center] & img {
 		margin-inline: auto;
 	}
 }

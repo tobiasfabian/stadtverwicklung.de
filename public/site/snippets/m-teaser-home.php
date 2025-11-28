@@ -7,7 +7,7 @@ if ($teaserImage === null) {
 	return;
 }
 ?>
-<div class="m-teaser-home">
+<div class=m-teaser-home>
 	<div>
 		<?php if ($teaserImage = $page->teaserImage()->toFile()): ?>
 			<picture>
@@ -27,11 +27,11 @@ if ($teaserImage === null) {
 				]) ?>
 			</picture>
 		<?php endif ?>
-		<div class="m-teaser-home__text">
-			<h1 class="a-heading"><?= $page->teaserTitle() ?></h1>
-			<p class="m-text"><?= $page->teaserText() ?></p>
+		<div class=m-teaser-home__text>
+			<h1 class=a-heading><?= $page->teaserTitle() ?></h1>
+			<p class=m-text><?= $page->teaserText() ?></p>
 			<?php if ($page->teaserLink()->isNotEmpty()): ?>
-				<a class="a-button" data-kind="transparent" href="<?= $teaserLink->link()->toUrl() ?>">
+				<a class=a-button data-kind=transparent href=<?= $teaserLink->link()->toUrl() ?>>
 					<?= $teaserLink->text() ?>
 				</a>
 			<?php endif ?>

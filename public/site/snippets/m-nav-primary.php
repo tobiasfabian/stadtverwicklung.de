@@ -1,13 +1,13 @@
 <?php
 /** @var \Kirby\Cms\Site $site */
 ?>
-<nav class="m-nav-primary">
-	<button class="a-button-hamburger" aria-label="Navigation ausklappen" popovertarget="nav-primary-list" popovertargetaction="toggle">
+<nav class=m-nav-primary>
+	<button class=a-button-hamburger aria-label="Navigation ausklappen" popovertarget=nav-primary-list popovertargetaction=toggle>
 		<span></span>
 		<span></span>
 		<span></span>
 	</button>
-	<ul id="nav-primary-list" popover>
+	<ul id=nav-primary-list popover>
 		<?php foreach ($site->pages()->listed() as $item): ?>
 			<li>
 				<a <?= attr([

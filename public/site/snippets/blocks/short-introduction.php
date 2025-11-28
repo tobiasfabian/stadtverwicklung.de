@@ -3,9 +3,9 @@
 $image = $block->image()->toFile();
 $text = $block->text();
 ?>
-<div class="m-short-introduction">
+<div class=m-short-introduction>
 	<?php if ($block->headline()->isNotEmpty()): ?>
-		<h2 class="a-heading"><?= $block->headline() ?></h2>
+		<h2 class=a-heading><?= $block->headline() ?></h2>
 	<?php endif ?>
 	<?php if ($image): ?>
 		<?php snippet('image', [
@@ -14,7 +14,7 @@ $text = $block->text();
 			'srcset' => 'short-introduction',
 		]) ?>
 	<?php endif ?>
-	<div class="m-short-introduction__text">
+	<div class=m-short-introduction__text>
 		<?= $text ?>
 	</div>
 </div>

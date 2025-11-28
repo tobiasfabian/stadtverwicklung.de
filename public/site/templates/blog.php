@@ -8,11 +8,11 @@ use Kirby\Exception\Exception;
 <body>
 	<?php snippet('o-header') ?>
 	<main>
-		<div class="o-blocks">
-			<div class="m-teaser">
-				<h1 class="a-heading"><?= $page->alternativeTitle()->or($page->title()) ?></h1>
+		<div class=o-blocks>
+			<div class=m-teaser>
+				<h1 class=a-heading><?= $page->alternativeTitle()->or($page->title()) ?></h1>
 				<?php if ($page->teaserText()->isNotEmpty()): ?>
-					<p class="m-text"><?= $page->teaserText() ?></p>
+					<p class=m-text><?= $page->teaserText() ?></p>
 				<?php endif ?>
 				<?php if ($teaserImage = $page->teaserImage()->toFile()): ?>
 					<?php snippet('image', [

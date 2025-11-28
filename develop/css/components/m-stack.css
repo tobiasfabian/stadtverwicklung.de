@@ -2,7 +2,7 @@
 	display: flex;
 	column-gap: var(--space-200);
 
-	&[data-justify="center"] {
+	&[data-justify=center] {
 		justify-content: center;
 	}
 }

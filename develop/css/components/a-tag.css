@@ -10,11 +10,11 @@
 	letter-spacing: var(--letter-spacing-uppercase);
 	color: var(--color-brand-orange-dark);
 
-	&[data-size="medium"] {
+	&[data-size=medium] {
 		font: var(--font-label-medium);
 	}
 
-	&[data-size="large"] {
+	&[data-size=large] {
 		font: var(--font-label-large);
 		font-weight: 400;
 	}

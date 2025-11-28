@@ -51,7 +51,7 @@ if (preg_match('!vimeo!i', $url) === 1) {
 }
 ?>
 <?php if ($url->isNotEmpty()) : ?>
-<figure class="m-video">
+<figure class=m-video>
 	<div>
 		<?= Str::replace(video($url, [
 			'youtube' => [
@@ -67,23 +67,23 @@ if (preg_match('!vimeo!i', $url) === 1) {
 			'allow' => 'accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; fullscreen',
 		]), ['https://www.youtube.com', 'src="'], ['https://www.youtube-nocookie.com', 'data-src="']) ?>
 		<?php $formId = Str::random(8, 'alpha'); ?>
-		<div class="m-video__cookie-banner">
+		<div class=m-video__cookie-banner>
 			<?php if ($youtubeId): ?>
-				<div class="m-video__preview">
-					<img src="<?= url('youtube-thumbnail/' . $youtubeId) ?>" width="1280" height="720" alt="">
+				<div class=m-video__preview>
+					<img src=<?= url('youtube-thumbnail/' . $youtubeId) ?> width=1280 height=720 alt="">
 				</div>
 			<?php endif; ?>
-			<button class="m-video__button-play" aria-label="Video anschauen: <?= $videoTitle ?>">
+			<button class=m-video__button-play aria-label="Video anschauen: <?= $videoTitle ?>">
 				<?= svg('assets/images/play-button.svg') ?>
 			</button>
-			<div class="m-video__legal-info">
+			<div class=m-video__legal-info>
 				Dieses Video wird mit Ihrer Zustimmung von YouTube geladen.
-				<a href="<?= $site->privacyPage()->url() ?>" title="<?= $site->privacyPage()->title() ?>">Mehr erfahren…</a>
+				<a href=<?= $site->privacyPage()->url() ?> title="<?= $site->privacyPage()->title() ?>">Mehr erfahren…</a>
 			</div>
 		</div>
 	</div>
 	<?php if ($block?->caption()->isNotEmpty()) : ?>
-		<figcaption class="a-caption"><?= $block?->caption() ?></figcaption>
+		<figcaption class=a-caption><?= $block?->caption() ?></figcaption>
 	<?php endif ?>
 </figure>
 <?php endif ?>

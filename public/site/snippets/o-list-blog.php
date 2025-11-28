@@ -5,14 +5,14 @@
 $headline = $headline ?? null;
 $showMore = $showMore ?? null;
 ?>
-<div class="m-grid">
+<div class=m-grid>
 	<?php if ($headline): ?>
-		<h2 class="a-heading"><?= $headline ?></h2>
+		<h2 class=a-heading><?= $headline ?></h2>
 	<?php endif ?>
 	<ul>
 		<?php foreach ($entries as $blogEntryPage): ?>
-			<li class="m-grid__item">
-				<a href="<?= $blogEntryPage->url() ?>">
+			<li class=m-grid__item>
+				<a href=<?= $blogEntryPage->url() ?>>
 					<?php snippet('image', [
 						'image' => $blogEntryPage->teaserImage()->toFile(),
 						'srcset' => '3/2',
@@ -25,8 +25,8 @@ $showMore = $showMore ?? null;
 		<?php endforeach ?>
 	</ul>
 	<?php if ($showMore): ?>
-		<div class="m-stack" data-justify="center">
-			<a class="a-button" href="<?= $site->blogPage()->url() ?>">
+		<div class=m-stack data-justify=center>
+			<a class=a-button href=<?= $site->blogPage()->url() ?>>
 				Alle Artikel
 			</a>
 		</div>

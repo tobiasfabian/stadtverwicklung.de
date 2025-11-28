@@ -1,7 +1,7 @@
 panel.plugin("tobiaswolf/cite-block", {
 	blocks: {
 		cite: `
-			<figure @dblclick="open" class="k-cite">
+			<figure @dblclick="open" class=k-cite>
         <div v-if="content.text">
           <blockquote>
             <span v-html="content.text"></span>

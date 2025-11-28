@@ -40,17 +40,17 @@ class MGallery extends HTMLElement {
 
 		this.template = Object.assign(document.createElement('template'), {
 			innerHTML: `
-				<div class="m-gallery__images">
+				<div class=m-gallery__images>
 					${imagesListElement.outerHTML}
 				</div>
-				<div class="m-gallery__navigation-buttons">
-					<button class="a-button" data-shape="circle" data-action="previous-image" aria-label="${translations.previousImage}">←</button>
-					<button class="a-button" data-shape="circle" data-action="next-image" aria-label="${translations.nextImage}">→</button>
+				<div class=m-gallery__navigation-buttons>
+					<button class=a-button data-shape=circle data-action=previous-image aria-label="${translations.previousImage}">←</button>
+					<button class=a-button data-shape=circle data-action=next-image aria-label="${translations.nextImage}">→</button>
 				</div>
-				<nav class="m-gallery__navigation" aria-label="${translations.navigationLabel}">
-					<div class="a-pagination" data-kind="dots">
+				<nav class=m-gallery__navigation aria-label="${translations.navigationLabel}">
+					<div class=a-pagination data-kind=dots>
 						<ul>
-							${Array.from({ length: this.imagesCount }, (_, index) => index + 1).map((index) => `<li><button data-index="${index}" data-action="show-image" aria-label="${index}"></button></li>`).join('')}
+							${Array.from({ length: this.imagesCount }, (_, index) => index + 1).map((index) => `<li><button data-index=${index} data-action=show-image aria-label="${index}"></button></li>`).join('')}
 						</ul>
 					</div>
 				</nav>
@@ -60,9 +60,9 @@ class MGallery extends HTMLElement {
 		this.imagesUlElement = this.imagesElement.querySelector(':scope > ul');
 		this.imgElements = this.imagesUlElement.querySelectorAll(':scope > li > img');
 
-		this.paginationButtonElements = this.template.content.querySelectorAll('[data-action="show-image"]');
-		this.buttonPreviousImageElement = this.template.content.querySelector('[data-action="previous-image"]');
-		this.buttonNextImageElement = this.template.content.querySelector('[data-action="next-image"]');
+		this.paginationButtonElements = this.template.content.querySelectorAll('[data-action=show-image]');
+		this.buttonPreviousImageElement = this.template.content.querySelector('[data-action=previous-image]');
+		this.buttonNextImageElement = this.template.content.querySelector('[data-action=next-image]');
 
 		// Functions
 		// Utility function to check if an element is partially in view

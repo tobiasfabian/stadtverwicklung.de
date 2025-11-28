@@ -27,25 +27,3 @@
 		}
 	}
 }
-
-.m-teaser__text {
-		display: grid;
-		row-gap: var(--space-400);
-		align-content: start;
-
-	> dl {
-		display: grid;
-		row-gap: var(--space-150);
-	}
-	> dl > dt {
-		font: var(--font-label-medium);
-		font-weight: 400;
-	}
-	> dl > dd {
-		font: var(--font-label-large);
-	}
-
-	> strong {
-
-	}
-}

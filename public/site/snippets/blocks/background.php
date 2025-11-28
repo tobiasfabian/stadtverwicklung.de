@@ -6,7 +6,7 @@ $styles = array_filter([
 	'background-color' => $block->backgroundColor()->isNotEmpty() ? $block->backgroundColor() : null,
 ]);
 ?>
-<div class="o-background" <?= attr([
+<div class=o-background <?= attr([
 	'data-gradient' => $block->gradient()->value(),
 	'style' => [
 		'color' => $block->color(),
@@ -19,14 +19,14 @@ $styles = array_filter([
 	)),
 ]) ?>>
 	<?php if ($illustration): ?>
-		<div class="o-background__illustration">
+		<div class=o-background__illustration>
 			<?php snippet('image', [
 				'image' => $illustration,
 				'sizes' => '7em',
 			]) ?>
 		</div>
 	<?php endif ?>
-	<div class="o-blocks">
+	<div class=o-blocks>
 		<?= $block->text()->toBlocks() ?>
 	</div>
 </div>

@@ -41,7 +41,7 @@
 		background-color: hsl(from var(--color-background-secondary) h s calc(l - 3));
 	}
 
-	&[data-state="active"] {
+	&[data-state=active] {
 		background-color: transparent;
 
 		> :where(p, a) {
