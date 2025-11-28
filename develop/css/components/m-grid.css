@@ -60,7 +60,7 @@
 	}
 
 	img {
-		max-inline-size: calc(336rem / 16);
+		max-inline-size: calc(352rem / 16);
 		inline-size: 100%;
 	}
 

@@ -30,8 +30,8 @@
 
 	/* Widths */
 	--max-width: calc(1600rem / 16);
-	--max-width-content: calc(1056rem / 16);
-	--max-width-text: calc(704rem / 16);
+	--max-width-content: calc(1104rem / 16);
+	--max-width-text: calc(728rem / 16);
 
 	/* Borders */
 	/* Use px values instead of rem */

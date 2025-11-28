@@ -1,4 +1,5 @@
 .m-text {
+	max-inline-size: var(--max-width-text);
 	font: var(--font-paragraph-large);
 	letter-spacing: var(--letter-spacing-display);
 

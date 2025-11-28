@@ -39,18 +39,6 @@ tabs:
         templates:
           - event
   meta:
-    label: Meta
-    icon: search
-    sections:
-      metaFields:
-        type: fields
-        fields:
-          metaDescription:
-            extends: fields/meta-description
+    extends: tabs/meta
   files:
-    label: Dateien
-    icon: file
-    sections:
-      files:
-        label: Dateien
-        type: files
+    extends: tabs/files

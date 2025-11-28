@@ -17,7 +17,7 @@ use Kirby\Exception\Exception;
 				<?php if ($teaserImage = $page->teaserImage()->toFile()): ?>
 					<?php snippet('image', [
 						'image' => $teaserImage,
-						'sizes' => 516 / 16 . 'em',
+						'sizes' => 528 / 16 . 'em',
 					]) ?>
 				<?php endif ?>
 			</div>

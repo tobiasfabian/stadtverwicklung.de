@@ -1,11 +1,12 @@
-title: Start-Seite
+title: Info-Seite
 
 navigation:
   status: all
   template: all
 
-icon: home
-image: icon
+image:
+  query: model.teaserImage.toFile
+  cover: true
 
 tabs:
   content:
@@ -14,25 +15,21 @@ tabs:
     sections:
       fields:
         fields:
-          teaserImage:
-            extends: fields/teaser-image
-          teaserTitle:
-            label: Teaser-Titel
+          alternativeTitle:
+            label: Teaser-Text
             extends: fields/writer-inline
             marks: false
-            width: 1/2
           teaserText:
             label: Teaser-Text
             extends: fields/writer-inline
             width: 1/2
-          teaserLink:
-            extends: fields/link
+          teaserImage:
+            extends: fields/teaser-image
             width: 1/2
-          text:
-            extends: fields/blocks
+      pages:
+        label: Unterseiten
+        type: pages
   meta:
     extends: tabs/meta
-  pages:
-    extends: tabs/subpages
   files:
     extends: tabs/files

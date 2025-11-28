@@ -6,18 +6,7 @@
 	<?php snippet('o-header') ?>
 	<main>
 		<div class=o-blocks>
-			<div class=m-teaser>
-				<h1 class=a-heading><?= $page->alternativeTitle()->or($page->title()) ?></h1>
-				<div class=m-teaser__text>
-					<p class=m-text><?= $page->teaserText() ?></p>
-				</div>
-				<?php if ($teaserImage = $page->teaserImage()->toFile()): ?>
-					<?php snippet('image', [
-						'image' => $teaserImage,
-						'sizes' => 516 / 16 . 'em',
-					]) ?>
-				<?php endif ?>
-			</div>
+			<?php snippet('m-teaser') ?>
 			<?php snippet('o-list-events', [
 				'events' => collection('events')->listed()->flip(),
 			]) ?>

@@ -9,6 +9,21 @@ tabs:
     label: Inhalt
     icon: page
     sections:
+      fields:
+        type: fields
+        fields:
+          alternativeTitle:
+            label: Alternativer Titel
+            placeholder: "{ model.title }"
+            extends: fields/writer-inline
+            marks: false
+          teaserText:
+            label: Teaser-Text
+            extends: fields/writer-inline
+            width: 1/2
+          teaserImage:
+            extends: fields/teaser-image
+            width: 1/2
       pages:
         headline: Projekte
         layout: table
@@ -20,11 +35,6 @@ tabs:
         templates:
           - project
   meta:
-    label: Meta
-    icon: search
-    sections:
-      metaFields:
-        type: fields
-        fields:
-          metaDescription:
-            extends: fields/meta-description
+    extends: tabs/meta
+  files:
+    extends: tabs/files

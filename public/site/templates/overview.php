@@ -8,7 +8,6 @@
 		<div class=o-blocks>
 			<?php snippet('m-teaser') ?>
 			<div class=m-grid>
-				<h2 class=a-heading>Aktuelle Projekte</h2>
 				<ul>
 					<?php foreach ($page->children()->listed() as $projectPage): ?>
 						<?php /** @var ProjectPage|\Kirby\Cms\Page $projectPage */ ?>
@@ -16,23 +15,7 @@
 							<a class=m-card-link href=<?= $projectPage->url() ?>>
 								<h3><?= $projectPage->title() ?> →</h3>
 								<?php if ($projectPage->teaserText()->isNotEmpty()): ?>
-									<p><?= $projectPage->teaserText() ?></p>
-								<?php endif ?>
-							</a>
-						</li>
-					<?php endforeach ?>
-				</ul>
-			</div>
-			<div class=m-grid>
-				<h2 class=a-heading>Abgeschlossene Projekte</h2>
-				<ul>
-					<?php foreach ($page->children()->unlisted() as $projectPage): ?>
-						<?php /** @var ProjectPage|\Kirby\Cms\Page $projectPage */ ?>
-						<li class=m-grid__item>
-							<a class=m-card-link href=<?= $projectPage->url() ?>>
-								<h3><?= $projectPage->title() ?> →</h3>
-								<?php if ($projectPage->teaserText()->isNotEmpty()): ?>
-									<p><?= $projectPage->teaserText() ?></p>
+									<p><?= strip_tags($projectPage->teaserText(), ['strong']) ?></p>
 								<?php endif ?>
 							</a>
 						</li>
