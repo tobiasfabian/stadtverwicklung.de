@@ -7,12 +7,14 @@
 	row-gap: var(--space-100);
 
 	> address,
+	> em,
 	> time {
 		font: var(--font-label-xlarge);
 		font-weight: 400;
 		text-wrap-style: balance;
 	}
 
+	> em,
 	> address {
 		color: var(--color-brand-orange-dark);
 	}

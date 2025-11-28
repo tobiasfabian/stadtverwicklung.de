@@ -501,6 +501,11 @@ html[data-no-scroll] :scope {
 
 		font: var(--font-label-small);
 	}
+.a-button[data-kind=solid] {
+		color: var(--color-white);
+		border-color: var(--color-brand-orange);
+		background-color: var(--color-brand-orange);
+	}
 .a-button[data-kind=transparent] {
 		color: var(--color-brand-orange);
 		background-color: transparent;
@@ -1039,8 +1044,8 @@ m-gallery:focus {
 	}
 .m-stack {
 	display: flex;
-	-moz-column-gap: var(--space-200);
-	     column-gap: var(--space-200);
+	flex-wrap: wrap;
+	gap: var(--space-200);
 }
 .m-stack[data-justify=center] {
 		justify-content: center;
@@ -1165,12 +1170,14 @@ m-gallery:focus {
 	row-gap: var(--space-100);
 }
 .m-teaser-text > address,
+	.m-teaser-text > em,
 	.m-teaser-text > time {
 		font: var(--font-label-xlarge);
 		font-weight: 400;
 		text-wrap-style: balance;
 	}
-.m-teaser-text > address {
+.m-teaser-text > em,
+	.m-teaser-text > address {
 		color: var(--color-brand-orange-dark);
 	}
 .m-teaser-text > .a-button-back + * {

@@ -32,6 +32,11 @@
 		font: var(--font-label-small);
 	}
 
+	&[data-kind=solid] {
+		color: var(--color-white);
+		border-color: var(--color-brand-orange);
+		background-color: var(--color-brand-orange);
+	}
 	&[data-kind=transparent] {
 		color: var(--color-brand-orange);
 		background-color: transparent;

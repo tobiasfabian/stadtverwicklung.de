@@ -17,9 +17,13 @@ $projectPages = $page->projects()->toPages();
 						<?= $page->dateFull() ?> | <?= $page->hours() ?>
 					<?php endif ?>
 				</time>
-				<address>
-					<?= $page->addressFull() ?>
-				</address>
+				<?php if ($page->attendanceMode()->value() === 'OnlineEventAttendanceMode'): ?>
+					<em>Online</em>
+				<?php else: ?>
+					<address>
+						<?= $page->addressFull() ?>
+					</address>
+				<?php endif ?>
 				<?php if ($projectPages->count() > 0): ?>
 					<div class=m-teaser-text__projects>
 						<?= tc('project', $projectPages->count()) ?>:
@@ -32,7 +36,12 @@ $projectPages = $page->projects()->toPages();
 				<h2 class=a-heading><?= $page->subtitle() ?></h2>
 			</header>
 			<?= $page->text()->toBlocks() ?>
-			<a class=a-button href="<?= $page->url() ?>.ics">In Kalender eintragen</a>
+			<div class="m-stack">
+				<?php if ($page->registrationLink()->isNotEmpty()): ?>
+					<a class=a-button data-kind=solid href="<?= $page->registrationLink() ?>">Jetzt anmelden</a>
+				<?php endif ?>
+				<a class=a-button href="<?= $page->url() ?>.ics">In Kalender eintragen</a>
+			</div>
 		</div>
 	</main>
 	<?php snippet('o-footer') ?>
