@@ -16,6 +16,14 @@
 				</address>
 				<h1 class="a-heading"><?= $page->title() ?></h1>
 				<h2 class="a-heading"><?= $page->subtitle() ?></h2>
+				<?php if ($projectPages->count() > 0): ?>
+					<div class=m-teaser-text__projects>
+						<?= tc('project', $projectPages->count()) ?>:
+						<?php foreach ($projectPages as $projectPage): ?>
+							<a href=<?= $projectPage->url() ?>><?= $projectPage->title() ?></a>
+						<?php endforeach ?>
+					</div>
+				<?php endif ?>
 			</header>
 
 			<?= $page->text()->toBlocks() ?>

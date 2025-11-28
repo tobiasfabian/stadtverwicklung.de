@@ -15,6 +15,11 @@ return [
         'field.partner' => 'Ein Projekt von…',
         'events.upcoming' => 'Bevorstehende Veranstaltungen',
         'events.past' => 'Vergangene Veranstaltungen',
+        'project' => [
+            '',
+            'Projekt',
+            'Projekte'
+        ]
     ],
     'url' => '/'
 ];
