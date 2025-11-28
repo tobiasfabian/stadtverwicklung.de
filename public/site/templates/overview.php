@@ -9,13 +9,17 @@
 			<?php snippet('m-teaser') ?>
 			<div class=m-grid>
 				<ul>
-					<?php foreach ($page->children()->listed() as $projectPage): ?>
-						<?php /** @var ProjectPage|\Kirby\Cms\Page $projectPage */ ?>
+					<?php foreach ($page->children()->listed() as $subpage): ?>
+						<?php /** @var \Kirby\Cms\Page $subpage */ ?>
 						<li class=m-grid__item>
-							<a class=m-card-link href=<?= $projectPage->url() ?>>
-								<h3><?= $projectPage->title() ?> →</h3>
-								<?php if ($projectPage->teaserText()->isNotEmpty()): ?>
-									<p><?= strip_tags($projectPage->teaserText(), ['strong']) ?></p>
+							<a href=<?= $subpage->url() ?>>
+								<?php snippet('image', [
+									'image' => $subpage->teaserImage()->or($subpage->metaImage())->toFile(),
+									'srcset' => 'card',
+								]) ?>
+								<h3><?= $subpage->title() ?> →</h3>
+								<?php if ($subpage->teaserText()->isNotEmpty()): ?>
+									<p><?= strip_tags($subpage->teaserText(), ['strong']) ?></p>
 								<?php endif ?>
 							</a>
 						</li>

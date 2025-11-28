@@ -29,6 +29,9 @@ tabs:
       pages:
         label: Unterseiten
         type: pages
+        templates:
+          - info
+          - default
   meta:
     extends: tabs/meta
   files:

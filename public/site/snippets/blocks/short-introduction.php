@@ -10,7 +10,7 @@ $text = $block->text();
 	<?php if ($image): ?>
 		<?php snippet('image', [
 			'image' => $image,
-			'sizes' => '100vw',
+			'sizes' => 352 / 16 . 'em',
 			'srcset' => 'short-introduction',
 		]) ?>
 	<?php endif ?>

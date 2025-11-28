@@ -12,7 +12,7 @@
 					<?php foreach ($page->children()->listed() as $knowledgePage): ?>
 						<?php /** @var KnowledgeEntryPage|\Kirby\Cms\Page $knowledgePage */ ?>
 						<li class=m-grid__item>
-							<a class=m-card-link href=<?= $knowledgePage->url() ?>>
+							<a href=<?= $knowledgePage->url() ?>>
 								<h3><?= $knowledgePage->title() ?> →</h3>
 								<p><?= $knowledgePage->teaserText() ?></p>
 							</a>

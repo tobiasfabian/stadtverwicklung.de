@@ -5,6 +5,8 @@ navigation:
   template: all
   sortBy: startDate desc
 
+num: '{{ page.startDate.toDate("Ymd") }}'
+
 image:
   query: model.teaserImage.toFile
   cover: true
@@ -24,7 +26,6 @@ tabs:
             label: Start-Datum
             type: date
             width: 1/4
-            help: Wird genutzt, damit auf den Leistungen-Seiten die neusten Projekte angezeigt werden können.
           period:
             label: field.period
             type: text

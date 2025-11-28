@@ -14,8 +14,7 @@
 				<?php if ($image): ?>
 					<?php snippet('image', [
 						'image' => $image,
-						'srcset' => '3/2',
-						'sizes' => 336 / 16 . 'rem',
+						'srcset' => 'card',
 					]) ?>
 				<?php endif ?>
 				<h3><?= $item->title() ?></h3>

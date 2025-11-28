@@ -1,4 +1,4 @@
 <?php
 return function (\Kirby\Cms\Site $site) {
-	return $site->projectsPage()->childrenAndDrafts();
+	return $site->projectsPage()->childrenAndDrafts()->sortBy('startDate', 'desc');
 };

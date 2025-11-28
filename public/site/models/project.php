@@ -3,6 +3,9 @@
 use Kirby\Cms\Page;
 use Kirby\Cms\Pages;
 
+/**
+ * @method \Kirby\Content\Field startDate
+ */
 class ProjectPage extends Page
 {
 	public function events(): Pages

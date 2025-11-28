@@ -77,6 +77,11 @@ return [
 			'height' => 630,
 			'crop' => true,
 		],
+		'card'=> [
+			'width' => 352,
+			'height' => 236,
+			'crop' => true,
+		],
 		'short-introduction' => [
 			'width' => 336,
 			'height' => 256,
@@ -91,14 +96,27 @@ return [
 				'crop' => true,
 			],
 		],
+		'card' => [
+			'352w' => [
+				'width' => 352,
+				'height' => 236,
+				'crop' => true,
+			],
+			'704w' => [
+				'width' => 352 * 2,
+				'height' => 236 * 2,
+				'crop' => true,
+				'quality' => 70,
+			],
+		],
 		'short-introduction' => [
-			'336w' => [
-				'width' => 336,
+			'352w' => [
+				'width' => 352,
 				'height' => 256,
 				'crop' => true,
 			],
-			'672w' => [
-				'width' => 336 * 2,
+			'704w' => [
+				'width' => 352 * 2,
 				'height' => 256 * 2,
 				'crop' => true,
 				'quality' => 70,

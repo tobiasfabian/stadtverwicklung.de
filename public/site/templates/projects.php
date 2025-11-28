@@ -10,10 +10,14 @@
 			<div class=m-grid>
 				<h2 class=a-heading>Aktuelle Projekte</h2>
 				<ul>
-					<?php foreach ($page->children()->listed() as $projectPage): ?>
+					<?php foreach (collection('projects')->listed() as $projectPage): ?>
 						<?php /** @var ProjectPage|\Kirby\Cms\Page $projectPage */ ?>
 						<li class=m-grid__item>
-							<a class=m-card-link href=<?= $projectPage->url() ?>>
+							<a href=<?= $projectPage->url() ?>>
+								<?php snippet('image', [
+									'image' => $projectPage->teaserImage()->toFile(),
+									'srcset' => 'card',
+								]); ?>
 								<h3><?= $projectPage->title() ?> →</h3>
 								<?php if ($projectPage->teaserText()->isNotEmpty()): ?>
 									<p><?= $projectPage->teaserText() ?></p>
@@ -26,10 +30,14 @@
 			<div class=m-grid>
 				<h2 class=a-heading>Abgeschlossene Projekte</h2>
 				<ul>
-					<?php foreach ($page->children()->unlisted() as $projectPage): ?>
+					<?php foreach (collection('projects')->unlisted() as $projectPage): ?>
 						<?php /** @var ProjectPage|\Kirby\Cms\Page $projectPage */ ?>
 						<li class=m-grid__item>
-							<a class=m-card-link href=<?= $projectPage->url() ?>>
+							<a href=<?= $projectPage->url() ?>>
+								<?php snippet('image', [
+									'image' => $projectPage->teaserImage()->toFile(),
+									'srcset' => 'card',
+								]); ?>
 								<h3><?= $projectPage->title() ?> →</h3>
 								<?php if ($projectPage->teaserText()->isNotEmpty()): ?>
 									<p><?= $projectPage->teaserText() ?></p>

@@ -15,8 +15,7 @@ $showMore = $showMore ?? null;
 				<a href=<?= $blogEntryPage->url() ?>>
 					<?php snippet('image', [
 						'image' => $blogEntryPage->teaserImage()->toFile(),
-						'srcset' => '3/2',
-						'sizes' => 336 / 16 . 'rem',
+						'srcset' => 'card',
 					]) ?>
 					<time datetime="<?= $blogEntryPage->date()->toDate('c') ?>"><?= $blogEntryPage->date()->toDate('d.m.Y') ?></time>
 					<h3><?= $blogEntryPage->title() ?></h3>
