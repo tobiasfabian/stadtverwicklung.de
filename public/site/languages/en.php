@@ -9,7 +9,10 @@ return [
     ],
     'name' => 'English',
     'translations' => [
-
+        'field.period' => 'Time period',
+        'field.location' => 'Location',
+        'field.areas_of_action' => 'Areas of action',
+        'field.partner' => 'A project by…',
     ],
     'url' => NULL
 ];

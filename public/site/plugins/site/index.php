@@ -15,6 +15,9 @@ App::plugin(
 	version: '2025-06',
 	extends: [
 		'siteMethods' => [
+			'projectsPage' => function () {
+				return page('page://5qmbi5bf5dkeu3u3');
+			},
 			'blogPage' => function () {
 				return page('page://ts0jgzbgmzzyfri3');
 			},

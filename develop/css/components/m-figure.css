@@ -5,4 +5,9 @@
 	&[data-max-width="text-width"] {
 		max-inline-size: var(--max-width-text);
 	}
+
+	> figcaption {
+		margin-block-start: var(--space-200);
+		font: var(--font-paragraph-small);
+	}
 }

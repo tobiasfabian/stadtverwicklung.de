@@ -17,7 +17,7 @@ tabs:
         fields:
           alternativeTitle:
             label: Alternativer Titel
-            placeholder: model.title
+            placeholder: "{model.title}"
             extends: fields/writer-inline
             marks: false
           teaserText:
@@ -29,7 +29,13 @@ tabs:
             width: 1/2
       events:
         type: pages
-        info: "{{ page.startDate.toDate('d.m.Y') }}"
+        batch: true
+        sortBy: startDate DESC
+        layout: table
+        columns:
+          projects: true
+          date:
+            value: "{{ page.startDate.toDate('d.m.Y') }}"
         templates:
           - event
   meta:

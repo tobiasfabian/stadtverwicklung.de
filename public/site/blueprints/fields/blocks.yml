@@ -1,14 +1,30 @@
 type: blocks
 pretty: true
 fieldsets:
-  - heading
-  - text
-  - button
-  - cite
-  - video
-  - image
-  - gallery
-  - short-introduction
-  - info-list
-  - iframe
-  - line
+  text:
+    label: Content
+    type: group
+    fieldsets:
+      - text
+      - cite
+      - button
+      - image
+      - gallery
+      - video
+      - iframe
+      - short-introduction
+      - info-list
+  layout:
+    label: Layout
+    type: group
+    fieldsets:
+      - line
+      - banner-orange
+      - grid
+      - background
+  generatedContent:
+    label: Genrierter Inhalt
+    type: group
+    fieldsets:
+      - events
+      - blog-entries

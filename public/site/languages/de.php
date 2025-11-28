@@ -9,7 +9,10 @@ return [
     ],
     'name' => 'Deutsch',
     'translations' => [
-
+        'field.period' => 'Zeitraum',
+        'field.location' => 'Ort',
+        'field.areas_of_action' => 'Handlungsfelder',
+        'field.partner' => 'Ein Projekt von…',
     ],
     'url' => '/'
 ];

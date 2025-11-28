@@ -9,7 +9,22 @@
 			<div class="m-teaser">
 				<h1 class="a-heading"><?= $page->alternativeTitle()->or($page->title()) ?></h1>
 				<div class="m-teaser__text">
-					<p class="m-text"><?= $page->teaserText() ?></p>
+					<?php if ($page->teaserText()->isNotEmpty()): ?>
+						<div class="m-text">
+							<?= $page->teaserText() ?>
+						</div>
+					<?php endif ?>
+					<?php if ($page->status() === 'unlisted'): ?>
+						<dl>
+							<dt>Zeitraum</dt>
+							<dd><?= $page->period() ?></dd>
+							<dt>Ort</dt>
+							<dd><?= $page->location() ?></dd>
+							<dt>Handlungsfelder</dt>
+							<dd><?= $page->areas_of_action() ?></dd>
+						</dl>
+						<strong><?= $page->partner()->kti()?></strong>
+					<?php endif ?>
 				</div>
 				<?php if ($teaserImage = $page->teaserImage()->toFile()): ?>
 					<?php snippet('image', [

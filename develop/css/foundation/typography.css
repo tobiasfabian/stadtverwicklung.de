@@ -16,6 +16,7 @@
 	--font-size-label-medium: calc(16rem / 16);
 	--font-size-label-small: calc(14rem / 16);
 
+	--font-size-paragraph-xlarge: calc(24rem / 16);
 	--font-size-paragraph-large: calc(20rem / 16);
 	--font-size-paragraph-medium: calc(16rem / 16);
 	--font-size-paragraph-small: calc(14rem / 16);
@@ -32,6 +33,7 @@
 	--line-height-label-medium: calc(16 / 16);
 	--line-height-label-small: calc(14 / 14);
 
+	--line-height-paragraph-xlarge: calc(32 / 24);
 	--line-height-paragraph-large: calc(28 / 20);
 	--line-height-paragraph-medium: calc(22 / 16);
 	--line-height-paragraph-small: calc(18 / 14);
@@ -48,6 +50,7 @@
 	--font-label-medium: 700 var(--font-size-label-medium)/var(--line-height-label-medium) var(--font-family);
 	--font-label-small: 700 var(--font-size-label-small)/var(--line-height-label-small) var(--font-family);
 
+	--font-paragraph-xlarge: 400 var(--font-size-paragraph-xlarge)/var(--line-height-paragraph-xlarge) var(--font-family);
 	--font-paragraph-large: 400 var(--font-size-paragraph-large)/var(--line-height-paragraph-large) var(--font-family);
 	--font-paragraph-medium: 400 var(--font-size-paragraph-medium)/var(--line-height-paragraph-medium) var(--font-family);
 	--font-paragraph-small: 400 var(--font-size-paragraph-small)/var(--line-height-paragraph-small) var(--font-family);

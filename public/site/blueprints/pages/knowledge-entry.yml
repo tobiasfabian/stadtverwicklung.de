@@ -11,7 +11,7 @@ tabs:
     sections:
       fields:
         fields:
-          teaser:
+          teaserText:
             label: Teaser-Text
             extends: fields/headline
             help: Wird in der Übersicht angezeigt

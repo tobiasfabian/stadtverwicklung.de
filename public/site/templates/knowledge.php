@@ -8,7 +8,9 @@
 		<div class="o-blocks">
 			<div class="m-teaser">
 				<h1 class="a-heading"><?= $page->alternativeTitle()->or($page->title()) ?></h1>
-				<p class="m-text"><?= $page->teaserText() ?></p>
+				<div class="m-teaser__text">
+					<p class="m-text"><?= $page->teaserText() ?></p>
+				</div>
 				<?php if ($teaserImage = $page->teaserImage()->toFile()): ?>
 					<?php snippet('image', [
 						'image' => $teaserImage,
@@ -19,11 +21,11 @@
 			<div class="m-grid">
 				<ul>
 					<?php foreach ($page->children()->listed() as $knowledgePage): ?>
-						<?php /** @var BlogEntryPage|\Kirby\Cms\Page $knowledgePage */ ?>
+						<?php /** @var KnowledgeEntryPage|\Kirby\Cms\Page $knowledgePage */ ?>
 						<li class="m-grid__item">
 							<a class="m-card-lonk" href="<?= $knowledgePage->url() ?>">
 								<h3><?= $knowledgePage->title() ?> →</h3>
-								<p><?= $knowledgePage->teaser() ?></p>
+								<p><?= $knowledgePage->teaserText() ?></p>
 							</a>
 						</li>
 					<?php endforeach ?>

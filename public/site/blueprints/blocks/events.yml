@@ -5,4 +5,4 @@ preview: fields
 fields:
   info:
     type: info
-    text: Zeigt alle kommenden Veranstaltungen an
+    text: Zeigt entweder alle kommenden Veranstaltungen an. Oder alle Veranstaltungen eines Projekts.

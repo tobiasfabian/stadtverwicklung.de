@@ -26,7 +26,7 @@ class EventPage extends Page {
 		return $this->endDate()->toDate() > time();
 	}
 
-	public function city(): string
+	public function city(): ?string
 	{
 		return $this->location()->toObject()->city()->value();
 	}
@@ -34,7 +34,7 @@ class EventPage extends Page {
 	/**
 	 * @return string Online or [City]
 	 */
-	public function tag(): string
+	public function tag(): ?string
 	{
 		return $this->attendanceMode()->value() === 'OnlineEventAttendanceMode'
 			? 'online'

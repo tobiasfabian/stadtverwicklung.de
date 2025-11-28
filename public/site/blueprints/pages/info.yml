@@ -27,7 +27,7 @@ tabs:
             extends: fields/teaser-image
             width: 1/2
           text:
-            extends: fields/blocks-all
+            extends: fields/blocks
   meta:
     label: Meta
     icon: search

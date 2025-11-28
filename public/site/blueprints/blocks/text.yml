@@ -11,8 +11,11 @@ fields:
     type: toggles
     grow: false
     width: 1/2
+    default: Standard
     options:
-      small: Klein
+      xsmall: XS
+      small: S
+      large: L
   width:
     label: Breite
     type: toggles
