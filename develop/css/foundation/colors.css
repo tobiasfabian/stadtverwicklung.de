@@ -57,6 +57,7 @@
 	--color-background-tertiary: var(--color-gray-200);
 	--color-background-primary-inverse: var(--color-black);
 	--color-background-secondary-inverse: var(--color-gray-800);
+	--color-background-header: hsl(from var(--color-background-primary) h s l / 0.9);
 
 	--color-content-primary: var(--color-brand-purple);
 	--color-content-secondary: var(--color-gray-600);
@@ -71,6 +72,8 @@
 	--color-border-opaque-inverse: var(--color-gray-700);
 	--color-border-transparent-inverse: color-mix(in hsl, var(--color-white) 8%, transparent);
 	--color-border-selected-inverse: var(--color-white);
+
+	--backdrop-header: blur(10px) saturate(1.1);
 
 	/* Shadows */
 	--box-shadow-header: 0px 4px 4px 0px #00000040;

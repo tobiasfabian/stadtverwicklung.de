@@ -3,8 +3,8 @@
 	"version": "0.1.0",
 	"description": "*",
 	"scripts": {
-		"js": "npx webpack --config webpack.config.js",
-		"js-dev": "npx webpack watch --config webpack.config.js --mode development",
+		"js": "esbuild ./develop/js/index.js --bundle --format=esm --minify --outdir=public/assets/js --sourcemap --target=chrome109,firefox115,safari15.8  \"--external:./polyfills/*\"",
+		"js-dev": "npx esbuild ./develop/js/index.js --bundle --format=esm --outdir=public/assets/js --sourcemap --watch=\"forever\" \"--external:./polyfills/*\"",
 		"js-lint": "npx eslint --fix develop/js",
 		"css": "npx postcss develop/css/*.css --dir public/assets/css -m --env production",
 		"css-dev": "npx postcss develop/css/*.css --dir public/assets/css -m -w --env development",
@@ -12,25 +12,18 @@
 	},
 	"author": "hello@tobiaswolf.me",
 	"devDependencies": {
-		"@babel/cli": "^7.28.3",
-		"@babel/core": "^7.28.4",
-		"@babel/preset-env": "^7.28.3",
 		"@csstools/postcss-color-mix-function": "^2.0.19",
 		"@csstools/postcss-oklab-function": "^2.2.3",
-		"autoprefixer": "^10.4.21",
+		"autoprefixer": "^10.4.22",
 		"babel-loader": "^8.4.1",
 		"cssnano": "^5.1.15",
+		"esbuild": "0.27.1",
 		"eslint": "^8.57.1",
 		"eslint-config-airbnb-base": "^15.0.0",
 		"eslint-plugin-import": "^2.32.0",
 		"postcss": "^8.5.6",
 		"postcss-cli": "^10.1.0",
 		"postcss-import": "^15.1.0",
-		"postcss-nesting": "^11.3.0",
-		"webpack": "^5.102.1",
-		"webpack-cli": "^4.10.0"
-	},
-	"dependencies": {
-		"core-js": "^3.46.0"
+		"postcss-nesting": "^11.3.0"
 	}
 }

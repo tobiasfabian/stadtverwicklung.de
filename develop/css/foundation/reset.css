@@ -32,6 +32,11 @@ dialog {
 [popover] {
 	border: 0;
 }
+@supports not selector(:popover-open) {
+	[popover]:not(.\:popover-open) {
+		display: none;
+	}
+}
 
 a {
 	color: inherit;

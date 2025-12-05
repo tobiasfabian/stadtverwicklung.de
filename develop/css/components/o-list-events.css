@@ -1,4 +1,6 @@
 .o-list-events {
+	--_grid-template-columns: 2.5ch 2.2ch 1fr auto;
+
 	margin-inline: auto;
 	box-sizing: content-box;
 	max-inline-size: var(--max-width-content);
@@ -12,7 +14,7 @@
 
 	> ul {
 		display: grid;
-		grid-template-columns: 2.5ch 2.2ch 1fr auto;
+		grid-template-columns: var(--_grid-template-columns);
 		column-gap: var(--space-300);
 		list-style: none;
 	}
@@ -46,9 +48,7 @@
 	}
 
 	@media (min-width: 42em) {
-		> ul {
-			grid-template-columns: 2.5ch 2.2ch 1fr minmax(auto, 10ch) auto;
-		}
+		--_grid-template-columns: 2.5ch 2.2ch 1fr minmax(auto, 10ch) auto;
 	}
 }
 
@@ -57,6 +57,7 @@
 	padding-inline: var(--space-100);
 	grid-column: 1 / -1;
 	display: grid;
+	grid-template-columns: var(--_grid-template-columns);
 	grid-template-columns: subgrid;
 	grid-auto-flow: dense;
 	align-items: baseline;

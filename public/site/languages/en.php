@@ -9,6 +9,8 @@ return [
     ],
     'name' => 'English',
     'translations' => [
+        'aria.label.a-button-hamburger' => 'Expand menu',
+        'aria.label.a-nav-item' => '{title}, expand sub-menu',
         'field.period' => 'Time period',
         'field.location' => 'Location',
         'field.areas_of_action' => 'Areas of action',

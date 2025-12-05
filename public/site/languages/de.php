@@ -9,6 +9,8 @@ return [
     ],
     'name' => 'Deutsch',
     'translations' => [
+        'aria.label.a-button-hamburger' => 'Navigation ausklappen',
+        'aria.label.a-nav-item' => '{title}, Unternavigation ausklappen',
         'field.period' => 'Zeitraum',
         'field.location' => 'Ort',
         'field.areas_of_action' => 'Handlungsfelder',

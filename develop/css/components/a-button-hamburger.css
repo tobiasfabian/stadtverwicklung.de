@@ -17,7 +17,7 @@
 		transition-duration: var(--duration-small);
 	}
 
-	&:has(+ #nav-primary-list:popover-open) {
+	&:has(+ :popover-open) {
 		> span:nth-child(1) {
 			rotate: 45deg;
 			translate: 0 calc((3rem + 7rem) / 16);

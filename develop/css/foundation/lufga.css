@@ -1,13 +1,13 @@
 @font-face {
 	font-family: 'Lufga';
-	src: url('../fonts/lufga-regular.woff2') format('woff2'), url('../fonts/lufga-regular.woff') format('woff');
+	src: url('/assets/fonts/lufga-regular.woff2') format('woff2'), url('/assets/fonts/lufga-regular.woff') format('woff');
 	font-weight: 400;
 	font-display: swap; /* optional for “main” font weight */
 	font-style: normal;
 }
 @font-face {
 	font-family: 'Lufga';
-	src: url('../fonts/lufga-bold.woff2') format('woff2'), url('../fonts/lufga-bold.woff') format('woff');
+	src: url('/assets/fonts/lufga-bold.woff2') format('woff2'), url('/assets/fonts/lufga-bold.woff') format('woff');
 	font-weight: 700;
 	font-display: swap; /* optional for “main” font weight */
 	font-style: normal;

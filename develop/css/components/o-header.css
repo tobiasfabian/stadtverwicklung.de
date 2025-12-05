@@ -48,8 +48,8 @@
 		z-index: var(--z-index-header);
 		position: sticky;
 		inset-block-start: var(--_inset-block-start);
-		background-color: color-mix(in hsl, var(--color-background-primary), transparent 10%);
-		backdrop-filter: blur(10px) saturate(1.1);
+		background-color: var(--color-background-header);
+		backdrop-filter: var(--backdrop-header);
 
 		@media (prefers-reduced-motion: no-preference) {
 			@supports (animation-timeline: scroll()) {

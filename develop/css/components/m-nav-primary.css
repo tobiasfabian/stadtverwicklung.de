@@ -6,9 +6,11 @@
 		color: var(--color-brand-purple);
 	}
 
-	@media not (min-width: 64em) {
+	/* Use not (min-width: 64em) when support for iOS15.8 drops */
+	@media (max-width: 63.9999em) {
 		> ul {
 			position: fixed;
+			display: grid;
 			top: calc(120rem / 16);
 			block-size: calc(100vh - calc(120rem / 16) - var(--space-600) * 2);
 			inline-size: 100vw;
@@ -27,6 +29,7 @@
 				opacity: 0;
 				transition-property: translate, opacity;
 				transition-duration: inherit;
+				transition-delay: calc(var(--duration-xsmall) * (5 - 1) * 0.5);
 
 				&:nth-child(1) {
 					transition-delay: calc(var(--duration-xsmall) * (1 - 1) * 0.5);
@@ -42,8 +45,8 @@
 				}
 			}
 
+			&.\:popover-open,
 			&:popover-open {
-				display: grid;
 				opacity: 1;
 				transition-duration: var(--duration-medium);
 
@@ -51,15 +54,15 @@
 					opacity: 1;
 					translate: 0 0;
 
-					/* @starting-style {
+					@starting-style {
 						opacity: 0;
 						translate: -0.5em 0;
-					} */
+					}
 				}
 
-				/* @starting-style {
+				@starting-style {
 					opacity: 0;
-				} */
+				}
 			}
 		}
 	}
@@ -73,5 +76,14 @@
 		> ul > li {
 			display: flex;
 		}
+	}
+}
+
+.m-nav-primary__subnav {
+	position-area: bottom span-right;
+	@media (min-width: 64em) {
+		background-color: var(--color-background-header);
+		backdrop-filter: var(--backdrop-header);
+		box-shadow: var(--box-shadow-header);
 	}
 }
