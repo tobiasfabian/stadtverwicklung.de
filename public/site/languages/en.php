@@ -15,6 +15,8 @@ return [
         'field.location' => 'Location',
         'field.areas_of_action' => 'Areas of action',
         'field.partner' => 'A project by…',
+        'projects.completed' => 'Completed Projects',
+        'projects.current' => 'Current Projects',
     ],
     'url' => NULL
 ];

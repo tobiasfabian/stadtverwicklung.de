@@ -1,5 +1,8 @@
 <?php
 /** @var \Kirby\Cms\Site $site */
+
+use Kirby\Toolkit\Str;
+
 ?>
 <nav class=m-nav-primary>
 	<button class=a-button-hamburger aria-label="<?= t('aria.label.a-button-hamburger') ?>" popovertarget=nav-primary-list popovertargetaction=toggle>
@@ -39,6 +42,17 @@
 								</a>
 							</li>
 						<?php endforeach ?>
+						<?php if ($item->intendedTemplate()->name() === 'projects'): ?>
+							<li>
+								<a <?= attr([
+									'href' => $item->url() . '#' . Str::slug(t('projects.completed')),
+									'class' => 'a-nav-item',
+									'data-variant' => 'secondary',
+								]) ?> >
+									<?= t('projects.completed') ?>
+								</a>
+							</li>
+						<?php endif ?>
 					</ul>
 				<?php else: ?>
 					<a <?= attr([

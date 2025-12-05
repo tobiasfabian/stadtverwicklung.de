@@ -1,6 +1,6 @@
 .m-nav-primary {
 	margin-inline-end: calc(var(--padding-inline-root) * -1);
-	block-size: var(--header-height);
+	block-size: var(--height-header);
 
 	> ul {
 		color: var(--color-brand-purple);

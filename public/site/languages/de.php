@@ -17,6 +17,8 @@ return [
         'field.partner' => 'Ein Projekt von…',
         'events.upcoming' => 'Bevorstehende Veranstaltungen',
         'events.past' => 'Vergangene Veranstaltungen',
+        'projects.completed' => 'Abgeschlossene Projekte',
+        'projects.current' => 'Aktuelle Projekte',
         'project' => [
             '',
             'Projekt',

@@ -8,7 +8,6 @@
 }
 
 .o-header {
-	--header-height: calc(60rem / 16);
 	--_width-logo: calc(160rem / 16);
 	--_inset-block-start: calc(10rem / 16 * -1);
 	padding-block-start: calc(var(--_inset-block-start) * -1 + 10rem / 16);
@@ -40,7 +39,6 @@
 	}
 
 	@media (max-width: 26em) {
-		--header-height: calc(48rem / 16);
 		--_width-logo: calc(120rem / 16);
 	}
 

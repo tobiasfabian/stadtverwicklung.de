@@ -1,5 +1,6 @@
 <?php
 /** @var \Kirby\Cms\Page $page */
+use Kirby\Toolkit\Str;
 ?>
 <?php snippet('head'); ?>
 <body>
@@ -8,7 +9,7 @@
 		<div class=o-blocks>
 			<?php snippet('m-teaser') ?>
 			<div class=m-grid>
-				<h2 class=a-heading>Aktuelle Projekte</h2>
+				<h2 class=a-heading><?= t('projects.current') ?></h2>
 				<ul>
 					<?php foreach (collection('projects')->listed() as $projectPage): ?>
 						<?php /** @var ProjectPage|\Kirby\Cms\Page $projectPage */ ?>
@@ -28,7 +29,7 @@
 				</ul>
 			</div>
 			<div class=m-grid>
-				<h2 class=a-heading>Abgeschlossene Projekte</h2>
+				<h2 class=a-heading id=<?= Str::slug(t('projects.completed')) ?>><?= t('projects.completed') ?></h2>
 				<ul>
 					<?php foreach (collection('projects')->unlisted() as $projectPage): ?>
 						<?php /** @var ProjectPage|\Kirby\Cms\Page $projectPage */ ?>
