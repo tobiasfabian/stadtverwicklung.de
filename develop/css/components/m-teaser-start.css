@@ -34,7 +34,6 @@
 	animation-range: exit-crossing 0% exit-crossing 100%;
 
 	> img {
-		block-size: 100%;
 		object-fit: cover;
 	}
 
@@ -142,7 +141,7 @@
 		justify-self: end;
 		align-self: end;
 		grid-row-start: 1;
-		translate: -20% calc(20% + var(--m-teaser-start-bubble) * 1px);
+		translate: -20% calc(13% + var(--m-teaser-start-bubble) * 0.5px);
 	}
 	@media (min-width: 80em) {
 		font-size: var(--font-size-label-xlarge);

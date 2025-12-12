@@ -1,5 +1,6 @@
 .m-text {
 	max-inline-size: var(--max-width-text);
+	inline-size: 100%;
 	font: var(--font-paragraph-large);
 	letter-spacing: var(--letter-spacing-display);
 
@@ -100,5 +101,14 @@
 	&[data-width=large] {
 		margin-inline: auto;
 		max-inline-size: var(--max-width-content);
+
+		> * {
+			max-width: max(var(--max-width-text), 55ch);
+		}
+	}
+
+	.o-blocks > &[data-text-size=large] + *,
+	.o-blocks > .m-teaser-start + & {
+		margin-block-start: var(--space-500);
 	}
 }
