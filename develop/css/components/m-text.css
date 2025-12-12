@@ -27,12 +27,15 @@
 
 	> h1 {
 		font: var(--font-heading-large);
+		letter-spacing: normal;
 	}
 	> h2 {
 		font: var(--font-heading-medium);
+		letter-spacing: normal;
 	}
 	> h3 {
 		font: var(--font-heading-small);
+		letter-spacing: normal;
 	}
 
 	> :where(ul, ol) {

@@ -1,0 +1,150 @@
+@property --m-teaser-start-h {
+	syntax: "<number>";
+	inherits: true;
+	initial-value:0
+}
+@property --m-teaser-start-bubble {
+	syntax: "<number>";
+	inherits: true;
+	initial-value: 0
+}
+
+@keyframes m-teaser-start {
+	0% {
+		--m-teaser-start-h: 0;
+		--m-teaser-start-bubble: 0;
+	}
+
+	to {
+		--m-teaser-start-h: 24;
+		--m-teaser-start-bubble: 20;
+	}
+}
+
+
+.m-teaser-start {
+	display: grid;
+	margin-inline: auto;
+	inline-size: 100%;
+	max-inline-size: var(--max-width);
+	max-block-size: calc(640rem / 16);
+	animation-name: m-teaser-start;
+	animation-timeline: view();
+	animation-timing-function: linear;
+	animation-range: exit-crossing 0% exit-crossing 100%;
+
+	> img {
+		block-size: 100%;
+		object-fit: cover;
+	}
+
+	> * {
+		grid-column: 1 / -1;
+		grid-row: 1 / span 1;
+	}
+
+	@media (max-width: 26em) {
+		> img {
+			block-size: 50vw;
+		}
+	}
+}
+
+.m-teaser-start__overlay {
+	--_color: hsl(350, 80%, 90%);
+	--_h: 8;
+	--_s: 1;
+	--_l: 2;
+
+	background-image: linear-gradient(calc(180deg + var(--degree)),
+		hsl(from var(--_color) calc(h + var(--m-teaser-start-h) + var(--_h) * -6) calc(s + var(--_s) * 6) calc(l - var(--_l) * 6)),
+		hsl(from var(--_color) calc(h + var(--m-teaser-start-h) + var(--_h) * -5) calc(s + var(--_s) * 5) calc(l - var(--_l) * 5)),
+		hsl(from var(--_color) calc(h + var(--m-teaser-start-h) + var(--_h) * -4) calc(s + var(--_s) * 4) calc(l - var(--_l) * 4)),
+		hsl(from var(--_color) calc(h + var(--m-teaser-start-h) + var(--_h) * -3) calc(s + var(--_s) * 3) calc(l - var(--_l) * 3)),
+		hsl(from var(--_color) calc(h + var(--m-teaser-start-h) + var(--_h) * -2) calc(s + var(--_s) * 2) calc(l - var(--_l) * 2)),
+		hsl(from var(--_color) calc(h + var(--m-teaser-start-h) + var(--_h) * -1) calc(s + var(--_s) * 1) calc(l - var(--_l) * 1)),
+		hsl(from var(--_color) calc(h + var(--m-teaser-start-h)) s l),
+		hsl(from var(--_color) calc(h + var(--m-teaser-start-h) + var(--_h) * 1) calc(s + var(--_s) * 1) calc(l - var(--_l) * 1)),
+		hsl(from var(--_color) calc(h + var(--m-teaser-start-h) + var(--_h) * 2) calc(s + var(--_s) * 2) calc(l - var(--_l) * 2)),
+		hsl(from var(--_color) calc(h + var(--m-teaser-start-h) + var(--_h) * 3) calc(s + var(--_s) * 3) calc(l - var(--_l) * 3)),
+		hsl(from var(--_color) calc(h + var(--m-teaser-start-h) + var(--_h) * 4) calc(s + var(--_s) * 4) calc(l - var(--_l) * 4)),
+		hsl(from var(--_color) calc(h + var(--m-teaser-start-h) + var(--_h) * 5) calc(s + var(--_s) * 5) calc(l - var(--_l) * 5)),
+		hsl(from var(--_color) calc(h + var(--m-teaser-start-h) + var(--_h) * 6) calc(s + var(--_s) * 6) calc(l - var(--_l) * 6))
+	);
+	background-size: cover;
+	mix-blend-mode: color-burn;
+
+	&[data-variant="mask"] {
+		mask-image: linear-gradient(calc(var(--degree) - 2deg), hsla(0, 0%, 100%, 0.9), hsla(0, 0%, 100%, 0.8) 40%, hsla(0, 0%, 100%, 0.2) 60%, hsla(0, 0%, 100%, 0));
+		mix-blend-mode: unset;
+		opacity: 1;
+	}
+}
+
+.m-teaser-start__text {
+	position: relative;
+	align-self: end;
+	padding: var(--padding-inline-root);
+
+	> h1 {
+		font-size: clamp(var(--font-size-heading-small), calc(88 / 1440 * 100vw), var(--font-size-heading-xxlarge));
+		line-height: calc(40 / 40);
+	}
+
+	@media (min-width: 50em) {
+		padding: calc(var(--padding-inline-root) * 2);
+	}
+}
+
+.m-teaser-start__bubble {
+	translate: 0 calc(var(--m-teaser-start-bubble) * 0.5px);
+	margin-block-start: calc(var(--padding-inline-root) * -2);
+	margin-inline-end: var(--padding-inline-root);
+	justify-self: end;
+	grid-row-start: 2;
+	aspect-ratio: 400 / 340;
+	box-sizing: border-box;
+	inline-size: 24ch;
+	padding: 1em;
+	padding-inline-end: calc(0.6% + 1em);
+	padding-block-end: calc(1.0% + 1em);
+	text-wrap-style: balance;
+	text-align: center;
+	display: grid;
+	row-gap: var(--space-200);
+	justify-content: center;
+	align-content: center;
+	justify-items: center;
+	text-decoration: none;
+	line-height: calc(28 / 24);
+	font-size: var(--font-size-label-medium);
+	font-weight: 700;
+		background-image: url('/assets/images/sprechblase-outline.png'), linear-gradient(to left top,
+		hsla(18 100% 82% / 1),
+		hsla(48 100% 70% / 1)
+	);
+	color: var(--color-brand-blue);
+	background-color: var(--color-yellow-500);
+	background-size: contain;
+	mask-image: url('/assets/images/sprechblase.png');
+	mask-size: contain;
+	transition-property: background-image;
+	transition-duration: var(--duration-medium);
+
+	> .a-button {
+		font-size: 0.88em;
+	}
+
+	@media (min-width: 40em) {
+		font-size: var(--font-size-label-large);
+	}
+	@media (min-width: 50em) {
+		justify-self: end;
+		align-self: end;
+		grid-row-start: 1;
+		translate: -20% calc(20% + var(--m-teaser-start-bubble) * 1px);
+	}
+	@media (min-width: 80em) {
+		font-size: var(--font-size-label-xlarge);
+	}
+}

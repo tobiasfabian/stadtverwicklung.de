@@ -20,6 +20,7 @@ fieldsets:
     fieldsets:
       - line
       - banner
+      - teaser-start
       - grid
       - background
   generatedContent:

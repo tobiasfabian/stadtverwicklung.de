@@ -1,8 +1,8 @@
 .a-button {
-	--_padding-block: var(--space-200);
-	--_padding-block-start: calc(var(--space-200));
-	--_padding-block-end: calc(var(--space-200) - 1rem / 16);
-	--_padding-inline: var(--space-300);
+	--_padding-block: 0.5em;
+	--_padding-block-start: calc(0.5em);
+	--_padding-block-end: calc(0.5em - 1rem / 16);
+	--_padding-inline: 0.75em;
 
 	display: inline-block;
 	padding-inline: var(--_padding-inline);

@@ -10,6 +10,7 @@
 		.o-list-events,
 		.o-background,
 		.m-teaser,
+		.m-teaser-start,
 		m-gallery,
 		.m-figure,
 		.m-video,
@@ -23,15 +24,15 @@
 		justify-self: start;
 	}
 
-	main > &:first-child {
+	main > &:first-child:not(:has(> .m-teaser-start:first-child)) {
 		margin-block-start: var(--space-1000);
 	}
 
 	:where(.m-teaser) + & {
 		margin-block-start: var(--space-1000);
 	}
-	:where(.m-teaser-home) + & {
-		margin-block-start: var(--space-1000);
+	:where(.m-teaser-start) + & {
+		margin-block-start: var(--space-700);
 	}
 
 	&[data-gap=small] {
@@ -41,5 +42,11 @@
 	/* DEPRECATED */
 	&[data-variant=blog-entry] {
 		font: var(--font-paragraph-large);
+	}
+
+	@media (min-width: 50em) {
+		:where(.m-teaser-start) + & {
+			margin-block-start: var(--space-1000);
+		}
 	}
 }

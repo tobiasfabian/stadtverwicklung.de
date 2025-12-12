@@ -1,0 +1,22 @@
+name: Teaser Start
+wysiwyg: true
+preview: fields
+icon: sparkling
+fields:
+  title:
+    label: Teaser-Titel
+    extends: fields/writer-inline
+    marks: false
+    width: 2/3
+  image:
+    extends: fields/teaser-image
+    width: 1/3
+  text:
+    label: Störer-Text
+    extends: fields/writer-inline
+    marks: false
+    width: 2/3
+  link:
+    label: Störer-Link
+    extends: fields/link
+    width: 2/3

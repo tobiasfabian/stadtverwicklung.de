@@ -4,6 +4,10 @@ navigation:
   status: all
   template: all
 
+options:
+  changeTemplate:
+    - info
+
 tabs:
   content:
     extends: tabs/content

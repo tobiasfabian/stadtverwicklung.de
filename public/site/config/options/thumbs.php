@@ -77,7 +77,7 @@ return [
 			'height' => 630,
 			'crop' => true,
 		],
-		'm-teaser-home'=> [
+		'm-teaser-start'=> [
 			'width' => 1600,
 			'height' => 640,
 			'crop' => true,
@@ -101,7 +101,7 @@ return [
 				'crop' => true,
 			],
 		],
-		'm-teaser-home'=> [
+		'm-teaser-start'=> [
 			'3200w' => [
 				'width' => 1600 * 2,
 				'height' => 640 * 2,

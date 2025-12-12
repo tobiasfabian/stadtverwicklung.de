@@ -8,6 +8,10 @@ image:
   query: model.teaserImage.toFile
   cover: true
 
+options:
+  changeTemplate:
+    - default
+
 tabs:
   content:
     label: Inhalt
