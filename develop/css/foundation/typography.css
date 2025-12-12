@@ -7,6 +7,8 @@
 	--font-family: 'Lufga', sans-serif;
 
 	/* Font size */
+	--font-size-heading-xxlarge: calc(88rem / 16);
+	--font-size-heading-xlarge: calc(64rem / 16);
 	--font-size-heading-large: calc(40rem / 16);
 	--font-size-heading-medium: calc(28rem / 16);
 	--font-size-heading-small: calc(20rem / 16);
@@ -24,6 +26,8 @@
 	--font-size: var(--font-size-paragraph-medium);
 
 	/* Line height */
+	--line-height-heading-xxlarge: calc(88 / 40);
+	--line-height-heading-xlarge: calc(64 / 40);
 	--line-height-heading-large: calc(40 / 40);
 	--line-height-heading-medium: calc(32 / 28);
 	--line-height-heading-small: calc(24 / 20);
@@ -41,6 +45,8 @@
 	--line-height: var(--line-height-paragraph-medium);
 
 	/* Font */
+	--font-heading-xxlarge: 700 var(--font-size-heading-xxlarge)/var(--line-height-heading-xxlarge) var(--font-family);
+	--font-heading-xlarge: 700 var(--font-size-heading-xlarge)/var(--line-height-heading-xlarge) var(--font-family);
 	--font-heading-large: 700 var(--font-size-heading-large)/var(--line-height-heading-large) var(--font-family);
 	--font-heading-medium: 700 var(--font-size-heading-medium)/var(--line-height-heading-medium) var(--font-family);
 	--font-heading-small: 700 var(--font-size-heading-small)/var(--line-height-heading-small) var(--font-family);

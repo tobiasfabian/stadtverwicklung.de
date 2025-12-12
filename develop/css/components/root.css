@@ -12,7 +12,9 @@ html {
 	}
 
 	@media (min-height: 20em) {
-		scroll-padding-block-start: calc(var(--height-header) + var(--space-700));
+		* {
+			scroll-margin-block-start: calc(var(--height-header) + var(--space-700));
+		}
 	}
 }
 

@@ -3,6 +3,7 @@ toolbar:
   inline: false
 marks:
   - bold
+  - italic
   - link
 headings:
   - 2

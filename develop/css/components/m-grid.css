@@ -10,7 +10,7 @@
 
 	> ul {
 		display: grid;
-		grid-template-columns: repeat(auto-fill, minmax(calc(240rem / 16), 1fr));
+		grid-template-columns: repeat(auto-fill, minmax(calc(160rem / 16), 1fr));
 		column-gap: var(--padding-inline-root);
 		row-gap: var(--gap-inline);
 		list-style: none;
@@ -25,6 +25,12 @@
 	@media (min-width: 36em) {
 		> ul {
 			column-gap: var(--gap-inline);
+			grid-template-columns: repeat(auto-fill, minmax(calc(200rem / 16), 1fr));
+		}
+	}
+	@media (min-width: 50em) {
+		> ul {
+			grid-template-columns: repeat(auto-fill, minmax(calc(240rem / 16), 1fr));
 		}
 	}
 	@media (min-width: 64em) {

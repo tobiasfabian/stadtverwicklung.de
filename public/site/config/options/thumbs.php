@@ -77,6 +77,11 @@ return [
 			'height' => 630,
 			'crop' => true,
 		],
+		'm-teaser-home'=> [
+			'width' => 1600,
+			'height' => 640,
+			'crop' => true,
+		],
 		'card'=> [
 			'width' => 352,
 			'height' => 236,
@@ -93,6 +98,23 @@ return [
 			'1200w' => [
 				'width' => 1200,
 				'height' => 628,
+				'crop' => true,
+			],
+		],
+		'm-teaser-home'=> [
+			'3200w' => [
+				'width' => 1600 * 2,
+				'height' => 640 * 2,
+				'crop' => true,
+			],
+			'1600w' => [
+				'width' => 1600,
+				'height' => 640,
+				'crop' => true,
+			],
+			'800w' => [
+				'width' => 800,
+				'height' => 320,
 				'crop' => true,
 			],
 		],

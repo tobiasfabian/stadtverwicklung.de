@@ -14,20 +14,22 @@ tabs:
     sections:
       fields:
         fields:
-          teaserImage:
-            extends: fields/teaser-image
           teaserTitle:
             label: Teaser-Titel
             extends: fields/writer-inline
             marks: false
-            width: 1/2
+            width: 2/3
+          teaserImage:
+            extends: fields/teaser-image
+            width: 1/3
           teaserText:
             label: Teaser-Text
             extends: fields/writer-inline
-            width: 1/2
+            marks: false
+            width: 2/3
           teaserLink:
             extends: fields/link
-            width: 1/2
+            width: 2/3
           text:
             extends: fields/blocks
   meta:

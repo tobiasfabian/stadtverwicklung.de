@@ -13,6 +13,18 @@
 		}
 	}
 
+	> :where(ul, ol, p) > em {
+		padding-inline: 0.2em;
+		border-radius: 4px;
+		font-style: normal;
+		box-decoration-break: clone;
+		-webkit-box-decoration-break: clone;
+		background-image: linear-gradient(to left top,
+			hsl(28, 100%, 82%),
+			hsl(48, 100%, 70%)
+		);
+	}
+
 	> h1 {
 		font: var(--font-heading-large);
 	}
