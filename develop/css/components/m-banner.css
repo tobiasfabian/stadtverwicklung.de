@@ -1,18 +1,18 @@
 .m-banner {
 	--_color-background: hsl(342, 97%, 85%);
-	--_h: 9;
-	--_s: 1;
-	--_l: 2.5;
+	--_h: 4;
+	--_s: 2;
+	--_l: 2;
 
 	color: var(--_color, var(--color-brand-purple));
 	background-color: var(--_color-background);
 	background-image: linear-gradient(var(--degree),
-		hsl(from var(--_color-background) calc(h + var(--_h) * -3) calc(s + var(--_s) * -3) calc(l - var(--_l) * 3)),
-		hsl(from var(--_color-background) calc(h + var(--_h) * -2) calc(s + var(--_s) * -2) calc(l - var(--_l) * 2)),
-		hsl(from var(--_color-background) calc(h + var(--_h) * -1) calc(s + var(--_s) * -1) calc(l - var(--_l) * 1)),
+		hsl(from var(--_color-background) calc(h + var(--_h) * -3) calc(s + var(--_s) * 3) calc(l - var(--_l) * 3)),
+		hsl(from var(--_color-background) calc(h + var(--_h) * -2) calc(s + var(--_s) * 2) calc(l - var(--_l) * 1)),
+		hsl(from var(--_color-background) calc(h + var(--_h) * -1) calc(s + var(--_s) * 1) calc(l - var(--_l) * 0.6)),
 		hsl(from var(--_color-background) calc(h) s l),
-		hsl(from var(--_color-background) calc(h + var(--_h) * 1) calc(s + var(--_s) * 1) calc(l - var(--_l) * 1)),
-		hsl(from var(--_color-background) calc(h + var(--_h) * 2) calc(s + var(--_s) * 2) calc(l - var(--_l) * 2)),
+		hsl(from var(--_color-background) calc(h + var(--_h) * 1) calc(s + var(--_s) * 1) calc(l - var(--_l) * 0.6)),
+		hsl(from var(--_color-background) calc(h + var(--_h) * 2) calc(s + var(--_s) * 2) calc(l - var(--_l) * 1)),
 		hsl(from var(--_color-background) calc(h + var(--_h) * 3) calc(s + var(--_s) * 3) calc(l - var(--_l) * 3)),
 		hsl(from var(--_color-background) calc(h + var(--_h) * 4) calc(s + var(--_s) * 4) calc(l - var(--_l) * 4)),
 		hsl(from var(--_color-background) calc(h + var(--_h) * 5) calc(s + var(--_s) * 5) calc(l - var(--_l) * 5)),

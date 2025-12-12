@@ -50,18 +50,18 @@
 }
 
 .m-teaser-home__overlay {
-	--_color: hsl(350, 97%, 88%);
+	--_color: hsl(350, 80%, 90%);
 	--_h: 8;
 	--_s: 1;
-	--_l: 3;
+	--_l: 2;
 
 	background-image: linear-gradient(calc(180deg + var(--degree)),
-		hsl(from var(--_color) calc(h + var(--m-teaser-home-h) + var(--_h) * -6) calc(s + var(--_s) * -6) calc(l - var(--_l) * 6)),
-		hsl(from var(--_color) calc(h + var(--m-teaser-home-h) + var(--_h) * -5) calc(s + var(--_s) * -5) calc(l - var(--_l) * 5)),
-		hsl(from var(--_color) calc(h + var(--m-teaser-home-h) + var(--_h) * -4) calc(s + var(--_s) * -4) calc(l - var(--_l) * 4)),
-		hsl(from var(--_color) calc(h + var(--m-teaser-home-h) + var(--_h) * -3) calc(s + var(--_s) * -3) calc(l - var(--_l) * 3)),
-		hsl(from var(--_color) calc(h + var(--m-teaser-home-h) + var(--_h) * -2) calc(s + var(--_s) * -2) calc(l - var(--_l) * 2)),
-		hsl(from var(--_color) calc(h + var(--m-teaser-home-h) + var(--_h) * -1) calc(s + var(--_s) * -1) calc(l - var(--_l) * 1)),
+		hsl(from var(--_color) calc(h + var(--m-teaser-home-h) + var(--_h) * -6) calc(s + var(--_s) * 6) calc(l - var(--_l) * 6)),
+		hsl(from var(--_color) calc(h + var(--m-teaser-home-h) + var(--_h) * -5) calc(s + var(--_s) * 5) calc(l - var(--_l) * 5)),
+		hsl(from var(--_color) calc(h + var(--m-teaser-home-h) + var(--_h) * -4) calc(s + var(--_s) * 4) calc(l - var(--_l) * 4)),
+		hsl(from var(--_color) calc(h + var(--m-teaser-home-h) + var(--_h) * -3) calc(s + var(--_s) * 3) calc(l - var(--_l) * 3)),
+		hsl(from var(--_color) calc(h + var(--m-teaser-home-h) + var(--_h) * -2) calc(s + var(--_s) * 2) calc(l - var(--_l) * 2)),
+		hsl(from var(--_color) calc(h + var(--m-teaser-home-h) + var(--_h) * -1) calc(s + var(--_s) * 1) calc(l - var(--_l) * 1)),
 		hsl(from var(--_color) calc(h + var(--m-teaser-home-h)) s l),
 		hsl(from var(--_color) calc(h + var(--m-teaser-home-h) + var(--_h) * 1) calc(s + var(--_s) * 1) calc(l - var(--_l) * 1)),
 		hsl(from var(--_color) calc(h + var(--m-teaser-home-h) + var(--_h) * 2) calc(s + var(--_s) * 2) calc(l - var(--_l) * 2)),
@@ -71,11 +71,10 @@
 		hsl(from var(--_color) calc(h + var(--m-teaser-home-h) + var(--_h) * 6) calc(s + var(--_s) * 6) calc(l - var(--_l) * 6))
 	);
 	background-size: cover;
-	mix-blend-mode: multiply;
-	opacity: 0.9;
+	mix-blend-mode: color-burn;
 
 	&[data-variant="mask"] {
-		mask-image: linear-gradient(calc(var(--degree) - 5deg), hsla(0, 0%, 100%, 0.9), hsla(0, 0%, 100%, 0.8) 40%, hsla(0, 0%, 100%, 0.2) 60%, hsla(0, 0%, 100%, 0));
+		mask-image: linear-gradient(calc(var(--degree) - 2deg), hsla(0, 0%, 100%, 0.9), hsla(0, 0%, 100%, 0.8) 40%, hsla(0, 0%, 100%, 0.2) 60%, hsla(0, 0%, 100%, 0));
 		mix-blend-mode: unset;
 		opacity: 1;
 	}

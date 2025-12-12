@@ -103,6 +103,7 @@
 	@media (min-width: 64em) {
 		margin-block-start: calc(var(--_inset-block-start) * 1);
 		padding-block-start: calc(var(--_inset-block-start) * -1);
+		padding-block-end: var(--space-100);
 		color: var(--color-content-primary);
 		background-color: var(--color-background-header);
 		backdrop-filter: var(--backdrop-header);

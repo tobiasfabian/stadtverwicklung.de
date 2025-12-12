@@ -9,7 +9,7 @@
 	padding-block: var(--_padding-block-start) var(--_padding-block-end);
 	text-decoration: none;
 	font: var(--font-label-medium);
-	color: var(--color-brand-orange-dark);
+	color: var(--color-brand-blue);
 	border: var(--border-size-medium) solid currentcolor;
 	border-radius: calc(1lh + var(--_padding-block) * 2);
 	background-color: var(--color-background-primary);
@@ -39,7 +39,7 @@
 		background-color: var(--color-brand-orange);
 	}
 	&[data-kind=transparent] {
-		color: var(--color-brand-orange);
+		color: var(--color-brand-rose);
 		background-color: transparent;
 	}
 	&[data-kind=transparent-dark] {
@@ -64,15 +64,15 @@
 	@media (any-pointer: fine) {
 		:where(a, button):where(:focus-visible, :hover):not([disabled]) &,
 		&:where(:focus-visible, :hover):not([disabled]) {
-			color: var(--color-content-primary);
-			border-color: var(--color-brand-orange-dark);
-			background-color: var(--color-brand-orange);
+			color: var(--color-content-primary-inverse);
+			border-color: var(--color-brand-blue);
+			background-color: var(--color-brand-blue);
 			transition-timing-function: ease-out;
 
 			&[data-kind=transparent] {
 				color: var(--color-content-primary);
-				border-color: var(--color-brand-orange);
-				background-color: var(--color-brand-orange);
+				border-color: var(--color-brand-rose);
+				background-color: var(--color-brand-rose);
 			}
 			&[data-kind=transparent-dark] {
 				color: var(--color-white);

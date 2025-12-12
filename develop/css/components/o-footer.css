@@ -44,7 +44,7 @@
 
 .o-footer__sitemap {
 	padding-block: var(--space-500);
-	background-color: var(--color-brand-orange);
+	background-color: var(--color-brand-rose);
 
 	> div {
 		box-sizing: content-box;
