@@ -33,7 +33,7 @@
 	--max-width-content: calc(1104rem / 16);
 	--max-width-text: calc(728rem / 16);
 
-	--height-header: calc(60rem / 16);
+	--height-header: calc(80rem / 16);
 
 	/* Borders */
 	/* Use px values instead of rem */
@@ -67,9 +67,12 @@
 		--space-800: calc((52rem * 0.8) / 16);
 		--space-900: calc((64rem * 0.8) / 16);
 		--space-1000: calc((96rem * 0.7) / 16);
-		--height-header: calc(48rem / 16);
+		--height-header: calc(68rem / 16);
 	}
 	@media (min-width: 32rem) {
 		--padding-inline-root: var(--space-500);
+	}
+	@media (min-width: 64em) {
+		--height-header: calc(87rem / 16);
 	}
 }

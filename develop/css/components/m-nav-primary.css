@@ -1,25 +1,43 @@
 .m-nav-primary {
 	margin-inline-end: calc(var(--padding-inline-root) * -1);
-	block-size: var(--height-header);
+	block-size: 100%;
+}
 
-	> ul {
-		color: var(--color-brand-purple);
+.m-nav-primary__container {
+	/* Use not (min-width: 64em) when support for iOS15.8 drops */
+	@media (max-width: 63.9999em) {
+		position: fixed;
+		display: grid;
+		inset-block-start: var(--height-header);
+		block-size: calc(100vh - var(--height-header) - var(--space-600) - var(--space-1000));
+		inline-size: 100vw;
+		row-gap: var(--space-600);
+		padding-block-start: var(--space-600);
+		padding-block-end: var(--space-1000);
+		align-content: start;
+		background-color: transparent;
+		overflow: auto;
+
+		&.\:popover-open,
+		&:popover-open {
+			opacity: 1;
+			transition-duration: var(--duration-medium);
+		}
 	}
+	@media (min-width: 64em) {
+		block-size: 100%;
+		display: grid;
+		grid-template-rows: auto auto;
+	}
+}
+
+.m-nav-primary__nav {
+	color: var(--color-brand-purple);
 
 	/* Use not (min-width: 64em) when support for iOS15.8 drops */
 	@media (max-width: 63.9999em) {
 		> ul {
-			position: fixed;
-			display: grid;
-			top: calc(120rem / 16);
-			block-size: calc(100vh - calc(120rem / 16) - var(--space-600) * 2);
-			inline-size: 100vw;
-			row-gap: var(--space-600);
-			padding-block: var(--space-600);
-			align-content: start;
-			background-color: transparent;
 			opacity: 0;
-			overflow: auto;
 			transition-property: opacity, display;
 			transition-duration: var(--duration-xsmall);
 			transition-behavior: allow-discrete;
@@ -44,9 +62,10 @@
 					transition-delay: calc(var(--duration-xsmall) * (4 - 1) * 0.5);
 				}
 			}
+		}
 
-			&.\:popover-open,
-			&:popover-open {
+		.m-nav-primary__container:is(.\:popover-open, :popover-open) & {
+			> ul {
 				opacity: 1;
 				transition-duration: var(--duration-medium);
 
@@ -82,8 +101,42 @@
 .m-nav-primary__subnav {
 	position-area: bottom span-right;
 	@media (min-width: 64em) {
+		margin-block-start: calc(var(--_inset-block-start) * 1);
+		padding-block-start: calc(var(--_inset-block-start) * -1);
 		background-color: var(--color-background-header);
 		backdrop-filter: var(--backdrop-header);
 		box-shadow: var(--box-shadow-header);
+	}
+}
+
+
+.m-nav-primary__language-switch {
+	text-transform: uppercase;
+	> ul {
+		display: flex;
+		padding-inline: calc(var(--space-400) - var(--space-100));
+	}
+	> ul > li > a {
+		padding-inline: var(--space-100);
+		text-decoration: none;
+		font: var(--font-label-large);
+		font-weight: 400;
+
+		&[aria-current="page"] {
+			color: var(--color-content-secondary);
+		}
+	}
+	@media (max-width: 63.9999em) {
+
+	}
+	@media (min-width: 64em) {
+		grid-row-start: 1;
+		> ul {
+			justify-content: end;
+		}
+		> ul > li > a {
+			font: var(--font-label-small);
+			font-weight: 400;
+		}
 	}
 }

@@ -9,6 +9,8 @@ return [
     ],
     'name' => 'Deutsch',
     'translations' => [
+        'aria.label.primary-nav' => 'Haupt',
+        'aria.label.language-nav' => 'Sprachwechsler',
         'aria.label.a-button-hamburger' => 'Navigation ausklappen',
         'aria.label.a-nav-item' => '{title}, Unternavigation ausklappen',
         'field.period' => 'Zeitraum',

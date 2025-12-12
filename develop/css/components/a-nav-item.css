@@ -1,8 +1,9 @@
 .a-nav-item {
+	position: relative;
 	display: flex;
 	align-items: center;
 	padding-inline: var(--space-400);
-	padding-block: var(--space-400);
+	padding-block: var(--space-300);
 	line-height: calc(18rem / 16);
 	font-size: calc(18rem / 16);
 	font: var(--font-heading-large);
@@ -13,7 +14,11 @@
 	transition-property: opacity;
 	transition-duration: var(--duration-medium);
 
-	&:hover {
+	&:is(button) {
+		cursor: default;
+	}
+
+	&:is(a):hover {
 		text-decoration: underline;
 	}
 

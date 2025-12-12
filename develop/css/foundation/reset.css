@@ -31,6 +31,10 @@ dialog {
 
 [popover] {
 	border: 0;
+
+	&:not(:popover-open) {
+		display: none !important;
+	}
 }
 @supports not selector(:popover-open) {
 	[popover]:not(.\:popover-open) {

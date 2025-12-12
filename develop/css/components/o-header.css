@@ -9,8 +9,8 @@
 
 .o-header {
 	--_width-logo: calc(160rem / 16);
-	--_inset-block-start: calc(10rem / 16 * -1);
-	padding-block-start: calc(var(--_inset-block-start) * -1 + 10rem / 16);
+	--_inset-block-start: calc(4rem / 16 * -1);
+	padding-block-start: calc(var(--_inset-block-start) * -1 + 4rem / 16);
 
 	&::after {
 		content: '';
@@ -26,7 +26,7 @@
 		transition-behavior: allow-discrete;
 	}
 
-	&:has(.m-nav-primary > ul:popover-open) {
+	&:has(.m-nav-primary__container:popover-open) {
 		&::after {
 			content: '';
 			display: block;
@@ -60,6 +60,9 @@
 			}
 		}
 	}
+	@media (min-width: 64em) {
+		--_inset-block-start: calc(12rem / 16 * -1);
+	}
 }
 
 .o-header > div {
@@ -88,6 +91,8 @@
 	> a {
 		display: flex;
 		align-items: center;
+		padding-block-start: calc(13rem / 16);
+		padding-block-end: calc(10rem / 16);
 		padding-inline: var(--padding-inline-root);
 	}
 
