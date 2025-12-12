@@ -1,0 +1,60 @@
+.m-banner {
+	--_color-background: hsl(342, 97%, 85%);
+	--_h: 9;
+	--_s: 1;
+	--_l: 2.5;
+
+	color: var(--_color, var(--color-brand-purple));
+	background-color: var(--_color-background);
+	background-image: linear-gradient(var(--degree),
+		hsl(from var(--_color-background) calc(h + var(--_h) * -3) calc(s + var(--_s) * -3) calc(l - var(--_l) * 3)),
+		hsl(from var(--_color-background) calc(h + var(--_h) * -2) calc(s + var(--_s) * -2) calc(l - var(--_l) * 2)),
+		hsl(from var(--_color-background) calc(h + var(--_h) * -1) calc(s + var(--_s) * -1) calc(l - var(--_l) * 1)),
+		hsl(from var(--_color-background) calc(h) s l),
+		hsl(from var(--_color-background) calc(h + var(--_h) * 1) calc(s + var(--_s) * 1) calc(l - var(--_l) * 1)),
+		hsl(from var(--_color-background) calc(h + var(--_h) * 2) calc(s + var(--_s) * 2) calc(l - var(--_l) * 2)),
+		hsl(from var(--_color-background) calc(h + var(--_h) * 3) calc(s + var(--_s) * 3) calc(l - var(--_l) * 3)),
+		hsl(from var(--_color-background) calc(h + var(--_h) * 4) calc(s + var(--_s) * 4) calc(l - var(--_l) * 4)),
+		hsl(from var(--_color-background) calc(h + var(--_h) * 5) calc(s + var(--_s) * 5) calc(l - var(--_l) * 5)),
+		hsl(from var(--_color-background) calc(h + var(--_h) * 6) calc(s + var(--_s) * 6) calc(l - var(--_l) * 6)),
+		hsl(from var(--_color-background) calc(h + var(--_h) * 7) calc(s + var(--_s) * 7) calc(l - var(--_l) * 7)),
+		hsl(from var(--_color-background) calc(h + var(--_h) * 8) calc(s + var(--_s) * 8) calc(l - var(--_l) * 8))
+	);
+	background-size: cover;
+
+	> div {
+		box-sizing: border-box;
+		margin-inline: auto;
+		max-inline-size: calc(var(--max-width-content) + var(--padding-inline-root) * 2);
+		padding-inline: var(--padding-inline-root);
+		display: grid;
+		align-items: end;
+
+		> div {
+			display: flex;
+			flex-direction: column;
+			align-items: start;
+			justify-content: center;
+			row-gap: var(--space-400);
+			padding-block-start: calc(var(--padding-inline-root) + var(--space-200));
+			font: var(--font-paragraph-large);
+		}
+
+		> img {
+			max-inline-size: min(calc(380rem / 16), 90vw);
+		}
+	}
+
+	@media (min-width: 32em) {
+		> div {
+			grid-template-columns: 1fr 1fr;
+
+			> div {
+				padding-block: var(--space-800);
+			}
+			> img {
+				max-inline-size: 100%;
+			}
+		}
+	}
+}

@@ -1,5 +1,5 @@
 .m-nav-primary {
-	margin-inline-end: calc(var(--padding-inline-root) * -1);
+	margin-inline-end: calc(var(--space-400) * -1);
 	block-size: 100%;
 }
 

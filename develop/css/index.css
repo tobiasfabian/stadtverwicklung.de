@@ -25,7 +25,7 @@
 @import 'components/a-visually-hidden.css';
 
 /* Molecules */
-@import 'components/m-banner-orange.css';
+@import 'components/m-banner.css';
 @import 'components/m-cite.css';
 @import 'components/m-figure.css';
 @import 'components/m-gallery.css';

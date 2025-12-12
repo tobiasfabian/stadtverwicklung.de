@@ -1,0 +1,7 @@
+type: color
+format: hsl
+options:
+  "#F59D22": orange
+  "#262644": purple
+  "#002b66": blue
+  "#F3DCD8": rose

@@ -19,7 +19,7 @@ fieldsets:
     type: group
     fieldsets:
       - line
-      - banner-orange
+      - banner
       - grid
       - background
   generatedContent:

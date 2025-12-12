@@ -2,7 +2,7 @@
 	margin-block-start: auto;
 	padding-block-start: var(--space-1000);
 
-	main:has(> .o-blocks:last-child > .m-banner-orange:last-child) + & {
+	main:has(> .o-blocks:last-child > .m-banner:last-child) + & {
 		padding-block-start: 0;
 	}
 }

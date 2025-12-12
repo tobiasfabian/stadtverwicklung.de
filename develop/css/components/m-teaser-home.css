@@ -50,12 +50,12 @@
 }
 
 .m-teaser-home__overlay {
-	--_color: hsl(9, 97%, 87%);
-	--_l: 3;
+	--_color: hsl(350, 97%, 88%);
+	--_h: 8;
 	--_s: 1;
-	--_h: 6;
+	--_l: 3;
 
-	background-image: linear-gradient(to left top,
+	background-image: linear-gradient(calc(180deg + var(--degree)),
 		hsl(from var(--_color) calc(h + var(--m-teaser-home-h) + var(--_h) * -6) calc(s + var(--_s) * -6) calc(l - var(--_l) * 6)),
 		hsl(from var(--_color) calc(h + var(--m-teaser-home-h) + var(--_h) * -5) calc(s + var(--_s) * -5) calc(l - var(--_l) * 5)),
 		hsl(from var(--_color) calc(h + var(--m-teaser-home-h) + var(--_h) * -4) calc(s + var(--_s) * -4) calc(l - var(--_l) * 4)),
@@ -75,7 +75,7 @@
 	opacity: 0.9;
 
 	&[data-variant="mask"] {
-		mask-image: linear-gradient(to right top, hsla(0, 0%, 100%, 0.9), hsla(0, 0%, 100%, 0.8) 40%, hsla(0, 0%, 100%, 0.2) 60%, hsla(0, 0%, 100%, 0));
+		mask-image: linear-gradient(calc(var(--degree) - 5deg), hsla(0, 0%, 100%, 0.9), hsla(0, 0%, 100%, 0.8) 40%, hsla(0, 0%, 100%, 0.2) 60%, hsla(0, 0%, 100%, 0));
 		mix-blend-mode: unset;
 		opacity: 1;
 	}

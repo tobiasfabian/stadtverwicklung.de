@@ -1,0 +1,28 @@
+title: Banner
+wysiwyg: true
+preview: fields
+icon: sparkling
+fields:
+  title:
+    extends: fields/writer-inline
+    marks: false
+  text:
+    extends: fields/writer-inline
+  link:
+    extends: fields/link
+  image:
+    extends: fields/image
+    image:
+      cover: true
+    width: 1/3
+  colorBackground:
+    extends: fields/color
+    label: Color Background
+    type: color
+    placeholder: hsl(342 95% 85%)
+    width: 1/3
+  color:
+    label: Color Text
+    extends: fields/color
+    placeholder: hsl(240 28% 21%)
+    width: 1/3

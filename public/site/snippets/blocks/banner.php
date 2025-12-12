@@ -2,8 +2,19 @@
 <?php
 $link = $block->link()->toObject();
 $image = $block->image()->toFile();
+
+$style = [];
+if ($block->colorBackground()->isNotEmpty()) {
+	$style[] = '--_color-background: ' . 	$block->colorBackground();
+}
+if ($block->color()->isNotEmpty()) {
+	$style[] = '--_color: ' . 	$block->color();
+}
 ?>
-<div class=m-banner-orange>
+<div class=m-banner <?= attr([
+	'style' => $style ? implode(';', $style) : null,
+])
+?>>
 	<div>
 		<div>
 			<h2 class=a-heading><?= $block->title() ?></h2>

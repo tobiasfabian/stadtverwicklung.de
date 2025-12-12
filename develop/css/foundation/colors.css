@@ -40,7 +40,7 @@
 
 	/* Brand colors */
 	--color-brand-orange: #F59D22;
-	--color-brand-orange-dark: #E27B00;
+	/* --color-brand-orange-dark: #E27B00; */
 	--color-brand-orange-dark: #D57400;
 	--color-brand-purple: #262644;
 	--color-brand-blue: #002b66;
@@ -77,4 +77,7 @@
 
 	/* Shadows */
 	--box-shadow-header: 0px 4px 4px 0px #00000040;
+
+	/* Gradient degree */
+	--degree: 25deg;
 }
