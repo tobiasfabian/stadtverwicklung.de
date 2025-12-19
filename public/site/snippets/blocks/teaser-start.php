@@ -23,7 +23,7 @@ if ($image === null) {
 		<?php if ($block->text()->isNotEmpty()): ?>
 			<div class="m-teaser-start__bubble">
 				<p><?= $block->text() ?></p>
-				<?php if ($link->isNotEmpty()): ?>
+				<?php if ($link->link()->toUrl()): ?>
 					<a <?= attr([
 						'class' => 'a-button',
 						'href' => $link->link()->toUrl(),

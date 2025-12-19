@@ -2,7 +2,7 @@
 <?php
 $image = $block->image()->toFile();
 $link = $block->link()->toObject();
-$headline = $block->headline();
+$title = $block->title();
 $text = $block->text();
 
 if ($image === null) {
@@ -30,7 +30,7 @@ if ($image === null) {
 			</picture>
 		<?php endif ?>
 		<div class="m-teaser-illustration__text">
-			<h1 class="a-heading"><?= $headline ?></h1>
+			<h1 class="a-heading"><?= $title ?></h1>
 			<p class="m-text"><?= $text ?></p>
 			<?php if ($link->link()->toUrl()): ?>
 				<a class="a-button" data-kind="transparent" href="<?= $link->link()->toUrl() ?>">
