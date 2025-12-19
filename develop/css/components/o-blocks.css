@@ -10,6 +10,7 @@
 		.o-list-events,
 		.o-background,
 		.m-teaser,
+		.m-teaser-illustration,
 		.m-teaser-start,
 		m-gallery,
 		.m-figure,
@@ -24,7 +25,10 @@
 		justify-self: start;
 	}
 
-	main > &:first-child:not(:has(> .m-teaser-start:first-child)) {
+	main > &:first-child:not(:has(
+		> .m-teaser-illustration:first-child,
+		> .m-teaser-start:first-child
+	)) {
 		margin-block-start: var(--space-1000);
 	}
 

@@ -21,6 +21,7 @@ fieldsets:
       - line
       - banner
       - teaser-start
+      - teaser-illustration
       - grid
       - background
   generatedContent:

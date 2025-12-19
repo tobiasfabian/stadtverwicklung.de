@@ -1,0 +1,32 @@
+name: Teaser Illustration
+wysiwyg: true
+preview: fields
+icon: sparkling
+fields:
+  headline:
+    extends: fields/writer-inline
+    marks: false
+    width: 2/3
+  image:
+    extends: fields/teaser-image
+    size: small
+    width: 1/3
+    help: |
+      Wichtig: Die Grafik muss immer so gestatlet sein, dass der dunkelblaue Hintergrund gleich groß und an gleicher Stelle ist.
+  text:
+    label: Störer-Text
+    extends: fields/writer-inline
+    marks: false
+    width: 2/3
+  link:
+    label: Störer-Link
+    extends: fields/link
+    width: 2/3
+    fields:
+      newWindow:
+        label: open.newWindow
+        type: toggle
+        text:
+          - "Nein"
+          - "Ja"
+
