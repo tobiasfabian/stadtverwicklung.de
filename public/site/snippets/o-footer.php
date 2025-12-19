@@ -7,7 +7,7 @@ use Kirby\Toolkit\Str;
 <footer class=o-footer>
 	<div class=o-footer__newsletter>
 		<div>
-			<img src=<?= url('assets/images/illustration-newsletter.png') ?> width=304 height=160 alt="">
+			<img src=<?= url('assets/images/illustration-newsletter.webp') ?> width=304 height=160 alt="">
 			<div>
 				<h2 class=a-heading><?= $site->newsletterTitle() ?></h2>
 				<p class=m-text><?= $site->newsletterText() ?></p>

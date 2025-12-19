@@ -100,8 +100,10 @@
 	}
 
 	&[data-width=large] {
+		box-sizing: border-box;
 		margin-inline: auto;
-		max-inline-size: var(--max-width-content);
+		max-inline-size: calc(var(--max-width-content) + var(--padding-inline-root));
+		padding-inline: var(--padding-inline-root);
 
 		> * {
 			max-width: max(var(--max-width-text), 55ch);

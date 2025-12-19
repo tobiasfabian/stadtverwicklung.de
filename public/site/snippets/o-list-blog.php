@@ -16,6 +16,7 @@ $showMore = $showMore ?? null;
 					<?php snippet('image', [
 						'image' => $blogEntryPage->teaserImage()->toFile(),
 						'srcset' => 'card',
+						'sizes' => 'calc(50vw - 0.8rem * 3)',
 						'loading' => $page instanceof BlogPage && $blogEntryPage->indexOf($entries) <= 4 ? null : 'lazy',
 					]) ?>
 					<div>

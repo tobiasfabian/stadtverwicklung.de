@@ -28,6 +28,7 @@
 	inline-size: 100%;
 	max-inline-size: var(--max-width);
 	max-block-size: calc(640rem / 16);
+	overflow: hidden;
 	animation-name: m-teaser-start;
 	animation-timeline: view();
 	animation-timing-function: linear;
@@ -42,9 +43,20 @@
 		grid-row: 1 / span 1;
 	}
 
+	&:has(.m-teaser-start__bubble) {
+		margin-block-end: calc(var(--gap-block) * -0.75);
+	}
+
 	@media (max-width: 26em) {
 		> img {
 			block-size: 50vw;
+		}
+	}
+	@media (min-width: 50em) {
+		overflow: unset;
+
+		&:has(.m-teaser-start__bubble) {
+			margin-block-end: unset;
 		}
 	}
 }
@@ -96,8 +108,8 @@
 }
 
 .m-teaser-start__bubble {
-	translate: 0 calc(var(--m-teaser-start-bubble) * 0.5px);
-	margin-block-start: calc(var(--padding-inline-root) * -2);
+	translate: calc(var(--padding-inline-root) * 1.5) calc(var(--m-teaser-start-bubble) * 0.5px);
+	margin-block-start: calc(var(--padding-inline-root) * -6);
 	margin-inline-end: var(--padding-inline-root);
 	justify-self: end;
 	grid-row-start: 2;
@@ -116,7 +128,7 @@
 	justify-items: center;
 	text-decoration: none;
 	line-height: calc(28 / 24);
-	font-size: var(--font-size-label-medium);
+	font-size: var(--font-size-label-small);
 	font-weight: 700;
 		background-image: url('/assets/images/sprechblase-outline.png'), linear-gradient(to left top,
 		hsla(18 100% 82% / 1),
@@ -134,6 +146,9 @@
 		font-size: 0.88em;
 	}
 
+	@media (min-width: 40em) {
+		font-size: var(--font-size-label-medium);
+	}
 	@media (min-width: 40em) {
 		font-size: var(--font-size-label-large);
 	}
