@@ -113,7 +113,7 @@
 		margin-block-start: var(--space-500);
 	}
 
-	.a-heading + & {
+	.m-logos > .a-heading + & {
 		margin-block-start: var(--space-600);
 
 		&[data-text-size=small] {
