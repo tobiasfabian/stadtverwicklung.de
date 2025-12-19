@@ -9,6 +9,8 @@ use Kirby\Cms\Page;
  * @var Page $page
  * @var \Kirby\Cms\App $kirby
  */
+
+/** @var \Kirby\Cms\File */
 $ogImage = $page->metaImage()->or($page->teaserImage())->toFile();
 $ogImage = $ogImage ?? asset('assets/images/open-graph.jpg');
 ?>
@@ -32,12 +34,12 @@ $ogImage = $ogImage ?? asset('assets/images/open-graph.jpg');
 		<?php if ($ogImage instanceof File): ?>
 			<meta property=og:image:alt content="<?= $ogImage->alt()->esc('attr') ?>">
 		<?php endif ?>
-		<meta property=og:image:type content=<?= $ogImage->mime() ?>>
+		<meta property=og:image:type content=image/webp>
 		<meta property=og:image:width content=1200>
 		<meta property=og:image:height content=628>
 	<?php endif ?>
 
 	<link rel=canonical href=<?= $page->url($page->translation()->exists() ? null : (string)$kirby->defaultLanguage()) ?>>
 	<link rel=stylesheet href=<?= hashedUrl('assets/css/index.css') ?>>
-	<script src=<?= hashedUrl('assets/js/index.js') ?> defer type=module></script>
+	<script src=<?= hashedUrl('assets/js/index.js') ?> type=module></script>
 </head>

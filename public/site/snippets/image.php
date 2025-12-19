@@ -29,7 +29,7 @@ $height = $height ?? option('thumbs.presets')[$srcset]['crop'] === true ? option
 	'alt' => esc($alt, 'attr'),
 	'width' => $width,
 	'height' => $height,
-	'sizes' => $sizes,
+	'sizes' => $isSvg ? null : $sizes,
 	'loading' => $loading ?? null,
 	'fetchpriority' => $fetchpriority ?? null,
 	'decoding' => $decoding ?? null,

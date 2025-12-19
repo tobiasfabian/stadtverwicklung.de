@@ -25,7 +25,6 @@
 					<img <?= attr([
 						'src' => $image->thumb($size)->url(),
 						'srcset' => $image->srcset($size2x),
-						'sizes' => $width . 'px',
 						'alt' => $item->text(),
 						'width' => $width ,
 						'height' => $height,

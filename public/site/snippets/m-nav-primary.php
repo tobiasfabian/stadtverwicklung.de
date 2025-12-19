@@ -79,7 +79,7 @@ use Kirby\Toolkit\Str;
 						<a <?= attr([
 							'href' => $page->urlForLanguage($lang->code()),
 							'aria-current' => $lang === $kirby->language() ? 'page' : null,
-						]) ?> href="<?= $page->urlForLanguage($lang->code()) ?>">
+						]) ?>>
 							<?= $lang->code() ?>
 						</a>
 					</li>
