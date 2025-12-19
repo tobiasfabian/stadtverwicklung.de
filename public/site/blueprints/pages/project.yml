@@ -5,8 +5,6 @@ navigation:
   template: all
   sortBy: startDate desc
 
-num: '{{ page.startDate.toDate("Ymd") }}'
-
 image:
   query: model.teaserImage.toFile
   cover: true
