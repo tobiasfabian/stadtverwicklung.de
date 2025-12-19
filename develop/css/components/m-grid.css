@@ -22,6 +22,10 @@
 		}
 	}
 
+	.m-text + & {
+		margin-block-start: var(--space-500);
+	}
+
 	@media (min-width: 36em) {
 		> ul {
 			column-gap: var(--gap-inline);
