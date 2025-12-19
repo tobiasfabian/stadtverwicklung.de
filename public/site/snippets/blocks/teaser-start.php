@@ -24,7 +24,12 @@ if ($image === null) {
 			<div class="m-teaser-start__bubble">
 				<p><?= $block->text() ?></p>
 				<?php if ($link->isNotEmpty()): ?>
-					<a class="a-button" href="<?= $link->link()->toUrl() ?>" data-kind=transparent-dark><?= $link->text() ?></a>
+					<a <?= attr([
+						'class' => 'a-button',
+						'href' => $link->link()->toUrl(),
+						'data-kind' => 'transparent-dark',
+						'target' => $link->newWindow()->toBool() ? '_blank' : null,
+					]) ?>><?= $link->text() ?></a>
 				<?php endif ?>
 			</div>
 		<?php endif ?>

@@ -1,10 +1,5 @@
-type: writer
-toolbar:
-  inline: false
-marks:
-  - bold
-  - italic
-  - link
+extends: fields/writer-inline
+inline: false
 headings:
   - 1
   - 2

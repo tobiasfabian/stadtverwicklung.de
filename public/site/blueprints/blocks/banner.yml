@@ -8,6 +8,8 @@ fields:
     marks: false
   text:
     extends: fields/writer-inline
+    marks:
+      - bold
   link:
     extends: fields/link
   image:

@@ -14,6 +14,7 @@
 		}
 	}
 
+	> em,
 	> :where(ul, ol, p) > em {
 		padding-inline: 0.2em;
 		border-radius: 4px;
