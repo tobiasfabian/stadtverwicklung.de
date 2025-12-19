@@ -1,10 +1,3 @@
-<If "%{HTTP_HOST} == 'vorschau.stadtverwicklung.de'">
-	AuthType Basic
-	AuthName "Preview"
-	AuthUserFile //www/htdocs/w01dee97/vorschau.stadtverwicklung.de/.htpasswd
-	Require valid-user
-</IF>
-
 # Kirby .htaccess with additions by hello@tobiaswolf.me
 # revision 2023-07-22 (2023-08-07)
 
@@ -13,6 +6,11 @@
 	# enable awesome urls. i.e.:
 	# http://yourdomain.com/about-us/team
 	RewriteEngine on
+
+	# Always redirect to correct domain
+	RewriteCond %{HTTP_HOST} !^stadtverwicklung\.de$ [NC]
+	RewriteCond %{HTTP_HOST} !\.test$ [NC]
+	RewriteRule ^(.*)$ https://stadtverwicklung.de/$1 [R=301,L]
 
 	# Redirect to https
 	RewriteCond %{HTTPS} off
