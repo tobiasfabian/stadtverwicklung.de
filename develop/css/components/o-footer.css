@@ -45,6 +45,7 @@
 .o-footer__sitemap {
 	padding-block: var(--space-500);
 	background-color: var(--color-brand-rose);
+	font: var(--font-paragraph-medium);
 
 	> div {
 		box-sizing: content-box;
@@ -58,7 +59,7 @@
 
 		> address {
 			grid-column: 1 / 4;
-			font: var(--font-paragraph-medium);
+			font-style: normal;
 
 			> p {
 				margin-block-end: var(--space-400);
@@ -91,8 +92,16 @@
 .o-footer__nav-category {
 	grid-column-end: span 2;
 
+	> ul {
+		margin-block-start: var(--space-100);
+	}
+
 	a {
+		padding-block: var(--space-150);
+		display: block;
 		text-decoration: none;
+		font: var(--font-label-medium);
+		font-weight: 400;
 
 		&:where(:focus-visible, :hover) {
 			text-decoration: underline;
