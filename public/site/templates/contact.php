@@ -40,7 +40,7 @@ use Kirby\Toolkit\Str;
 						<?php foreach ($page->socialMedia()->toStructure() as $item): ?>
 							<li>
 								<a href=<?= $item->link() ?> title="<?= Str::kebabToCamel($item->plattform()) ?> ">
-									<img src=<?= url('assets/images/icon-' . $item->plattform() . '.svg') ?> alt="<?= Str::kebabToCamel($item->plattform()) ?>" width="32" height="32">
+									<img src=<?= url('assets/images/icon-' . $item->plattform() . '.svg') ?> alt="<?= Str::kebabToCamel($item->plattform()) ?>" width="36" height="36">
 								</a>
 							</li>
 						<?php endforeach ?>
