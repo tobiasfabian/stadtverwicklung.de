@@ -35,6 +35,15 @@
 		}
 	}
 
+	@media (max-width: 63.999em) {
+		&:is(button) {
+			padding-block-end: var(--space-100);
+		}
+
+		&[data-variant="secondary"] {
+			padding-inline-start: var(--space-500);
+		}
+	}
 	@media (min-width: 64em) {
 		font: var(--font-label-large);
 		font-weight: 400;
