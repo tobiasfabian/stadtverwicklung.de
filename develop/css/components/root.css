@@ -24,6 +24,7 @@ body {
 	flex-direction: column;
 }
 
+html:has(.m-nav-primary__container[popover]:popover-open),
 html[data-no-scroll],
 html[data-no-scroll] & {
 	overflow: hidden;
