@@ -112,7 +112,7 @@ class EventPage extends Page {
 
 	/**
 	 * @return string|null
-	 * e.g. ab 11:00
+	 * e.g. 11:00
 	 * null, when start and end date are differnt days
 	 */
 	public function hours(): ?string
@@ -122,7 +122,7 @@ class EventPage extends Page {
 			pattern: 'HH:mm',
 		);
 		if ($this->endDate()->isEmpty()) {
-			return 'ab ' . $formatter->format($this->startDate()->toDate());
+			return $formatter->format($this->startDate()->toDate());
 		}
 
 		$startHour = $formatter->format($this->startDate()->toDate());
