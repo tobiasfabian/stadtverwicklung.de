@@ -11,26 +11,43 @@ tabs:
   content:
     label: Inhalt
     icon: page
-    sections:
-      fields:
-        fields:
-          subtitle:
-            label: Untertitel
-            extends: fields/writer-inline
-            marks: false
-            width: 2/3
+    columns:
+      -
+        width: 2/3
+        sections:
+          fields:
+            fields:
+              subtitle:
+                label: Untertitel
+                extends: fields/writer-inline
+                marks: false
+              date:
+                label: Datum
+                type: date
+                default: now
+                translate: false
+                required: true
+              projects:
+                label: Projekte
+                type: pages
+                query: site.projectsPage.childrenAndDrafts
+                width: 1/3
+      -
+        width: 1/3
+        sections:
           teaserImage:
-            extends: fields/teaser-image
-            width: 1/3
-          date:
-            label: Datum
-            type: date
-            width: 1/2
-            default: now
-            translate: false
-            required: true
+            type: fields
+            fields:
+              teaserImage:
+                extends: fields/teaser-image
+      -
+        width: 1/1
+        sections:
           text:
-            extends: fields/blocks
+            type: fields
+            fields:
+              text:
+                extends: fields/blocks
   meta:
     extends: tabs/meta
   pages:

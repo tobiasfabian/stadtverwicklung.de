@@ -52,10 +52,17 @@
 		text-decoration: none;
 	}
 
-	time {
-		display: block;
+	> a > div {
+		display: flex;
+		flex-wrap: wrap;
+		column-gap: var(--space-200);
 		font: var(--font-label-medium);
 		font-weight: 400;
+
+		> em {
+			font-style: normal;
+			color: var(--color-content-secondary);
+		}
 	}
 
 	h3 {

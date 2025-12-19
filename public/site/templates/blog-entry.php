@@ -1,5 +1,6 @@
 <?php
 /** @var BlogEntryPage $page */
+$projectPages = $page->projects()->toPages();
 ?>
 <?php snippet('head'); ?>
 <body>
@@ -11,17 +12,17 @@
 				<time datetime="<?= $page->date()->toDate('c') ?>">
 					<?= $page->date()->toDate('d.m.Y') ?>
 				</time>
+				<?php if ($projectPages->count() > 0): ?>
+					<div class=m-teaser-text__projects>
+						<?= tc('project', $projectPages->count()) ?>:
+						<?php foreach ($projectPages as $projectPage): ?>
+							<a href=<?= $projectPage->url() ?>><?= $projectPage->title() ?></a>
+						<?php endforeach ?>
+					</div>
+				<?php endif ?>
 				<h1 class=a-heading><?= $page->title() ?></h1>
 			</header>
 
-			<?php if ($teaserImage = $page->teaserImage()->toFile()): ?>
-				<figure class=m-figure>
-					<?php snippet('image', [
-						'image' => $teaserImage,
-						'sizes' => '(min-width: 66rem) 66rem, 100vw',
-					]) ?>
-				</figure>
-			<?php endif ?>
 			<?= $page->text()->toBlocks() ?>
 		</div>
 	</main>

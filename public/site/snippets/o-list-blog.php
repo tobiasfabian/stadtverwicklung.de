@@ -17,7 +17,12 @@ $showMore = $showMore ?? null;
 						'image' => $blogEntryPage->teaserImage()->toFile(),
 						'srcset' => 'card',
 					]) ?>
-					<time datetime="<?= $blogEntryPage->date()->toDate('c') ?>"><?= $blogEntryPage->date()->toDate('d.m.Y') ?></time>
+					<div>
+						<time datetime="<?= $blogEntryPage->date()->toDate('c') ?>"><?= $blogEntryPage->date()->toDate('d.m.Y') ?></time>
+						<?php foreach ($blogEntryPage->projects()->toPages() as $projectPage): ?>
+							<em><?= $projectPage->title() ?></em>
+						<?php endforeach ?>
+					</div>
 					<h3><?= $blogEntryPage->title() ?></h3>
 				</a>
 			</li>
