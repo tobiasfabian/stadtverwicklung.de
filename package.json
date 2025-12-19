@@ -8,7 +8,9 @@
 		"js-lint": "npx eslint --fix develop/js",
 		"css": "npx postcss develop/css/*.css --dir public/assets/css -m --env production",
 		"css-dev": "npx postcss develop/css/*.css --dir public/assets/css -m -w --env development",
-		"build": "npm run css; npm run js-lint; npm run js;"
+		"build": "npm run css; npm run js-lint; npm run js;",
+		"test-live": "unlighthouse --config-file unlighthouse.config.ts --site https://stadtverwicklung.de",
+		"test-local": "unlighthouse --config-file unlighthouse.config.ts --site https://stadtverwicklung.test"
 	},
 	"author": "hello@tobiaswolf.me",
 	"devDependencies": {
@@ -24,6 +26,7 @@
 		"postcss": "^8.5.6",
 		"postcss-cli": "^10.1.0",
 		"postcss-import": "^15.1.0",
-		"postcss-nesting": "^11.3.0"
+		"postcss-nesting": "^11.3.0",
+		"unlighthouse": "^0.17.4"
 	}
 }
