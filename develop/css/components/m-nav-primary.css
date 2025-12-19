@@ -13,7 +13,7 @@
 		inline-size: 100vw;
 		row-gap: var(--space-600);
 		padding-block-start: var(--space-600);
-		padding-block-end: var(--space-1000);
+		padding-block-end: calc(192rem / 16);
 		align-content: start;
 		background-color: transparent;
 		overflow: auto;
