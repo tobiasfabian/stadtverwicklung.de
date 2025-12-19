@@ -47,3 +47,15 @@
 		}
 	}
 }
+
+.m-teaser-text__tags {
+	display: flex;
+	column-gap: var(--space-200);
+	color: var(--color-content-secondary);
+	font: var(--font-label-medium);
+	font-weight: 400;
+
+	> em {
+		font-style: normal;
+	}
+}

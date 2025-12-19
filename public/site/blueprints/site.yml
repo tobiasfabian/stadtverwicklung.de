@@ -59,23 +59,7 @@ tabs:
             type: headline
             label: Funding
           footerFundingIcons:
-            type: structure
-            fields:
-              image:
-                type: files
-                multiple: false
-                query: model.images
-                required: true
-              text:
-                type: text
-                required: true
-              link:
-                type: link
-              height:
-                type: number
-                min: 20
-                max: 80
-                required: true
+            extends: fields/logos
           footerFundingText:
             extends: fields/writer-inline
             marks: false

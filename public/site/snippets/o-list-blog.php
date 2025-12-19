@@ -19,8 +19,8 @@ $showMore = $showMore ?? null;
 					]) ?>
 					<div>
 						<time datetime="<?= $blogEntryPage->date()->toDate('c') ?>"><?= $blogEntryPage->date()->toDate('d.m.Y') ?></time>
-						<?php foreach ($blogEntryPage->projects()->toPages() as $projectPage): ?>
-							<em><?= $projectPage->title() ?></em>
+						<?php foreach ($blogEntryPage->tags()->split() as $tag): ?>
+							<em>#<?= $tag ?></em>
 						<?php endforeach ?>
 					</div>
 					<h3><?= $blogEntryPage->title() ?></h3>

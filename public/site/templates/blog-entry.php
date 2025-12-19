@@ -1,6 +1,6 @@
 <?php
 /** @var BlogEntryPage $page */
-$projectPages = $page->projects()->toPages();
+$tags = $page->tags()->split();
 ?>
 <?php snippet('head'); ?>
 <body>
@@ -12,11 +12,10 @@ $projectPages = $page->projects()->toPages();
 				<time datetime="<?= $page->date()->toDate('c') ?>">
 					<?= $page->date()->toDate('d.m.Y') ?>
 				</time>
-				<?php if ($projectPages->count() > 0): ?>
-					<div class=m-teaser-text__projects>
-						<?= tc('project', $projectPages->count()) ?>:
-						<?php foreach ($projectPages as $projectPage): ?>
-							<a href=<?= $projectPage->url() ?>><?= $projectPage->title() ?></a>
+				<?php if (count($tags) > 0): ?>
+					<div class=m-teaser-text__tags>
+						<?php foreach ($tags as $tag): ?>
+							<em>#<?= $tag ?></em>
 						<?php endforeach ?>
 					</div>
 				<?php endif ?>

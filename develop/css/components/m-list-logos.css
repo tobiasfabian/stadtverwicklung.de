@@ -1,0 +1,13 @@
+ul.m-list-logos {
+	list-style: none;
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	column-gap: var(--space-600);
+	row-gap: var(--space-600);
+
+	.a-heading + &,
+	.m-text + & {
+		margin-block-start: var(--space-500);
+	}
+}

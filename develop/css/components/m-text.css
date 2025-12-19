@@ -112,4 +112,12 @@
 	.o-blocks > .m-teaser-start + & {
 		margin-block-start: var(--space-500);
 	}
+
+	.a-heading + & {
+		margin-block-start: var(--space-600);
+
+		&[data-text-size=small] {
+			margin-block-start: var(--space-400);
+		}
+	}
 }

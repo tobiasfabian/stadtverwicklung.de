@@ -1,0 +1,18 @@
+type: structure
+fields:
+  image:
+    type: files
+    multiple: false
+    query: model.images
+    required: true
+  text:
+    type: text
+    required: true
+  link:
+    type: link
+  height:
+    type: number
+    default: 60
+    min: 20
+    max: 80
+    required: true

@@ -134,15 +134,6 @@
 		column-gap: var(--gap-inline);
 		row-gap: var(--gap-inline);
 		font: var(--font-paragraph-small);
-
-		> ul {
-			list-style: none;
-			display: flex;
-			align-items: center;
-			flex-wrap: wrap;
-			column-gap: var(--space-600);
-			row-gap: var(--space-600);
-		}
 	}
 
 	@media (min-width: 50em) {

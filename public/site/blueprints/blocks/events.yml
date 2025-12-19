@@ -1,8 +1,8 @@
-title: Veranstaltungen
+title: Termine
 icon: calendar
 wysiwyg: true
 preview: fields
 fields:
   info:
     type: info
-    text: Zeigt entweder alle kommenden Veranstaltungen an. Oder alle Veranstaltungen eines Projekts.
+    text: Zeigt entweder alle kommenden Termine an. Oder alle Termine eines Projekts.

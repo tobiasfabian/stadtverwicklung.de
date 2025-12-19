@@ -1,0 +1,12 @@
+name: Logos
+icon: bluesky
+wysiwyg: true
+preview: fields
+fields:
+  headline:
+    extends: fields/writer-inline
+    marks: false
+  text:
+    extends: fields/writer-inline
+  logos:
+    extends: fields/logos

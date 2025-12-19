@@ -14,6 +14,7 @@ fieldsets:
       - iframe
       - short-introduction
       - info-list
+      - logos
   layout:
     label: Layout
     type: group

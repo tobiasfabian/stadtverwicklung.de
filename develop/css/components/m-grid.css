@@ -53,13 +53,14 @@
 	}
 
 	> a > div {
-		display: flex;
-		flex-wrap: wrap;
+		display: grid;
+		grid-template-columns: 8ch 1fr;
 		column-gap: var(--space-200);
 		font: var(--font-label-medium);
 		font-weight: 400;
 
 		> em {
+			grid-column-start: 2;
 			font-style: normal;
 			color: var(--color-content-secondary);
 		}

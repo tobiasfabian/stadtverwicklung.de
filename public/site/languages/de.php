@@ -17,8 +17,8 @@ return [
         'field.location' => 'Ort',
         'field.areas_of_action' => 'Handlungsfelder',
         'field.partner' => 'Ein Projekt von…',
-        'events.upcoming' => 'Bevorstehende Veranstaltungen',
-        'events.past' => 'Vergangene Veranstaltungen',
+        'events.upcoming' => 'Bevorstehende Termine',
+        'events.past' => 'Vergangene Termine',
         'projects.completed' => 'Abgeschlossene Projekte',
         'projects.current' => 'Aktuelle Projekte',
         'project' => [
