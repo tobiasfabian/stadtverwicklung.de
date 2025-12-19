@@ -77,6 +77,7 @@ return [
 			'width' => 1200,
 			'height' => 630,
 			'crop' => true,
+			'format' => 'webp',
 		],
 		'm-teaser-start'=> [
 			'width' => 1600,
