@@ -16,6 +16,7 @@
 								<?php snippet('image', [
 									'image' => $subpage->teaserImage()->or($subpage->metaImage())->toFile(),
 									'srcset' => 'card',
+									'loading' => 'lazy',
 								]) ?>
 								<h3><?= $subpage->title() ?> →</h3>
 								<?php if ($subpage->teaserText()->isNotEmpty()): ?>

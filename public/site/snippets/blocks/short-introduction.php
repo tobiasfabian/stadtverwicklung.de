@@ -12,6 +12,7 @@ $text = $block->text();
 			'image' => $image,
 			'sizes' => 352 / 16 . 'em',
 			'srcset' => 'short-introduction',
+			'loading' => 'lazy',
 		]) ?>
 	<?php endif ?>
 	<div class=m-short-introduction__text>

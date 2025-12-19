@@ -18,6 +18,7 @@ use Kirby\Toolkit\Str;
 					<?php snippet('image', [
 						'image' => $page->headerImage()->toFile(),
 						'sizes' => '(min-width: 66rem) 66rem, 100vw',
+						'fetchpriority' => 'high',
 					]) ?>
 				</div>
 			</div>
@@ -40,7 +41,7 @@ use Kirby\Toolkit\Str;
 						<?php foreach ($page->socialMedia()->toStructure() as $item): ?>
 							<li>
 								<a href=<?= $item->link() ?> title="<?= Str::kebabToCamel($item->plattform()) ?> ">
-									<img src=<?= url('assets/images/icon-' . $item->plattform() . '.svg') ?> alt="<?= Str::kebabToCamel($item->plattform()) ?>" width="36" height="36">
+									<img src=<?= url('assets/images/icon-' . $item->plattform() . '.svg') ?> alt="<?= Str::kebabToCamel($item->plattform()) ?>" width=36 height=36 loading=lazy>
 								</a>
 							</li>
 						<?php endforeach ?>

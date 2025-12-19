@@ -14,6 +14,7 @@
 						'width' => $width * 2,
 						'height' => $height * 2,
 						'crop' => true,
+						'format' => 'webp',
 					],
 				];
 			?>
@@ -28,6 +29,7 @@
 						'alt' => $item->text(),
 						'width' => $width ,
 						'height' => $height,
+						'loading' => 'lazy',
 					]) ?>>
 				<?php if ($link = $item->link()->toUrl()): ?>
 					</a>

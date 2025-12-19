@@ -18,6 +18,7 @@ use Kirby\Toolkit\Str;
 								<?php snippet('image', [
 									'image' => $projectPage->teaserImage()->toFile(),
 									'srcset' => 'card',
+									'fetchpriority' => 'high',
 								]); ?>
 								<h3><?= $projectPage->title() ?> →</h3>
 								<?php if ($projectPage->teaserText()->isNotEmpty()): ?>
@@ -38,6 +39,7 @@ use Kirby\Toolkit\Str;
 								<?php snippet('image', [
 									'image' => $projectPage->teaserImage()->toFile(),
 									'srcset' => 'card',
+									'loading' => 'lazy',
 								]); ?>
 								<h3><?= $projectPage->title() ?> →</h3>
 								<?php if ($projectPage->teaserText()->isNotEmpty()): ?>

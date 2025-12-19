@@ -23,6 +23,7 @@ $styles = array_filter([
 			<?php snippet('image', [
 				'image' => $illustration,
 				'sizes' => '7em',
+				'loading' => 'lazy',
 			]) ?>
 		</div>
 	<?php endif ?>

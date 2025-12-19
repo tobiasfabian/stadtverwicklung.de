@@ -28,6 +28,7 @@ if ($image === null) {
 		'srcset' => $srcset,
 		'alt' => $alt,
 		'sizes' => $sizes,
+		'loading' => 'lazy',
 	]) ?>
 
 	<?php if ($caption->isNotEmpty()): ?>

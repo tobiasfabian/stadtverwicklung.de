@@ -25,6 +25,7 @@ $projects = $projects->limit($limit);
 					<?php snippet('image', [
 						'image' => $projectPage->teaserImage()->toFile(),
 						'srcset' => 'card',
+						'loading' => 'lazy',
 					]) ?>
 					<h3><?= $projectPage->title() ?></h3>
 					<?php if ($projectPage->teaserText()->isNotEmpty()): ?>

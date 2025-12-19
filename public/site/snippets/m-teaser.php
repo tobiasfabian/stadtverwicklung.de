@@ -9,6 +9,7 @@
 		<?php snippet('image', [
 			'image' => $teaserImage,
 			'sizes' => 528 / 16 . 'em',
+			'loading' => 'lazy',
 		]) ?>
 	<?php endif ?>
 </div>

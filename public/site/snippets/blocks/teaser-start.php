@@ -13,6 +13,7 @@ if ($image === null) {
 				'image' => $image,
 				'srcset' => 'm-teaser-start',
 				'sizes' => '100vw',
+				'fetchpriority' => 'high',
 			]) ?>
 		<?php endif ?>
 		<div class="m-teaser-start__overlay" data-variant="mask"></div>

@@ -17,6 +17,7 @@
 						<?php snippet('image', [
 							'image' => $image,
 							'srcset' => 'card',
+							'loading' => 'lazy',
 						]) ?>
 					<?php endif ?>
 					<h3><?= $item->title() ?></h3>

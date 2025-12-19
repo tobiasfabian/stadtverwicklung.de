@@ -18,6 +18,7 @@ use Kirby\Exception\Exception;
 					<?php snippet('image', [
 						'image' => $teaserImage,
 						'sizes' => 528 / 16 . 'em',
+						'fetchpriority' => 'high',
 					]) ?>
 				<?php endif ?>
 			</div>

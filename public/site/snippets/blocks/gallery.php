@@ -17,7 +17,8 @@ $files = $block->images()->toFiles();
 			<?php snippet('image', [
 				'image' => $image,
 				'srcset' => $srcset,
-				'sizes' => '(min-width: 66rem) 66rem, 100vw'
+				'sizes' => '(min-width: 66rem) 66rem, 100vw',
+				'loading' => 'lazy',
 			]) ?>
 		</li>
 		<?php endforeach ?>

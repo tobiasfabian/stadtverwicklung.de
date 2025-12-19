@@ -26,6 +26,7 @@ if ($image === null) {
 				<?php snippet('image', [
 					'image' => $image,
 					'sizes' => '100vw',
+					'fetchpriority' => 'high',
 				]) ?>
 			</picture>
 		<?php endif ?>

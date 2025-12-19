@@ -16,6 +16,7 @@ $showMore = $showMore ?? null;
 					<?php snippet('image', [
 						'image' => $blogEntryPage->teaserImage()->toFile(),
 						'srcset' => 'card',
+						'loading' => $page instanceof BlogPage && $blogEntryPage->indexOf($entries) <= 4 ? null : 'lazy',
 					]) ?>
 					<div>
 						<time datetime="<?= $blogEntryPage->date()->toDate('c') ?>"><?= $blogEntryPage->date()->toDate('d.m.Y') ?></time>

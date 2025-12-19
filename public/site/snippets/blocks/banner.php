@@ -27,7 +27,8 @@ if ($block->color()->isNotEmpty()) {
 		</div>
 		<?php snippet('image', [
 			'image' => $image,
-			'sizes' => 480 / 16 . 'rem',
+			'sizes' => '(width > 52em) ' . 576 / 16 . 'rem, ' .  380 / 16 . 'rem',
+			'loading' => 'lazy',
 		]) ?>
 	</div>
 </div>
