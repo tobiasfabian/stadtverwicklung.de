@@ -32,6 +32,7 @@
 }
 
 .m-nav-primary__nav {
+	grid-row-start: 2;
 	color: var(--color-brand-purple);
 
 	/* Use not (min-width: 64em) when support for iOS15.8 drops */

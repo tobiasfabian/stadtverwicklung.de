@@ -72,7 +72,7 @@ use Kirby\Toolkit\Str;
 				<?php endforeach ?>
 			</ul>
 		</nav>
-		<nav class=m-nav-primary__language-switch aria-label="<?= t('aria.label.language-nav') ?>">
+		<nav class=m-nav-primary__language-switch hidden aria-label="<?= t('aria.label.language-nav') ?>">
 			<ul>
 				<?php foreach ($kirby->languages() as $lang): ?>
 					<li>
