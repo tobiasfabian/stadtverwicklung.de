@@ -22,6 +22,10 @@ use Kirby\Toolkit\Str;
 			<address>
 				<p>
 					<?= $site->contactPage()->address() ?>
+					<?php if ($site->contactPage()->email()->isNotEmpty()): ?>
+						<br>
+						<a href="<?= Str::encode($site->contactPage()->email()) ?>"><?= Str::encode($site->contactPage()->email()) ?></a>
+					<?php endif ?>
 				</p>
 				<div class=a-caption>© 2025 Stadtverwicklung gGmbH</div>
 			</address>
@@ -51,7 +55,7 @@ use Kirby\Toolkit\Str;
 						<?php foreach ($site->contactPage()->socialMedia()->toStructure() as $item): ?>
 							<li>
 								<a href=<?= $item->link() ?> title="<?= Str::kebabToCamel($item->plattform()) ?> ">
-									<img src=<?= url('assets/images/icon-' . $item->plattform() . '.svg') ?> alt="<?= Str::kebabToCamel($item->plattform()) ?>" width="24" height="24">
+									<img src=<?= url('assets/images/icon-' . $item->plattform() . '.svg') ?> alt="<?= Str::kebabToCamel($item->plattform()) ?>" width="36" height="36">
 								</a>
 							</li>
 						<?php endforeach ?>
