@@ -32,5 +32,5 @@ use Kirby\Cms\Page;
 
 	<link rel=canonical href=<?= $page->url() ?>>
 	<link rel=stylesheet href=<?= hashedUrl('assets/css/index.css') ?>>
-	<script src=<?= hashedUrl('assets/js/index.js') ?> defer type="module"></script>
+	<script src=<?= hashedUrl('assets/js/index.js') ?> defer type=module></script>
 </head>

@@ -2,7 +2,7 @@
 /** @var \Kirby\Cms\Page $page */
 
 $events = null;
-$limit = null;
+$limit = 4;
 
 if ($page instanceof ProjectPage) {
 	$events = $page->events();

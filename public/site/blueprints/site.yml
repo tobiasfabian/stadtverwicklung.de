@@ -58,8 +58,8 @@ tabs:
           fundingHeadline:
             type: headline
             label: Funding
-          footerFundingIcons:
+          footerFundingLogo:
+            type: files
+            multiple: false
+          footerFundingLogos:
             extends: fields/logos
-          footerFundingText:
-            extends: fields/writer-inline
-            marks: false

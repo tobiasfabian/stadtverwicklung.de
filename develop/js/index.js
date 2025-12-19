@@ -22,5 +22,5 @@ if (!('anchorName' in document.documentElement.style)) {
 				popoverElement.style.top = `${rect.top + rect.height}px`;
 			}
 		});
-		});
+	});
 }

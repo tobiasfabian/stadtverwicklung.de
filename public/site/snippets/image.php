@@ -15,15 +15,17 @@ if (!($image instanceof File)) {
 	return;
 }
 
+$isSvg = $image->mime() === 'image/svg+xml';
+
 $sizes = $sizes ?? '100vw';
 $alt = $alt ?? $image->alt();
 $srcset = (string)($srcset ?? 'default');
-$width = option('thumbs.presets')[$srcset]['width'];
-$height = option('thumbs.presets')[$srcset]['crop'] === true ? option('thumbs.presets')[$srcset]['height'] : round($width * $image->ratio());
+$width = $width ?? option('thumbs.presets')[$srcset]['width'];
+$height = $height ?? option('thumbs.presets')[$srcset]['crop'] === true ? option('thumbs.presets')[$srcset]['height'] : round($width / $image->ratio());
 ?>
 <img <?= attr(array_merge([
-	'src' => $image->thumb($srcset)->url(),
-	'srcset' => $image->srcset($srcset),
+	'src' => $isSvg ? $image->url() : $image->thumb($srcset)->url(),
+	'srcset' => $isSvg ? null : $image->srcset($srcset),
 	'alt' => esc($alt, 'attr'),
 	'width' => $width,
 	'height' => $height,

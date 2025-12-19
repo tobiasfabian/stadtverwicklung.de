@@ -66,10 +66,8 @@ use Kirby\Toolkit\Str;
 	</div>
 	<div class=o-footer__funding>
 		<div>
-			<?php snippet('m-list-logos', ['logos' => $site->footerFundingIcons()->toStructure()]) ?>
-			<p>
-				<?= $site->footerFundingText() ?>
-			</p>
+			<?php snippet('image', ['image' => $site->footerFundingLogo()->toFile()]) ?>
+			<?php snippet('m-list-logos', ['logos' => $site->footerFundingLogos()->toStructure()]) ?>
 		</div>
 	</div>
 </footer>

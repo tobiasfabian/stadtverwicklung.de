@@ -138,15 +138,22 @@
 		max-inline-size: var(--max-width-content);
 		padding-inline: var(--padding-inline-root);
 		display: grid;
-		column-gap: var(--gap-inline);
+		align-items: start;
+		column-gap: var(--space-800);
 		row-gap: var(--gap-inline);
 		font: var(--font-paragraph-small);
 	}
 
 	@media (min-width: 50em) {
 		> div {
-			grid-template-columns: repeat(2, 1fr);
+			grid-template-columns: repeat(12, 1fr);
+			> img {
+				grid-column-end: span 7;
+			}
+			> ul {
+				grid-column-start: 8;
+				grid-column-end: -1;
+			}
 		}
 	}
 }
-

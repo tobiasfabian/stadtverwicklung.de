@@ -22,5 +22,4 @@ return [
 
 	// Custom options
 	'sitemap.ignoreTemplates' => ['error'],
-	'blog.jsonUrl' => 'https://stadtverwicklung.de/de/blog.json',
 ];

@@ -33,37 +33,38 @@ foreach ($crops as $key => $value) {
 			'width' => 412,
 			'height' => $value === null ? null : round(376 / $value),
 			'crop' => $value === null ? false : true,
+			'format' => 'webp',
 		],
 		'824w' => [
 			'width' => 824,
 			'height' => $value === null ? null : round(824 / $value),
 			'crop' => $value === null ? false : true,
-
+			'format' => 'webp',
 		],
 		'1024w' => [
 			'width' => 1080,
 			'height' => $value === null ? null : round(1080 / $value),
 			'crop' => $value === null ? false : true,
-
+			'format' => 'webp',
 		],
 		'1236w' => [
 			'width' => 1236,
 			'height' => $value === null ? null : round(1236 / $value),
 			'crop' => $value === null ? false : true,
-
+			'format' => 'webp',
 		],
 		'1440w' => [
 			'width' => 1440,
 			'height' => $value === null ? null : round(1440 / $value),
 			'crop' => $value === null ? false : true,
-
+			'format' => 'webp',
 		],
 		'2048w' => [
 			'width' => 2048,
 			'height' => $value === null ? null : round(2048 / $value),
 			'crop' => $value === null ? false : true,
 			'quality' => 70,
-
+			'format' => 'webp',
 		],
 	];
 }
