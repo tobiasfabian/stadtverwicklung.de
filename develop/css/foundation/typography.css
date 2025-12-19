@@ -70,7 +70,7 @@
 	/* Other */
 	--hyphenate-limit: 5;
 
-	@media (max-width: 26em) {
+	@media (max-width: 28em) {
 		/* Font size */
 		--font-size-heading-large: calc((40rem - 7rem) / 16);
 		--font-size-heading-medium: calc((28rem - 3rem) / 16);
@@ -81,7 +81,7 @@
 		--font-size-label-medium: calc((16rem - 2rem) / 16);
 		--font-size-label-small: calc((14rem - 2rem) / 16);
 
-		--font-size-paragraph-xlarge: calc((24rem - 4rem) / 16);
+		--font-size-paragraph-xlarge: calc((24rem - 5rem) / 16);
 		--font-size-paragraph-large: calc((20rem - 3rem) / 16);
 		--font-size-paragraph-medium: calc((16rem - 2rem) / 16);
 		--font-size-paragraph-small: calc((14rem - 1rem) / 16);

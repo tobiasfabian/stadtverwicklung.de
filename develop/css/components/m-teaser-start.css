@@ -98,7 +98,7 @@
 	padding: var(--padding-inline-root);
 
 	> h1 {
-		font-size: clamp(var(--font-size-heading-small), calc(88 / 1440 * 100vw), var(--font-size-heading-xxlarge));
+		font-size: clamp(var(--font-size-heading-large), calc(88 / 1440 * 100vw), var(--font-size-heading-xxlarge));
 		line-height: calc(40 / 40);
 	}
 
