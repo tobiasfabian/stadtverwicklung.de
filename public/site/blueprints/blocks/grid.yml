@@ -1,5 +1,5 @@
 title: Raster
-label: 3-spaltig (jeweils mit Bild, Titel, Text)
+label: 2- oder 3-spaltig (jeweils mit Bild, Titel, Text)
 icon: grid
 wysiwyg: true
 preview: fields
@@ -38,5 +38,13 @@ fields:
       - value: center
         text: Zentriert
         icon: text-center
-
-
+  columns:
+    label: Spalten
+    type: toggles
+    width: 1/2
+    grow: false
+    options:
+      - 2
+      - 3
+    default: 3
+    help: Bei 3 Spalten, wird das Bild immer auf ein 6/4 Format beschnitten.

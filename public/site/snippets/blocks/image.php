@@ -10,10 +10,10 @@ $srcset = $block->ratio()->or('default');
 $image = $block->image()->toFile();
 $alt = $alt->or($image?->alt());
 $maxWidth = Str::camelToKebab($block->maxWidth()->toString());
-$sizes = '(min-width: 66rem) 66rem, 100vw';
+$sizes = '(min-width: 69rem) 69rem, 100vw';
 
 if ($maxWidth === 'text-width') {
-	$sizes = '(min-width: 44rem) 44rem, 100vw';
+	$sizes = '(min-width: 45.5em) 45.5rem, 100vw';
 }
 
 if ($image === null) {
@@ -21,7 +21,7 @@ if ($image === null) {
 }
 ?>
 <figure class=m-figure <?= attr([
-	'data-max-width' => empty($maxWidth) ? null : $maxWidth,
+	'data-max-width' => empty($maxWidth) || $maxWidth === 'content-width' ? null : $maxWidth,
 ]) ?>>
 	<?php snippet('image', [
 		'image' => $image,

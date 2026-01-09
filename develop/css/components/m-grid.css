@@ -31,15 +31,30 @@
 			column-gap: var(--gap-inline);
 			grid-template-columns: repeat(auto-fill, minmax(calc(200rem / 16), 1fr));
 		}
+		&[data-columns="2"] {
+			> ul {
+				grid-template-columns: repeat(auto-fill, minmax(calc(240rem / 16), 1fr));
+			}
+		}
 	}
 	@media (min-width: 50em) {
 		> ul {
 			grid-template-columns: repeat(auto-fill, minmax(calc(240rem / 16), 1fr));
 		}
+		&[data-columns="2"] {
+			> ul {
+				grid-template-columns: repeat(auto-fill, minmax(calc(340rem / 16), 1fr));
+			}
+		}
 	}
 	@media (min-width: 64em) {
 		> ul {
 			grid-template-columns: repeat(auto-fill, minmax(calc(292rem / 16), 1fr));
+		}
+		&[data-columns="2"] {
+			> ul {
+				grid-template-columns: repeat(auto-fill, minmax(calc(400rem / 16), 1fr));
+			}
 		}
 	}
 }
@@ -96,6 +111,9 @@
 		}
 	}
 
+	.m-grid[data-columns="2"] & img {
+		max-inline-size: none;
+	}
 	.m-grid[data-text-align=center] & img {
 		margin-inline: auto;
 	}

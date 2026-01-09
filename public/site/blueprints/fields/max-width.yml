@@ -1,0 +1,7 @@
+label: Maximale Breite
+type: toggles
+options:
+  text-width: Text-Breite (728px)
+  content-width: Maximale Content Breite (1104px)
+default: content-width
+help: Die Fotos müssen in hoher Auflösung hochgeladen werden. Die Fotos werden automatisch vom System verkleinert.

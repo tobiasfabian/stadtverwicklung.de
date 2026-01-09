@@ -6,6 +6,10 @@ m-gallery {
 	flex-wrap: wrap;
 	justify-content: center;
 
+	&[data-max-width='text-width'] {
+		max-inline-size: var(--max-width-text);
+	}
+
 	&:focus {
 		outline: none;
 	}

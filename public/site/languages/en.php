@@ -9,10 +9,11 @@ return [
     ],
     'name' => 'English',
     'translations' => [
-        'aria.label.primary-nav' => 'Main',
-        'aria.label.language-nav' => 'Lang switch',
         'aria.label.a-button-hamburger' => 'Expand menu',
         'aria.label.a-nav-item' => '{title}, expand sub-menu',
+        'aria.label.gallery' => 'Images',
+        'aria.label.language-nav' => 'Lang switch',
+        'aria.label.primary-nav' => 'Main',
         'field.period' => 'Time period',
         'field.location' => 'Location',
         'field.areas_of_action' => 'Areas of action',

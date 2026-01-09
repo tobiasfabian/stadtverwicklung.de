@@ -23,9 +23,5 @@ fields:
   ratio:
     extends: fields/ratio
     width: 1/2
-  maxWidth:
-    label: Maximale Breite
-    type: toggles
-    width: 1/2
-    options:
-      textWidth: Text-Breite
+  maxWidth: fields/max-width
+
