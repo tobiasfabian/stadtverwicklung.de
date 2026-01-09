@@ -31,7 +31,7 @@ foreach ($crops as $key => $value) {
 		// Moto G Power (Page Speed Test)
 		'412w' => [
 			'width' => 412,
-			'height' => $value === null ? null : round(376 / $value),
+			'height' => $value === null ? null : round(412 / $value),
 			'crop' => $value === null ? false : true,
 			'format' => 'webp',
 		],
