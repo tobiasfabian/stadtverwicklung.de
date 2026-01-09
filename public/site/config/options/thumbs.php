@@ -23,7 +23,6 @@ foreach ($crops as $key => $value) {
 		'width' => 2048,
 		'height' => $value === null ? null : round(2048 / $value),
 		'crop' => $value === null ? false : true,
-		'quality' => 80,
 	];
 
 	// Define srcsets
