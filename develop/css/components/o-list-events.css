@@ -29,6 +29,11 @@
 		padding-inline: var(--space-100);
 		font: var(--font-heading-small);
 		background-color: var(--color-brand-rose);
+
+		> small {
+			display: block;
+			font: var(--font-label-medium);
+		}
 	}
 	> ul > li > ul {
 		display: contents;
@@ -75,6 +80,11 @@
 		font-weight: 400;
 	}
 
+	.o-list-events__item[data-variant="tba"] & {
+		grid-column: 1 / -2;
+		grid-row: 1 / 2;
+	}
+
 	.o-list-events__item:where(:focus-visible, :hover) & {
 		color: var(--color-brand-orange-dark);
 	}
@@ -82,6 +92,11 @@
 	@media (min-width: 42em) {
 		grid-column: auto;
 		grid-row: auto;
+
+		.o-list-events__item[data-variant="tba"] & {
+			grid-column: 3;
+			grid-row: auto;
+		}
 	}
 }
 
@@ -91,6 +106,10 @@
 	@media (min-width: 42em) {
 		grid-column-start: auto;
 		justify-self: auto;
+
+		.o-list-events__item[data-variant="tba"] & {
+			grid-column-start: 4;
+		}
 	}
 }
 

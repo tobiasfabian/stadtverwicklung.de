@@ -11,7 +11,9 @@ if ($page instanceof ProjectPage) {
 	$events = collection('events');
 	$limit = 4;
 }
-$eventsUpcoming = $events->filterBy('isUpcoming', '==', true);
+$eventsUpcoming = $events->filter(function (EventPage $event) {
+	return $event->isUpcoming() || $event->isTBA();
+});
 ?>
 <?php if ($eventsUpcoming->count() > 0): ?>
 	<?php snippet('o-list-events', [

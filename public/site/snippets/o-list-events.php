@@ -3,13 +3,14 @@
 /** @var \Kirby\Cms\Pages $events */
 
 $headline = $headline ?? null;
+$eventsTBA = $events->filterBy('isTBA', '==', true);
 ?>
 <div class=o-list-events>
 	<?php if ($headline): ?>
 		<h2 class=a-heading><?= $headline ?></h2>
 	<?php endif ?>
 	<ul>
-		<?php foreach ($events->group('month', false) as $month => $group): ?>
+		<?php foreach ($events->filterBy('isUpcoming', '==', true)->group('month', false) as $month => $group): ?>
 			<li>
 				<h3><?= $month ?></h3>
 				<ul>
@@ -35,5 +36,31 @@ $headline = $headline ?? null;
 				</ul>
 			</li>
 		<?php endforeach ?>
+		<?php if ($eventsTBA->count() > 0): ?>
+			<li>
+				<h3>
+					<?= t('events.tba.heading') ?>
+					<small><?= t('events.tba.subheading') ?></small>
+				</h3>
+				<ul>
+					<?php foreach ($eventsTBA as $eventPage): ?>
+						<?php /** @var EventPage $eventPage */ ?>
+						<li>
+							<a class=o-list-events__item data-variant="tba" href=<?= $eventPage->url() ?>>
+								<strong class=o-list-events__item-title>
+									<?= $eventPage->title() ?>
+									<?php if ($eventPage->subtitle()->isNotEmpty()): ?>
+										<small><?= $eventPage->subtitle() ?></small>
+									<?php endif ?>
+								</strong>
+								<span class=o-list-events__item-location>
+									<span class=a-tag><?= $eventPage->tag() ?></span>
+								</span>
+							</a>
+						</li>
+					<?php endforeach ?>
+				</ul>
+			</li>
+		<?php endif ?>
 	</ul>
 </div>

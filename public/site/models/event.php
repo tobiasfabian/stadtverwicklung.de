@@ -19,12 +19,22 @@ use Kirby\Toolkit\Str;
  * @method Field teaserImage()
  */
 class EventPage extends Page {
+	public function sort(): int
+	{
+		return $this->startDate()->isNotEmpty() ? $this->startDate()->toDate('YmdHi') : 999999999999;
+	}
+
 	public function isUpcoming(): bool
 	{
 		if ($this->endDate()->isEmpty()) {
 			return $this->startDate()->toDate() > time();
 		}
 		return $this->endDate()->toDate() > time();
+	}
+
+	public function isTBA(): bool
+	{
+		return $this->startDate()->isEmpty();
 	}
 
 	public function city(): ?string

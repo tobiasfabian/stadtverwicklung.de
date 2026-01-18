@@ -25,16 +25,14 @@ tabs:
       teaserImage:
         extends: fields/teaser-image
         width: 1/2
-      time:
-        type: text
       startDate:
         label: Start-Datum
         type: date
         translate: false
         time:
           step: 1
-        required: true
         width: 1/3
+        help: Ist noch kein Datum festgelegt, wird als Datum „tba“ angezeigt.
       endDate:
         label: End-Datum
         type: date

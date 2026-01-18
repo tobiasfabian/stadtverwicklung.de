@@ -8,7 +8,7 @@
 		<div class=o-blocks>
 			<?php snippet('m-teaser') ?>
 			<?php snippet('o-list-events', [
-				'events' => collection('events')->listed()->filterBy('isUpcoming', '==', true)->flip(),
+				'events' => collection('events')->listed(),
 			]) ?>
 		</div>
 	</main>

@@ -30,7 +30,7 @@ tabs:
       events:
         type: pages
         batch: true
-        sortBy: startDate DESC
+        sortBy: sort DESC
         layout: table
         columns:
           projects: true

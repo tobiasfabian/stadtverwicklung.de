@@ -10,13 +10,15 @@ $projectPages = $page->projects()->toPages();
 		<div class=o-blocks>
 			<header class=m-teaser-text>
 				<a class=a-button-back href=<?= $page->parent()->url() ?>>← Zurück zur Übersicht</a>
-				<time datetime="<?= $page->startDate()->toDate('c') ?>">
-					<?php if ($page->multiDay()): ?>
-						<?= $page->dateTimeFull() ?> – <?= $page->dateTimeFull(true) ?>
-					<?php else: ?>
-						<?= $page->dateFull() ?> | <?= $page->hours() ?>
-					<?php endif ?>
-				</time>
+				<?php if (!$page->isTBA()): ?>
+					<time datetime="<?= $page->startDate()->toDate('c') ?>">
+						<?php if ($page->multiDay()): ?>
+							<?= $page->dateTimeFull() ?> – <?= $page->dateTimeFull(true) ?>
+						<?php else: ?>
+							<?= $page->dateFull() ?> | <?= $page->hours() ?>
+						<?php endif ?>
+					</time>
+				<?php endif ?>
 				<?php if ($page->attendanceMode()->value() === 'OnlineEventAttendanceMode'): ?>
 					<em>Online</em>
 				<?php else: ?>
