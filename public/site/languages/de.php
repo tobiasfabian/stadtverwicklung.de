@@ -20,7 +20,7 @@ return [
         'field.partner' => 'Ein Projekt von…',
         'events.past' => 'Vergangene Termine',
         'events.tba.heading' => 'Weitere Veranstaltungen',
-        'events.tba.subheading' => 'Termine werden noch bekannt gegben',
+        'events.tba.subheading' => 'Termine werden noch bekannt gegeben',
         'events.upcoming' => 'Bevorstehende Termine',
         'projects.completed' => 'Abgeschlossene Projekte',
         'projects.current' => 'Aktuelle Projekte',
