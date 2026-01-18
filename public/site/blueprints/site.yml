@@ -63,3 +63,16 @@ tabs:
             multiple: false
           footerFundingLogos:
             extends: fields/logos
+  settings:
+    sections:
+      settings:
+        type: fields
+        fields:
+          favicon:
+            type: files
+            multiple: false
+            required: true
+            translate: false
+            help: |
+             Größe: 32x32 px
+             Bildformat: png oder ico
