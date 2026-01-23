@@ -1,6 +1,8 @@
 <?php
 
-Kirby::plugin('tobiaswolf/button-block', [
+use Kirby\Cms\App;
+
+App::plugin('tobiaswolf/button-block', [
 	'blueprints' => [
 		'blocks/button' => __DIR__ . '/blueprints/blocks/button.yml',
 	],

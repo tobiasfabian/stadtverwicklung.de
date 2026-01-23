@@ -1,6 +1,8 @@
 <?php
 
-Kirby::plugin('tobiaswolf/cite-block', [
+use Kirby\Cms\App;
+
+App::plugin('tobiaswolf/cite-block', [
 	'blueprints' => [
 		'blocks/cite' => __DIR__ . '/blueprints/blocks/cite.yml',
 	],

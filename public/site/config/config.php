@@ -10,7 +10,7 @@ return [
 		'kirby' => 'security',
 		'plugins' => [
 			'site/*' => false,
-			'tobiaswolf/hashed-url' => false,
+			'tobiaswolf/*' => false,
 		],
 	],
 	'cache' => [
