@@ -10,7 +10,9 @@ class MIframe {
 
 		buttonElement.addEventListener('click', () => {
 			window.sessionStorage.setItem(this.sessionKey, '1');
-			[...document.mIframes].filter((_) => _.provider === this.provider).forEach((_) => _.activate());
+			[...document.mIframes]
+				.filter((_) => _.provider === this.provider)
+				.forEach((_) => _.activate());
 		});
 
 		if (window.sessionStorage.getItem(this.sessionKey) === '1') {
