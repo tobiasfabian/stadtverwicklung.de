@@ -1,11 +1,16 @@
 <?php
-/** @var Kirby\Cms\Page $page */
-/** @var Kirby\Cms\Site $site */
+/** @var \Kirby\Cms\Page $page */
+/** @var \Kirby\Cms\Site $site */
 
 $knowledgeEntries = null;
 $limit = 4;
 
+/** @var \Kirby\Cms\Pages */
 $knowledgeEntries = collection('knowledge-entries');
+
+if ($page->isPublished()) {
+	$knowledgeEntries = $knowledgeEntries->listed();
+}
 
 if ($page->template()->name() === 'knowledge-entry') {
 	$knowledgeEntries = $knowledgeEntries->filter(fn ($knowledgeEntry) => $knowledgeEntry->id() !== $page->id());
