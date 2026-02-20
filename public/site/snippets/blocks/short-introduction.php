@@ -8,12 +8,19 @@ $text = $block->text();
 		<h2 class=a-heading><?= $block->headline() ?></h2>
 	<?php endif ?>
 	<?php if ($image): ?>
-		<?php snippet('image', [
-			'image' => $image,
-			'sizes' => 352 / 16 . 'em',
-			'srcset' => 'short-introduction',
-			'loading' => 'lazy',
-		]) ?>
+		<figure class="m-figure">
+			<?php snippet('image', [
+				'image' => $image,
+				'sizes' => 352 / 16 . 'em',
+				'srcset' => 'short-introduction',
+				'loading' => 'lazy',
+			]) ?>
+			<?php if ($block->caption()->isNotEmpty()): ?>
+				<figcaption>
+					<?= $block->caption() ?>
+				</figcaption>
+			<?php endif ?>
+		</figure>
 	<?php endif ?>
 	<div class=m-short-introduction__text>
 		<?= $text ?>

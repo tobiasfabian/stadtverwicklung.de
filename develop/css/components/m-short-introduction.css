@@ -1,6 +1,6 @@
 .m-short-introduction {
 	display: grid;
-	column-gap: var(--space-400);
+	column-gap: var(--gap-inline);
 	row-gap: var(--space-400);
 	font: var(--font-paragraph-medium);
 

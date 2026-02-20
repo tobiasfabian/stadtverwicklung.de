@@ -89,7 +89,7 @@ return [
 			'crop' => true,
 		],
 		'short-introduction' => [
-			'width' => 336,
+			'width' => 356,
 			'height' => 256,
 			'crop' => true,
 		],
