@@ -2,24 +2,22 @@
 /** @var Kirby\Cms\Page $page */
 /** @var Kirby\Cms\Site $site */
 
-$projects = null;
+	/** @var \Kirby\Cms\Pages */
+$projects = collection('projects')->listed();
 $limit = 3;
 
 if ($page->parent() === $site->servicesPage()) {
 	$uuid = $page->uuid();
-	$projects = collection('projects')->filter(function (ProjectPage $projectPage) use ($uuid) {
+	$projects = $projects->filter(function (ProjectPage $projectPage) use ($uuid) {
 		return in_array($uuid, $projectPage->servicePagesUuids());
 	});
-} else {
-	/** @var \Kirby\Cms\Pages */
-	$projects = collection('projects');
 }
 $projects = $projects->limit($limit);
 ?>
 <div class=m-grid>
 	<h2 class=a-heading><?= tc('project', $projects->count()) ?></h2>
 	<ul>
-		<?php foreach ($projects->limit($limit) as $projectPage): ?>
+		<?php foreach ($projects as $projectPage): ?>
 			<li class=m-grid__item>
 				<a href=<?= $projectPage->url() ?>>
 					<?php snippet('image', [
