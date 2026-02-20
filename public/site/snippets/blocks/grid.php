@@ -4,6 +4,7 @@ $columns = (int)$block->columns()->value();
 
 $srcset = 'card';
 $sizes = '100vw';
+$textAlign = $block->textAlign()->value() !== 'start' ? $block->textAlign()->value() : null;
 
 if ($columns === 2) {
 	$srcset = 'default';
@@ -12,7 +13,7 @@ if ($columns === 2) {
 ?>
 <?php $items = $block->items()->toStructure() ?>
 <div class=m-grid <?= attr([
-	'data-text-align' => $block->textAlign()->value() !== 'start' ? $block->textAlign()->value() : null,
+	'data-text-align' => $textAlign,
 	'data-columns' => $columns !== 3 || empty($columns) ? $columns : null,
 ]) ?>>
 	<div class=m-text>
@@ -21,16 +22,20 @@ if ($columns === 2) {
 	<?php if ($items->count() > 0): ?>
 		<ul>
 			<?php foreach ($items as $item): ?>
-				<?php
-				$image = $item->image()->toFile();
-				?>
 				<li class=m-grid__item>
-					<?php if ($image): ?>
-						<?php snippet('image', [
-							'image' => $image,
-							'srcset' => $srcset,
-							'loading' => 'lazy',
-						]) ?>
+					<?php if ($image = $item->image()->toFile()): ?>
+						<figure class="m-figure" data-caption-align="<?= $textAlign === null ? 'end' : $textAlign ?>"">
+							<?php snippet('image', [
+								'image' => $image,
+								'srcset' => $srcset,
+								'loading' => 'lazy',
+							]) ?>
+							<?php if ($item->caption()->isNotEmpty()): ?>
+								<figcaption data-kind=secondary>
+									<?= $item->caption() ?>
+								</figcaption>
+							<?php endif ?>
+						</figure>
 					<?php endif ?>
 					<h3><?= $item->title() ?></h3>
 					<div class=m-text data-text-size=small>

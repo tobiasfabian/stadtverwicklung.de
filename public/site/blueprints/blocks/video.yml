@@ -37,8 +37,7 @@ fields:
       location: kirby
   caption:
     label: field.blocks.video.caption
-    type: writer
-    inline: true
+    extends: fields/writer-inline
   autoplay:
     label: field.blocks.video.autoplay
     type: toggle

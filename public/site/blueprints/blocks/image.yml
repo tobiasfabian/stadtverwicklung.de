@@ -17,9 +17,7 @@ fields:
     icon: title
   caption:
     label: field.blocks.image.caption
-    type: writer
-    icon: text
-    inline: true
+    extends: fields/writer-inline
   ratio:
     extends: fields/ratio
     width: 1/2

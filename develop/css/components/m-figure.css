@@ -9,5 +9,14 @@
 	> figcaption {
 		margin-block-start: var(--space-200);
 		font: var(--font-paragraph-small);
+
+		&[data-kind=secondary] {
+			margin-block-start: var(--space-150);
+			color: var(--color-content-secondary);
+		}
+	}
+
+	&[data-caption-align=end] {
+		text-align: end;
 	}
 }

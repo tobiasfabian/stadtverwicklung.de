@@ -24,6 +24,9 @@ fields:
         extends: fields/image
         image:
           back: white
+      caption:
+        label: field.blocks.image.caption
+        extends: fields/writer-inline
   textAlign:
     label: Text-Ausrichtung
     type: toggles

@@ -16,7 +16,4 @@ fields:
       - paragraph
   caption:
     label: field.blocks.image.caption
-    type: writer
-    icon: text
-    inline: true
-    width: 2/6
+    extends: fields/writer-inline
