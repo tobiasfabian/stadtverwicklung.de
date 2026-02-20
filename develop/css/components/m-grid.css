@@ -107,7 +107,7 @@
 
 	> a:where(:focus-visible, :hover) {
 		h3 {
-			color: var(--color-brand-orange);
+			color: var(--color-brand-orange-dark);
 		}
 	}
 

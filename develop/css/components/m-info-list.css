@@ -17,7 +17,12 @@
 			text-decoration: none;
 			> strong {
 				display: block;
-				text-decoration: underline;
+			}
+
+			&:where(:focus-visible, :hover) {
+				> strong {
+					color: var(--color-brand-orange-dark);
+				}
 			}
 		}
 	}
