@@ -27,10 +27,7 @@ $projects = $projects->limit($limit);
 						'srcset' => 'card',
 						'loading' => 'lazy',
 					]) ?>
-					<h3><?= $projectPage->title() ?></h3>
-					<?php if ($projectPage->teaserText()->isNotEmpty()): ?>
-						<p><?= $projectPage->teaserText() ?></p>
-					<?php endif ?>
+					<h3><?= $projectPage->title() ?> →</h3>
 				</a>
 			</li>
 		<?php endforeach ?>
