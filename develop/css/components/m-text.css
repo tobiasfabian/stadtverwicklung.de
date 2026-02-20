@@ -16,13 +16,17 @@
 
 	> em,
 	> :where(ul, ol, p) > em {
-		padding-inline: 0.2em;
+		padding-inline: 0.05em;
 		border-radius: 4px;
 		font-style: normal;
+		font-weight: 700;
 		box-decoration-break: clone;
 		-webkit-box-decoration-break: clone;
+		background-position: 0 0.26lh;
+		background-size: 100% 0.45lh;
+		background-repeat: no-repeat;
 		background-image: linear-gradient(to left top,
-			hsl(28, 100%, 82%),
+			hsl(48, 100%, 70%),
 			hsl(48, 100%, 70%)
 		);
 	}
