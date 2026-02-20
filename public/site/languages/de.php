@@ -28,6 +28,11 @@ return [
             '',
             'Projekt',
             'Projekte'
+        ],
+        'knowledge-entry.more' => [
+            '',
+            'Weiter Wissens-Beitrag',
+            'Weitere Wissens-Beiträge'
         ]
     ],
     'url' => '/'

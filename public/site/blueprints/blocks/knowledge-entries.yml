@@ -1,0 +1,8 @@
+title: Weitere Wissens-Beiträge
+icon: list-bullet
+wysiwyg: true
+preview: fields
+fields:
+  info:
+    type: info
+    text: Zeigt zufällig vier weitere Wissens-Beiträge an
