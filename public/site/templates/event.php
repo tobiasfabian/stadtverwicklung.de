@@ -44,6 +44,8 @@ $projectPages = $page->projects()->toPages();
 				<?php endif ?>
 				<a class=a-button href="<?= $page->url() ?>.ics">In Kalender eintragen</a>
 			</div>
+			<hr>
+			<a class=a-button-back href=<?= $page->parent()->url() ?>>← Alle Termine</a>
 		</div>
 	</main>
 	<?php snippet('o-footer') ?>
