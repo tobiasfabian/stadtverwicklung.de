@@ -58,7 +58,7 @@ class MGallery extends HTMLElement {
 		});
 		this.imagesElement = this.template.content.querySelector('.m-gallery__images');
 		this.imagesUlElement = this.imagesElement.querySelector(':scope > ul');
-		this.imgElements = this.imagesUlElement.querySelectorAll(':scope > li > img');
+		this.itemElements = this.imagesUlElement.querySelectorAll(':scope > li > *');
 
 		this.paginationButtonElements = this.template.content.querySelectorAll('[data-action=show-image]');
 		this.buttonPreviousImageElement = this.template.content.querySelector('[data-action=previous-image]');
@@ -89,7 +89,7 @@ class MGallery extends HTMLElement {
 			rootMargin: '20px',
 			root: this,
 		});
-		[...this.imgElements].forEach((imgElement) => {
+		[...this.itemElements].forEach((imgElement) => {
 			observer.observe(imgElement);
 		});
 
@@ -171,12 +171,12 @@ class MGallery extends HTMLElement {
 		this.buttonPreviousImageElement.addEventListener('click', () => this.showImage(this.currentImage - 1));
 		this.buttonNextImageElement.addEventListener('click', () => this.showImage(this.currentImage + 1));
 		this.imagesUlElement.addEventListener('scroll', () => {
-			const newIndex = [...this.imgElements].findIndex((_) => _.getAttribute('data-is-intersecting') !== null);
+			const newIndex = [...this.itemElements].findIndex((_) => _.getAttribute('data-is-intersecting') !== null);
 			this.currentImage = newIndex + 1;
 		}, {
 			passive: true,
 		});
-		this.imgElements.forEach((imgElement, index) => {
+		this.itemElements.forEach((imgElement, index) => {
 			imgElement.addEventListener('click', () => {
 				if (this.dragDeltaX === null) {
 					this.showImage(index + 1);

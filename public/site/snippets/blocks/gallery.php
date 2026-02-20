@@ -14,7 +14,7 @@ if ($maxWidth === 'text-width') {
 	$sizes = '(min-width: 45.5em) 45.5rem, 100vw';
 }
 
-$files = $block->images()->toFiles();
+$items = $block->items()->toStructure();
 ?>
 <m-gallery <?= attr([
 	'role' => 'region',
@@ -24,15 +24,24 @@ $files = $block->images()->toFiles();
 	'data-max-width' => empty($maxWidth) || $maxWidth === 'content-width' ? null : $maxWidth,
 ]) ?>>
 	<ul>
-		<?php foreach ($files as $image): ?>
-		<li>
-			<?php snippet('image', [
-				'image' => $image,
-				'srcset' => $srcset,
-				'sizes' => $sizes,
-				'loading' => 'lazy',
-			]) ?>
-		</li>
+		<?php foreach ($items as $item): ?>
+			<?php if ($image = $item->image()->toFile()): ?>
+				<li>
+					<figure class="m-figure">
+						<?php snippet('image', [
+							'image' => $image,
+							'srcset' => $srcset,
+							'sizes' => $sizes,
+							'loading' => 'lazy',
+						]) ?>
+						<?php if ($item->caption()->isNotEmpty()): ?>
+							<figcaption>
+								<?= $item->caption() ?>
+							</figcaption>
+						<?php endif ?>
+					</figure>
+				</li>
+			<?php endif ?>
 		<?php endforeach ?>
 	</ul>
 </m-gallery>
