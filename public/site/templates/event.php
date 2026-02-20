@@ -39,7 +39,7 @@ $projectPages = $page->projects()->toPages();
 			</header>
 			<?= $page->text()->toBlocks() ?>
 			<div class="m-stack">
-				<?php if ($page->registrationLink()->isNotEmpty()): ?>
+				<?php if ($page->registrationLink()->isNotEmpty() && $page->isUpcoming()): ?>
 					<a class=a-button data-kind=solid href="<?= $page->registrationLink() ?>">Jetzt anmelden</a>
 				<?php endif ?>
 				<a class=a-button href="<?= $page->url() ?>.ics">In Kalender eintragen</a>
