@@ -97,7 +97,7 @@
 		inline-size: 100%;
 	}
 
-	img + time {
+	img + :where(time, span) {
 		margin-block-start: var(--space-200);
 	}
 

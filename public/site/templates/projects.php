@@ -32,7 +32,7 @@ use Kirby\Toolkit\Str;
 			<div class=m-grid>
 				<h2 class=a-heading id=<?= Str::slug(t('projects.completed')) ?>><?= t('projects.completed') ?></h2>
 				<ul>
-					<?php foreach (collection('projects')->unlisted() as $projectPage): ?>
+					<?php foreach (collection('projects')->unlisted()->sortBy('startDate', 'desc') as $projectPage): ?>
 						<?php /** @var ProjectPage|\Kirby\Cms\Page $projectPage */ ?>
 						<li class=m-grid__item>
 							<a href=<?= $projectPage->url() ?>>
@@ -41,6 +41,7 @@ use Kirby\Toolkit\Str;
 									'srcset' => 'card',
 									'loading' => 'lazy',
 								]); ?>
+								<span><?= $projectPage->period() ?></span>
 								<h3><?= $projectPage->title() ?> →</h3>
 								<?php if ($projectPage->teaserText()->isNotEmpty()): ?>
 									<p><?= $projectPage->teaserText() ?></p>
