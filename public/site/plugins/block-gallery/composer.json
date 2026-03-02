@@ -1,0 +1,12 @@
+{
+	"name": "tobiaswolf/gallery-block",
+	"version": "2026-03",
+	"type": "kirby-plugin",
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Tobias Wolf",
+			"homepage": "https://tobiaswolf.me"
+		}
+	]
+}
