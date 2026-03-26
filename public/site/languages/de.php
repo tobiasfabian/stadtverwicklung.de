@@ -19,6 +19,8 @@ return [
         'field.areas_of_action' => 'Handlungsfelder',
         'field.partner' => 'Ein Projekt von…',
         'events.past' => 'Vergangene Termine',
+        'events.button.show-all' => 'Alle weiteren Termine anzeigen',
+        'events.button.hide-all' => 'Weitere Termine ausblenden',
         'events.tba.heading' => 'Weitere Veranstaltungen',
         'events.tba.subheading' => 'Termine werden noch bekannt gegeben',
         'events.upcoming' => 'Bevorstehende Termine',

@@ -1,6 +1,7 @@
 import './components/m-gallery.js';
 import './components/m-iframe.js';
 import './components/m-video.js';
+import './components/o-list-events.js';
 
 if (!(
 	typeof HTMLElement !== 'undefined'

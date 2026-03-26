@@ -51,6 +51,35 @@
 	> h2 + ul {
 		margin-block-start: var(--space-600);
 	}
+	> ul + button {
+		margin-block-start: var(--space-400);
+	}
+
+	&[data-show-all] {
+		interpolate-size: allow-keywords;
+
+		> ul > li:nth-of-type(n + 3) {
+			height: max-content;
+			transition-property: display, opacity, height;
+			transition-duration: var(--duration-medium);
+			transition-behavior: allow-discrete;
+			transition-timing-function: ease-in-out;
+
+			@starting-style {
+				height: 0;
+				opacity: 0;
+			}
+		}
+	}
+	&[data-show-all]:not([data-show-all="true"]) {
+		> ul > li:nth-of-type(n + 3) {
+			display: none;
+			height: 0;
+			opacity: 0;
+			transition-duration: var(--duration-medium);
+			transition-timing-function: ease-out;
+		}
+	}
 
 	@media (min-width: 42em) {
 		--_grid-template-columns: 2.5ch 2.2ch 1fr minmax(auto, 10ch) auto;

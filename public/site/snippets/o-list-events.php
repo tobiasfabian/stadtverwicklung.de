@@ -4,8 +4,9 @@
 
 $headline = $headline ?? null;
 $eventsTBA = $events->filterBy('isTBA', '==', true);
+$buttonShowAll = $buttonShowAll ?? null;
 ?>
-<div class=o-list-events>
+<div class=o-list-events <?= attr(['data-show-all' => $buttonShowAll ? 'false' : null]) ?>>
 	<?php if ($headline): ?>
 		<h2 class=a-heading><?= $headline ?></h2>
 	<?php endif ?>
@@ -63,4 +64,7 @@ $eventsTBA = $events->filterBy('isTBA', '==', true);
 			</li>
 		<?php endif ?>
 	</ul>
+	<?php if ($buttonShowAll === true): ?>
+		<button class="a-button" data-action="show-all" data-alternative-text="<?= t('events.button.hide-all') ?>"><?= t('events.button.show-all') ?></button>
+	<?php endif ?>
 </div>
