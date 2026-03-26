@@ -86,7 +86,6 @@
 	}
 
 	h3 {
-		margin-block-start: var(--space-150);
 		font: var(--font-heading-small);
 		text-wrap-style: pretty;
 		transition-property: color;
@@ -98,12 +97,12 @@
 		inline-size: 100%;
 	}
 
-	img + :where(time, span) {
-		margin-block-start: var(--space-200);
+	img + :where(time, span, div) {
+		margin-block-start: var(--space-100);
 	}
 
 	img + h3 {
-		margin-block-start: var(--space-300);
+		margin-block-start: var(--space-150);
 	}
 
 	> a:where(:focus-visible, :hover) {
