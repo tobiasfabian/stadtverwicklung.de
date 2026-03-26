@@ -2,4 +2,4 @@
 
 use Kirby\Cms\App;
 
-App::plugin('tobiaswolf/gallery-block');
+App::plugin('tobiaswolf/gallery-block', []);
