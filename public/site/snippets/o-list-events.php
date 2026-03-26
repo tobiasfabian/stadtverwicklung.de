@@ -29,7 +29,7 @@ $eventsTBA = $events->filterBy('isTBA', '==', true);
 								<span class=o-list-events__item-location>
 									<span class=a-tag><?= $eventPage->tag() ?></span>
 								</span>
-								<span class=o-list-events__item-hours><?= $eventPage->multiDay() ? $eventPage->shortEndDate() : $eventPage->hours() ?></span>
+								<span class=o-list-events__item-hours><?= $eventPage->multiDay() ? kti($eventPage->fromToDate()) : $eventPage->hours() ?></span>
 							</a>
 						</li>
 					<?php endforeach ?>

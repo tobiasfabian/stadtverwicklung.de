@@ -105,6 +105,19 @@ class EventPage extends Page {
 		return $formatter->format($this->startDate()->toDate());
 	}
 
+	public function fromToDate(): string
+	{
+		$formatter1 = new IntlDateFormatter(
+			locale: 'de_DE',
+			pattern: 'dd.MM',
+		);
+		$formatter2 = new IntlDateFormatter(
+			locale: 'de_DE',
+			pattern: 'dd.MM.y',
+		);
+		return $formatter1->format($this->startDate()->toDate()) . ' – ' . $formatter2->format($this->endDate()->toDate());
+	}
+
 	public function shortEndDate(): string
 	{
 		$formatter = new IntlDateFormatter(
