@@ -101,7 +101,7 @@
 		margin-block-start: var(--space-100);
 	}
 
-	img + h3 {
+	:where(img, .m-figure) + h3 {
 		margin-block-start: var(--space-150);
 	}
 

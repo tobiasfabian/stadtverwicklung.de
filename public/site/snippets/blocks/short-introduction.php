@@ -2,6 +2,8 @@
 <?php
 $image = $block->image()->toFile();
 $text = $block->text();
+$srcset = $block->content()->has('ratio') ? $block->ratio()->or('default') : 'short-introduction';
+$sizes = 352 / 16 . 'em';
 ?>
 <div class=m-short-introduction>
 	<?php if ($block->headline()->isNotEmpty()): ?>
@@ -11,8 +13,8 @@ $text = $block->text();
 		<figure class="m-figure">
 			<?php snippet('image', [
 				'image' => $image,
-				'sizes' => 352 / 16 . 'em',
-				'srcset' => 'short-introduction',
+				'sizes' => $sizes,
+				'srcset' => $srcset,
 				'loading' => 'lazy',
 			]) ?>
 			<?php if ($block->caption()->isNotEmpty()): ?>
