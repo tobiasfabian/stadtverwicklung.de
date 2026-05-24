@@ -1,9 +1,2 @@
-
-	.k-block-type-category .k-block-type-fields-header {
-		display: none;
-	}
-.k-block-container:not([data-hidden=true]) .k-block-type-fields.k-block-type-category > :not([data-collapsed=true]) {
-	padding-top: var(--spacing-3);
-}
-
+.k-block-type-category .k-block-type-fields-header{display:none}.k-block-container:not([data-hidden=true]) .k-block-type-fields.k-block-type-category>:not([data-collapsed=true]){padding-top:var(--spacing-3)}
 /*# sourceMappingURL=panel.css.map */

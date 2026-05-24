@@ -20,6 +20,10 @@
     }
   }
 
+	> figcaption {
+		margin-block-start: var(--space-200);
+	}
+
   &.-animate {
     > div {
       transition-property: border-radius;
