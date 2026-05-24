@@ -5,6 +5,7 @@
 $headline = $headline ?? null;
 $eventsTBA = $events->filterBy('isTBA', '==', true);
 $buttonShowAll = $buttonShowAll ?? null;
+$countGroups = 0;
 ?>
 <div class=o-list-events <?= attr(['data-show-all' => $buttonShowAll ? 'false' : null]) ?>>
 	<?php if ($headline): ?>
@@ -12,6 +13,7 @@ $buttonShowAll = $buttonShowAll ?? null;
 	<?php endif ?>
 	<ul>
 		<?php foreach ($events->filterBy('isUpcoming', '==', true)->group('month', false) as $month => $group): ?>
+			<?php $countGroups += 1 ?>
 			<li>
 				<h3><?= $month ?></h3>
 				<ul>
@@ -38,6 +40,7 @@ $buttonShowAll = $buttonShowAll ?? null;
 			</li>
 		<?php endforeach ?>
 		<?php if ($eventsTBA->count() > 0): ?>
+			<?php $countGroups += 1 ?>
 			<li>
 				<h3>
 					<?= t('events.tba.heading') ?>
@@ -64,7 +67,7 @@ $buttonShowAll = $buttonShowAll ?? null;
 			</li>
 		<?php endif ?>
 	</ul>
-	<?php if ($buttonShowAll === true): ?>
+	<?php if ($buttonShowAll === true && $countGroups > 2): ?>
 		<button class="a-button" data-action="show-all" data-alternative-text="<?= t('events.button.hide-all') ?>"><?= t('events.button.show-all') ?></button>
 	<?php endif ?>
 </div>
