@@ -4,6 +4,10 @@ navigation:
   status: all
   template: all
 
+image:
+  query: model.teaserImage.toFile
+  cover: true
+
 tabs:
   content:
     label: Inhalt
@@ -15,6 +19,21 @@ tabs:
             label: Teaser-Text
             extends: fields/headline
             help: Wird in der Übersicht angezeigt
+            width: 1/2
+          teaserImage:
+            extends: fields/teaser-image
+            width: 1/2
+          category:
+            label: Kategorie
+            type: multiselect
+            max: 1
+            translate: false
+            options:
+              type: query
+              query: page.parent.categories.toBlocks
+              text: "{{ block.headline }}"
+              value: "{{ block.id }}"
+            help: Neue Kategorien können über die [Übersichts-Seite](pages/wissen?tab=categories) (Wissens-Seite) angelegt werden.
           text:
             extends: fields/blocks
   meta:

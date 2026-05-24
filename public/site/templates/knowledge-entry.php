@@ -1,5 +1,5 @@
 <?php
-/** @var BlogEntryPage $page */
+/** @var KnowledgeEntryPage $page */
 /** @var \Kirby\Cms\Pages $prevPages */
 /** @var \Kirby\Cms\Pages $nextPages */
 ?>

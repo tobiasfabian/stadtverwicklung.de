@@ -28,9 +28,44 @@ tabs:
             extends: fields/teaser-image
             width: 1/2
       pages:
+        label: Unterseiten
         type: pages
+        info: "{{ page.category }}"
         templates:
           - knowledge-entry
+  categories:
+    icon: headline
+    label: Kategorien
+    sections:
+      categories:
+        type: fields
+        fields:
+          categories:
+            label: Kategorien
+            type: blocks
+            translate: false
+            help: |
+              Hier können Kategorie/Überschriften festgelegt werden. Jede Wissens-Seite (Unterseite) kann einer Kategorie zugeordnet werden. Die Unterseite werden anhand der Reihenfolge dieser Kategorien und dann anhand der Reihenfolge der Unterseiten sortiert.
+            fieldsets:
+              -
+                type: category
+                wysiwyg: true
+                preview: fields
+                icon: headline
+                title: Kategorie
+                label: "{{ headline }}"
+                fields:
+                  headline:
+                    label: Überschrift
+                    extends: fields/writer-inline
+                    marks: false
+                    width: 1/2
+                  headlineEn:
+                    label: Überschrift (English)
+                    extends: fields/writer-inline
+                    marks: false
+                    width: 1/2
+
   meta:
     extends: tabs/meta
   files:

@@ -20,6 +20,10 @@ return [
 		],
 	],
 
+	'panel' => [
+		'css' => 'assets/css/panel.css',
+	],
+
 	// Custom options
 	'sitemap.ignoreTemplates' => ['error'],
 ];
