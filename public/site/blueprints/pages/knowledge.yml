@@ -45,7 +45,7 @@ tabs:
             type: blocks
             translate: false
             help: |
-              Hier können Kategorie/Überschriften festgelegt werden. Jede Wissens-Seite (Unterseite) kann einer Kategorie zugeordnet werden. Die Unterseite werden anhand der Reihenfolge dieser Kategorien und dann anhand der Reihenfolge der Unterseiten sortiert.
+              Hier können Kategorie/Überschriften festgelegt werden. Jede Wissens-Seite (Unterseite) kann einer Kategorie zugeordnet werden.
             fieldsets:
               -
                 type: category
