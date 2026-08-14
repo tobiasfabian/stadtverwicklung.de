@@ -1,0 +1,7 @@
+label: Analytics
+icon: line-chart
+columns:
+  - width: 4/4
+    sections:
+      main:
+        type: matomo-page

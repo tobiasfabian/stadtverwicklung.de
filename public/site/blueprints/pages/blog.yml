@@ -17,3 +17,5 @@ tabs:
           - blog-entry
   meta:
     extends: tabs/meta
+  analytics:
+    extends: tabs/analytics

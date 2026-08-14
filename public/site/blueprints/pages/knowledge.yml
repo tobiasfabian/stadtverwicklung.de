@@ -70,3 +70,5 @@ tabs:
     extends: tabs/meta
   files:
     extends: tabs/files
+  analytics:
+    extends: tabs/analytics

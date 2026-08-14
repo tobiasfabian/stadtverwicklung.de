@@ -74,3 +74,5 @@ use Kirby\Toolkit\Str;
 		</div>
 	</div>
 </footer>
+
+<?php snippet('analytics') ?>

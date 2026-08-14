@@ -26,4 +26,7 @@ return [
 
 	// Custom options
 	'sitemap.ignoreTemplates' => ['error'],
+
+	// Matomo plugin, other settings in env.php
+	'sylvainjule.matomo.area.label' => 'Analytics'
 ];

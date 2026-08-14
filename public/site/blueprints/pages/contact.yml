@@ -45,3 +45,5 @@ tabs:
     extends: tabs/subpages
   files:
     extends: tabs/files
+  analytics:
+    extends: tabs/analytics
