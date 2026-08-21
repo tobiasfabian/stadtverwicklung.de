@@ -1,0 +1,12 @@
+name: HTML-Code
+icon: code
+wysiwyg: true
+preview: code
+fields:
+  code:
+    label: HTML-Code
+    type: textarea
+    placeholder: field.blocks.code.placeholder
+    buttons: false
+    font: monospace
+    help: Bitte nur mit äußerster Vorsicht benutzen. HTML-Code kann den Rest der Seite beeinflussen. Externe Skripte dürfen nicht eingefügt werden, da dafür immer eine Zustimmung der Website-Nutzer*in erforderlich ist.

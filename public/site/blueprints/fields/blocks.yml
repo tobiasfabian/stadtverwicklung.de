@@ -33,3 +33,9 @@ fieldsets:
       - projects
       - blog-entries
       - knowledge-entries
+  other:
+    label: Sonstiges
+    type: group
+    open: false
+    fieldsets:
+      - html
